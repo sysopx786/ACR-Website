@@ -1,13 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://american-clothing-restoration.valli349022.chatgpt.site/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://american-clothing-restoration.valli349022.chatgpt.site/what-we-restore/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://american-clothing-restoration.valli349022.chatgpt.site/our-process/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://american-clothing-restoration.valli349022.chatgpt.site/for-professionals/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://american-clothing-restoration.valli349022.chatgpt.site/results/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://american-clothing-restoration.valli349022.chatgpt.site/about/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://american-clothing-restoration.valli349022.chatgpt.site/contact/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://american-clothing-restoration.valli349022.chatgpt.site/privacy-policy/</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
-  <url><loc>https://american-clothing-restoration.valli349022.chatgpt.site/terms-of-service/</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
-  <url><loc>https://american-clothing-restoration.valli349022.chatgpt.site/cookie-policy/</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://american-clothing-restoration.valli349022.chatgpt.site/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://american-clothing-restoration.valli349022.chatgpt.site/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://american-clothing-restoration.valli349022.chatgpt.site/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://american-clothing-restoration.valli349022.chatgpt.site/"/>
+  </url>
+  <url>
+    <loc>https://american-clothing-restoration.valli349022.chatgpt.site/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://american-clothing-restoration.valli349022.chatgpt.site/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://american-clothing-restoration.valli349022.chatgpt.site/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://american-clothing-restoration.valli349022.chatgpt.site/"/>
+  </url>
+  <url>
+    <loc>https://american-clothing-restoration.valli349022.chatgpt.site/what-we-restore/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://american-clothing-restoration.valli349022.chatgpt.site/what-we-restore/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://american-clothing-restoration.valli349022.chatgpt.site/es/what-we-restore/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://american-clothing-restoration.valli349022.chatgpt.site/what-we-restore/"/>
+  </url>
+  <url>
+    <loc>https://american-clothing-restoration.valli349022.chatgpt.site/es/what-we-restore/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://american-clothing-restoration.valli349022.chatgpt.site/what-we-restore/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://american-clothing-restoration.valli349022.chatgpt.site/es/what-we-restore/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://american-clothing-restoration.valli349022.chatgpt.site/what-we-restore/"/>
+  </url>
+  <url>
+    <loc>https://american-clothing-restoration.valli349022.chatgpt.site/our-process/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://american-clothing-restoration.valli349022.chatgpt.site/our-process/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://american-clothing-restoration.valli349022.chatgpt.site/es/our-process/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://american-clothing-restoration.valli349022.chatgpt.site/our-process/"/>
+  </url>
+  <url>
+    <loc>https://american-clothing-restoration.valli349022.chatgpt.site/es/our-process/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://american-clothing-restoration.valli349022.chatgpt.site/our-process/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://american-clothing-restoration.valli349022.chatgpt.site/es/our-process/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://american-clothing-restoration.valli349022.chatgpt.site/our-process/"/>
+  </url>
+  <url>
+    <loc>https://american-clothing-restoration.valli349022.chatgpt.site/for-professionals/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://american-clothing-restoration.valli349022.chatgpt.site/for-professionals/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://american-clothing-restoration.valli349022.chatgpt.site/es/for-professionals/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://american-clothing-restoration.valli349022.chatgpt.site/for-professionals/"/>
+  </url>
+  <url>
+    <loc>https://american-clothing-restoration.valli349022.chatgpt.site/es/for-professionals/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://american-clothing-restoration.valli349022.chatgpt.site/for-professionals/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://american-clothing-restoration.valli349022.chatgpt.site/es/for-professionals/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://american-clothing-restoration.valli349022.chatgpt.site/for-professionals/"/>
+  </url>
+  <url>
+    <loc>https://american-clothing-restoration.valli349022.chatgpt.site/results/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://american-clothing-restoration.valli349022.chatgpt.site/results/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://american-clothing-restoration.valli349022.chatgpt.site/es/results/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://american-clothing-restoration.valli349022.chatgpt.site/results/"/>
+  </url>
+  <url>
+    <loc>https://american-clothing-restoration.valli349022.chatgpt.site/es/results/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://american-clothing-restoration.valli349022.chatgpt.site/results/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://american-clothing-restoration.valli349022.chatgpt.site/es/results/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://american-clothing-restoration.valli349022.chatgpt.site/results/"/>
+  </url>
+  <url>
+    <loc>https://american-clothing-restoration.valli349022.chatgpt.site/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://american-clothing-restoration.valli349022.chatgpt.site/about/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://american-clothing-restoration.valli349022.chatgpt.site/es/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://american-clothing-restoration.valli349022.chatgpt.site/about/"/>
+  </url>
+  <url>
+    <loc>https://american-clothing-restoration.valli349022.chatgpt.site/es/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://american-clothing-restoration.valli349022.chatgpt.site/about/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://american-clothing-restoration.valli349022.chatgpt.site/es/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://american-clothing-restoration.valli349022.chatgpt.site/about/"/>
+  </url>
+  <url>
+    <loc>https://american-clothing-restoration.valli349022.chatgpt.site/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://american-clothing-restoration.valli349022.chatgpt.site/contact/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://american-clothing-restoration.valli349022.chatgpt.site/es/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://american-clothing-restoration.valli349022.chatgpt.site/contact/"/>
+  </url>
+  <url>
+    <loc>https://american-clothing-restoration.valli349022.chatgpt.site/es/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://american-clothing-restoration.valli349022.chatgpt.site/contact/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://american-clothing-restoration.valli349022.chatgpt.site/es/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://american-clothing-restoration.valli349022.chatgpt.site/contact/"/>
+  </url>
+  <url>
+    <loc>https://american-clothing-restoration.valli349022.chatgpt.site/privacy-policy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://american-clothing-restoration.valli349022.chatgpt.site/privacy-policy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://american-clothing-restoration.valli349022.chatgpt.site/es/privacy-policy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://american-clothing-restoration.valli349022.chatgpt.site/privacy-policy/"/>
+  </url>
+  <url>
+    <loc>https://american-clothing-restoration.valli349022.chatgpt.site/es/privacy-policy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://american-clothing-restoration.valli349022.chatgpt.site/privacy-policy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://american-clothing-restoration.valli349022.chatgpt.site/es/privacy-policy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://american-clothing-restoration.valli349022.chatgpt.site/privacy-policy/"/>
+  </url>
+  <url>
+    <loc>https://american-clothing-restoration.valli349022.chatgpt.site/terms-of-service/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://american-clothing-restoration.valli349022.chatgpt.site/terms-of-service/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://american-clothing-restoration.valli349022.chatgpt.site/es/terms-of-service/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://american-clothing-restoration.valli349022.chatgpt.site/terms-of-service/"/>
+  </url>
+  <url>
+    <loc>https://american-clothing-restoration.valli349022.chatgpt.site/es/terms-of-service/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://american-clothing-restoration.valli349022.chatgpt.site/terms-of-service/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://american-clothing-restoration.valli349022.chatgpt.site/es/terms-of-service/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://american-clothing-restoration.valli349022.chatgpt.site/terms-of-service/"/>
+  </url>
+  <url>
+    <loc>https://american-clothing-restoration.valli349022.chatgpt.site/cookie-policy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://american-clothing-restoration.valli349022.chatgpt.site/cookie-policy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://american-clothing-restoration.valli349022.chatgpt.site/es/cookie-policy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://american-clothing-restoration.valli349022.chatgpt.site/cookie-policy/"/>
+  </url>
+  <url>
+    <loc>https://american-clothing-restoration.valli349022.chatgpt.site/es/cookie-policy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://american-clothing-restoration.valli349022.chatgpt.site/cookie-policy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://american-clothing-restoration.valli349022.chatgpt.site/es/cookie-policy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://american-clothing-restoration.valli349022.chatgpt.site/cookie-policy/"/>
+  </url>
 </urlset>
