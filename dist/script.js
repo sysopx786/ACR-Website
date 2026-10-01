@@ -58,19 +58,3 @@ document.querySelectorAll("[data-lang-switch]").forEach(link=>{
     langStore.set(target);
   });
 });
-
-const cookieBanner=document.querySelector("[data-cookie-banner]");
-const cookiePanel=document.querySelector("[data-cookie-panel]");
-const storage={
-  get(){try{return localStorage.getItem("acrCookieChoice")}catch{return null}},
-  set(value){try{localStorage.setItem("acrCookieChoice",value)}catch{}}
-};
-
-function showCookieBanner(){cookieBanner?.removeAttribute("hidden")}
-function closeCookieBanner(choice){storage.set(choice);cookieBanner?.setAttribute("hidden","")}
-
-if(cookieBanner&&!storage.get())showCookieBanner();
-document.querySelectorAll("[data-cookie-settings]").forEach(button=>button.addEventListener("click",showCookieBanner));
-document.querySelector("[data-cookie-accept]")?.addEventListener("click",()=>closeCookieBanner("accepted"));
-document.querySelector("[data-cookie-reject]")?.addEventListener("click",()=>closeCookieBanner("rejected"));
-document.querySelector("[data-cookie-manage]")?.addEventListener("click",()=>{if(cookiePanel)cookiePanel.hidden=!cookiePanel.hidden});
