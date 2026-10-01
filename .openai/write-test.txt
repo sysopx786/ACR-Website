@@ -1,1 +1,0 @@
-write access test after GitHub app configuration update
