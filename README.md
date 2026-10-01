@@ -65,7 +65,7 @@ Restoring What Matters.
 - Sitemap
 - Robots.txt
 - Local business schema
-- Cookie consent controls
+- Cookie popup removed; static cookie policy page retained
 - No contact forms
 - No invented email address
 - No invented hours
