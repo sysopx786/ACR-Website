@@ -41,27 +41,43 @@ Restoring What Matters.
 
 ## Pages Included
 
-- Home
-- What We Restore
-- Our Process
-- For Professionals
-- Results
-- About
-- Contact
-- Privacy Policy
-- Terms of Service
-- Cookie Policy
+- Home: `/`
+- What We Restore: `/what-we-restore/`
+- Our Process: `/our-process/`
+- For Professionals: `/for-professionals/`
+- Results: `/results/`
+- About: `/about/`
+- Contact: `/contact/`
+- Privacy Policy: `/privacy-policy/`
+- Terms of Service: `/terms-of-service/`
+- Cookie Policy: `/cookie-policy/`
+
+Spanish pages are included under `/es/`:
+
+- `/es/`
+- `/es/what-we-restore/`
+- `/es/our-process/`
+- `/es/for-professionals/`
+- `/es/results/`
+- `/es/about/`
+- `/es/contact/`
+- `/es/privacy-policy/`
+- `/es/terms-of-service/`
+- `/es/cookie-policy/`
 
 ## Key Website Features
 
 - Premium editorial layout
 - Responsive mobile design
 - Sticky mobile Call ACR button
+- English and Spanish language switch
 - Google Maps address links
 - Google Reviews section with all supplied reviews listed
 - Before and after comparison gallery
 - SEO metadata
 - Open Graph metadata
+- Canonical URLs
+- Hreflang links for English and Spanish pages
 - Sitemap
 - Robots.txt
 - Local business schema
@@ -110,6 +126,26 @@ GitHub Pages is configured through GitHub Actions in:
 
 The workflow publishes the `dist/` directory to GitHub Pages.
 
+The GitHub Pages build is served from:
+
+```text
+/ACR-Website/
+```
+
+Internal asset and page links in `dist/` are written for that GitHub Pages base path.
+
+The public deployment was checked after cleanup and returned:
+
+```text
+HTTP 200 OK
+```
+
+for:
+
+```text
+https://sysopx786.github.io/ACR-Website/
+```
+
 ## ChatGPT Sites
 
 The ChatGPT Sites project is configured in:
@@ -137,3 +173,22 @@ https://american-clothing-restoration.valli349022.chatgpt.site
 - Do not add forms.
 - Do not add unverified service areas, insurance partners, certifications, hours, employees, awards, or statistics.
 - Do not describe representative images as real customer projects.
+- Keep representative image disclosures visible where before-and-after examples appear.
+- Keep all addresses linked to Google Maps.
+- Keep phone links pointed to `tel:7177382679`.
+- Do not add a contact form, quote form, booking form, newsletter signup, popup, or chatbot.
+- Do not add an email address unless the business supplies one.
+- Do not add social icons unless real profiles are supplied.
+
+## Repository Cleanup Notes
+
+The repository should contain only deployable website files and deployment metadata.
+
+Keep:
+
+- `dist/`
+- `.github/workflows/pages.yml`
+- `.openai/hosting.json`
+- `README.md`
+
+Old uploaded screenshots, generated-image scratch files, prompt drafts, and ZIP archives were removed because they are not needed for the live website and should not be part of the public repository.
