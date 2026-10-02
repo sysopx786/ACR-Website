@@ -245,6 +245,14 @@ Inspect the latest machine-readable results in `qa/latest-browser-qa.json` and `
 
 **Verified browser-QA result (October 2, 2026):** GitHub Actions run [37060619211](https://github.com/sysopx786/ACR-Website/actions/runs/37060619211) passed for source commit `7632c6d55f39a30a23d3733e2fd5cb6666422dc1`. The mobile audit visited all **49 HTML routes** and reported **0px horizontal overflow**, maximum checked top-level section padding **54px**, and maximum measured gap for qualifying adjacent text blocks **20px**. The English and Spanish Fire/Smoke and Water/Flood pages each measured **9px heading-to-paragraph** and **20px between consecutive text sections**. English and Spanish service-page screenshots were captured in the QA artifact. The automated test also verified core desktop/mobile navigation, the professional workflow, before-and-after sliders, local links and accessibility; a physical-device review remains separate.
 
+
+### Dedicated Our Process page spacing fix — October 2, 2026
+
+- Corrected the English `/our-process/`, Spanish `/es/our-process/`, and legacy `/our-process.html` templates. The former two-column split placed an oversized illustration before six steps; each mobile step then rendered **number, heading and description on three separate rows** with 24px top/bottom padding. This repeated empty area had escaped the earlier generic text-section check.
+- Scoped the process layout to `.process-page-layout`. On desktop, six compact steps sit alongside the textile photograph. On mobile, the number sits **beside** the step title and description, step padding is 11px, and the illustration follows the process at a maximum of 200px tall. The professional-workflow link remains with the content.
+- Versioned the shared stylesheet URL on the three process routes to reduce stale cached CSS on Android.
+- Added mobile browser geometry tests and screenshots for **all three process URLs**: six items present, no large internal title/description or inter-step gaps, and photo below the process. Verify the latest successful GitHub Actions QA result before treating the change as tested.
+
 ## Maintenance Guidelines
 
 1. Keep English and Spanish copy, navigation, URLs, SEO metadata, and links aligned.
