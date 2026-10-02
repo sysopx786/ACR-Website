@@ -180,7 +180,7 @@ const assert=(condition,message)=>{if(!condition)errors.push(message);};
           largestSectionPadding:Math.max(0,...sections.map(el=>Math.max(parseFloat(getComputedStyle(el).paddingTop)||0,parseFloat(getComputedStyle(el).paddingBottom)||0))),
           duplicateHeroBrand:!!main?.querySelector(".hero .eyebrow, .pro-redesign-hero .eyebrow")?.textContent.trim().match(/^American Clothing Restoration$/i),
           textOnlySplitGaps:[...document.querySelectorAll("main > section.section.split")].filter(el=>{
-            return el.children[0]?.querySelector(":scope > h2")&&el.children[1]?.querySelector(":scope > p");
+            return el.children[0]?.querySelector(":scope > h2")&&!el.children[0]?.querySelector(":scope > p")&&el.children[1]?.querySelector(":scope > p");
           }).map(el=>{
             const heading=el.children[0].querySelector(":scope > h2");
             const paragraph=el.children[1].querySelector(":scope > p");
