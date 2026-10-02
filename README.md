@@ -214,6 +214,9 @@ Inspect the latest machine-readable results in `qa/latest-browser-qa.json` and `
 - Automated browser QA has a saved successful report for an earlier tested commit; recheck the current release's test/job conclusions and conduct a physical Android review before claiming full launch verification.
 - Confirm services, service area, contact/pickup logistics, and structured-data claims with the business owner. Do not manufacture eligibility restrictions or guarantees.
 
+
+- Linked text is visibly underlined throughout English and Spanish content with original ACR gold accents, while navigation and buttons retain their own styles. Four **For Professionals** audience cards now link directly to adjuster/carrier details, contractor details, or the relevant Contact page; their service panels have stable anchors. The homepage retains equal entry points for homeowners and professionals rather than moving all four professional cards above them.
+
 ## Maintenance Guidelines
 
 1. Keep English and Spanish copy, navigation, URLs, SEO metadata, and links aligned.
