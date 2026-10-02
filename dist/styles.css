@@ -442,3 +442,7 @@ main .process-page-layout .pro-context-link{margin:15px 0 0}
 /* Service area hero readability: off-white copy on charcoal, gold reserved for accents */
 .service-area-page .page-hero .copy,.service-area-page .page-hero .lead{color:var(--cream);}
 .service-area-page .page-hero .eyebrow{color:var(--gold);}
+
+/* Contact already supplies complete phone and location; keep only navigation/legal footer columns. */
+.contact-footer-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+@media(max-width:700px){.contact-footer-grid{grid-template-columns:1fr;}}
