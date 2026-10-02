@@ -1,8 +1,8 @@
 {
   "workflow": "ACR browser and accessibility QA",
-  "testedCommit": "a38640b1268fbec8afa211bea62d836deddc80ce",
+  "testedCommit": "d779d5f328c25eee77a5f9e90d1768c40cbaceeb",
   "result": "success",
-  "runUrl": "https://github.com/sysopx786/ACR-Website/actions/runs/37046696799",
-  "completedAt": "2026-10-02T18:21:05.642Z",
+  "runUrl": "https://github.com/sysopx786/ACR-Website/actions/runs/37046667467",
+  "completedAt": "2026-10-02T18:21:13.870Z",
   "log": "DESKTOP NAV {\"width\":1440,\"linksDisplay\":\"flex\",\"desktopItems\":4,\"mobileDisplay\":\"none\"}\nACCESSIBILITY FINDINGS []\nPROFESSIONAL QA [{\"language\":\"en\",\"mode\":\"desktop\",\"sections\":2,\"faq\":8,\"slider\":3,\"workflow\":6,\"localLinks\":21,\"overflow\":0,\"accessibility\":[],\"scriptErrors\":[],\"badResponses\":[]},{\"language\":\"en\",\"mode\":\"android\",\"sections\":2,\"faq\":8,\"slider\":3,\"workflow\":6,\"localLinks\":21,\"overflow\":0,\"accessibility\":[],\"scriptErrors\":[],\"badResponses\":[]},{\"language\":\"es\",\"mode\":\"desktop\",\"sections\":2,\"faq\":8,\"slider\":3,\"workflow\":6,\"localLinks\":21,\"overflow\":0,\"accessibility\":[],\"scriptErrors\":[],\"badResponses\":[]},{\"language\":\"es\",\"mode\":\"android\",\"sections\":2,\"faq\":8,\"slider\":3,\"workflow\":6,\"localLinks\":21,\"overflow\":0,\"accessibility\":[],\"scriptErrors\":[],\"badResponses\":[]}]\n{\"desktop\":\"checked\",\"mobile\":\"checked\",\"spanishGallery\":\"checked\",\"languageRouting\":\"checked\",\"assets404s\":0,\"accessibility\":[]}\nBROWSER QA PASS\n"
 }
