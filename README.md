@@ -361,7 +361,7 @@ _Last documentation update: October 2, 2026._
 
 - Promoted **FAQs** and **Reviews** from the About dropdown into **two separate top-level links**. About is now also a direct top-level link; Services, Results and Service Areas retain their dropdowns.
 - English: **FAQs**, **Reviews**; Spanish: **Preguntas frecuentes**, **Reseñas**.
-- FAQs links to `/faq/` (Spanish: `/es/faq/`); Reviews links to the existing `#google-reviews` homepage section in each language rather than generating a duplicate reviews page.
+- FAQs links to `/faq/` (Spanish: `/es/faq/`); Reviews links to the existing homepage `#reviews` section in each language rather than generating a duplicate reviews page. Any example reviews in that section are labeled as fictional previews, not customer endorsements.
 - Shared menu comes from `dist/script.js` and appears in desktop and Android/mobile navigation. The header collapses its expanded links to the accessible mobile menu at widths up to 1500px to prevent desktop text collisions. `#google-reviews` accounts for sticky-header scrolling.
 - All 42 sitemap HTML pages now request versioned shared CSS and JS assets to avoid stale menus.
 - GitHub-source changes were checked; live device testing and deployment validation are separate.
