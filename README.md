@@ -61,7 +61,8 @@ The root paths above are relative to `/ACR-Website/`. The corresponding translat
 English and Spanish desktop and mobile navigation use a common, responsive dropdown structure. The menu includes:
 
 - **Home**
-- **Services:** Fire & Smoke, Water & Flood, What We Restore, For Professionals
+- **Services:** Fire & Smoke, Water & Flood, What We Restore
+- **For Professionals** (top-level menu link on desktop and mobile; **Para profesionales** in Spanish)
 - **Our Process**
 - **Results:** Before & After and six case studies
 - **Service Areas:** Chester County
