@@ -179,6 +179,27 @@ const assert=(condition,message)=>{if(!condition)errors.push(message);};
           hasCss:[...document.querySelectorAll('link[rel="stylesheet"]')].some(el=>el.href.includes("/ACR-Website/styles.css")),
           largestSectionPadding:Math.max(0,...sections.map(el=>Math.max(parseFloat(getComputedStyle(el).paddingTop)||0,parseFloat(getComputedStyle(el).paddingBottom)||0))),
           duplicateHeroBrand:!!main?.querySelector(".hero .eyebrow, .pro-redesign-hero .eyebrow")?.textContent.trim().match(/^American Clothing Restoration$/i),
+          processLayout:(()=>{
+            const section=main?.querySelector(".process-page-layout");
+            if(!section)return null;
+            const steps=[...section.querySelectorAll(".step")];
+            const image=section.querySelector(".rich-image");
+            const content=section.querySelector(".process-page-content");
+            return {
+              stepCount:steps.length,
+              rows:steps.map((step,index)=>{
+                const title=step.querySelector("h3"),text=step.querySelector("p"),next=steps[index+1];
+                return {
+                  column:getComputedStyle(step).gridTemplateColumns,
+                  padding:parseFloat(getComputedStyle(step).paddingTop),
+                  headingToText:Math.round(text.getBoundingClientRect().top-title.getBoundingClientRect().bottom),
+                  betweenSteps:next?Math.round(next.getBoundingClientRect().top-step.getBoundingClientRect().bottom):null
+                };
+              }),
+              imageBelowContent: image.getBoundingClientRect().top>=content.getBoundingClientRect().bottom-1,
+              imageHeight:Math.round(image.getBoundingClientRect().height)
+            };
+          })(),
           textOnlySplitGaps:[...document.querySelectorAll("main > section.section.split")].filter(el=>{
             return el.children[0]?.querySelector(":scope > h2")&&!el.children[0]?.querySelector(":scope > p")&&el.children[1]?.querySelector(":scope > p");
           }).map(el=>{
@@ -202,6 +223,18 @@ const assert=(condition,message)=>{if(!condition)errors.push(message);};
       if(["fire-smoke-damage-clothing-restoration/index.html","es/fire-smoke-damage-clothing-restoration/index.html","water-flood-damage-textile-restoration/index.html","es/water-flood-damage-textile-restoration/index.html"].includes(relative)){
         console.log("TEXT SPACING EXAMPLE "+JSON.stringify({route:relative,gaps:metric.textOnlySplitGaps}));
         await auditPage.screenshot({path:path.join(screenshots,"spacing-"+relative.replace(/[\\/.]/g,"-")+".png"),fullPage:true});
+      }
+      if(relative.includes("our-process")){
+        assert(metric.processLayout?.stepCount===6,
+          "process: expected 6 steps on "+relative+": "+JSON.stringify(metric.processLayout));
+        assert(metric.processLayout?.rows.every(row=>row.padding<=14&&row.headingToText<=12&&(row.betweenSteps===null||row.betweenSteps<=2)),
+          "process: excessive internal spacing on "+relative+": "+JSON.stringify(metric.processLayout?.rows));
+        assert(metric.processLayout?.imageBelowContent,
+          "process: illustration should follow steps on mobile "+relative);
+        assert(metric.processLayout?.imageHeight<=205,
+          "process: illustration too tall on mobile "+relative);
+        console.log("PROCESS PAGE SPACING "+JSON.stringify({route:relative,process:metric.processLayout}));
+        await auditPage.screenshot({path:path.join(screenshots,"process-"+relative.replace(/[\\/.]/g,"-")+".png"),fullPage:true});
       }
       spacingResults.push({route:relative,...metric});
     }
