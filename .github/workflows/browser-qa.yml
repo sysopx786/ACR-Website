@@ -9,10 +9,13 @@ on:
       - dist/script.js
       - dist/index.html
       - dist/es/results/index.html
+      - dist/results/index.html
+      - dist/faq/index.html
+      - dist/es/faq/index.html
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   browser-smoke:
@@ -27,7 +30,43 @@ jobs:
           npm install --no-save --no-package-lock playwright axe-core
           npx playwright install --with-deps chromium
       - name: Test navigation, mobile, Spanish gallery and accessibility
-        run: node scripts/browser-qa.cjs
+        id: browser_tests
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -o pipefail
+          node scripts/browser-qa.cjs 2>&1 | tee browser-qa-output.log
+      - name: Store readable browser QA result
+        if: always()
+        env:
+          BROWSER_OUTCOME: ${{ steps.browser_tests.outcome }}
+        run: |
+          mkdir -p qa
+          node - <<'NODE'
+          const fs=require('fs');
+          const log=fs.existsSync('browser-qa-output.log')?fs.readFileSync('browser-qa-output.log','utf8'):'Test did not start (check dependency/setup steps).';
+          fs.writeFileSync('qa/latest-browser-qa.json',JSON.stringify({
+            workflow:'ACR browser and accessibility QA',
+            testedCommit:process.env.GITHUB_SHA,
+            result:process.env.BROWSER_OUTCOME,
+            runUrl:'https://github.com/'+process.env.GITHUB_REPOSITORY+'/actions/runs/'+process.env.GITHUB_RUN_ID,
+            completedAt:new Date().toISOString(),
+            log:log.slice(-25000)
+          },null,2)+'\\n');
+          NODE
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git checkout main
+          git pull --ff-only origin main
+          git add qa/latest-browser-qa.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Record latest ACR browser QA results [skip ci]"
+            git push origin HEAD:main
+          fi
+      - name: Fail when browser testing fails
+        if: steps.browser_tests.outcome != 'success'
+        run: exit 1
       - name: Save browser screenshots
         uses: actions/upload-artifact@v4
         if: always()
