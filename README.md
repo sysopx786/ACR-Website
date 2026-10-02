@@ -74,7 +74,8 @@ Navigation links are built by `dist/script.js` for desktop and mobile. `dist/sty
 
 - Homepage includes key service information, before-and-after previews, restoration guidance, reviews, six selected FAQ answers, and a link to Chester County information.
 - The FAQ page groups **20 questions** by subject. English and Spanish answers must stay aligned.
-- Results and six case studies display **original ACR job photographs**. Maintain the correct damaged **Before** and restored **After** labels. Do not misidentify unrelated images as ACR work.
+- English and Spanish Results galleries each display the **same 10 original ACR before-and-after job pairs**. Maintain the correct damaged **Before** and restored **After** labels. Six bilingual case studies reuse appropriate original images; do not misidentify illustrative images as ACR work.
+- Original job photographs are separate media assets in `dist/assets/original-jobs/`, rather than base64 images embedded in HTML. Keep below-the-fold image loading lazy where appropriate, and preserve slider accessibility. This reduces HTML document size but does **not** by itself verify live performance scores.
 - Decorative or illustrative imagery elsewhere must not be presented as documented customer work.
 - Reviews, ratings, and business claims require source verification before being presented as verified.
 - The Chester County page is informational, not a representation of a separate branch location.
@@ -104,6 +105,7 @@ The site includes page titles and descriptions, canonical links, English/Spanish
 - Verify ownership with the **actual** Google Search Console token or HTML file.
 - Check indexing for Home, Fire, Water, Results, FAQ, Chester County, and all six case studies.
 - Review indexing, impressions, clicks, and queries over time. Deployment does not establish search ranking or indexing.
+- **Pending:** Google Search Console account authorization and property ownership verification are required before sitemap submission and indexing/performance inspection can be confirmed.
 - FAQ structured data is not a guarantee of FAQ rich results.
 - Do not create unverified town-specific service claims, ratings, guarantees, insurance partnerships, certifications, or turnaround promises.
 
@@ -124,6 +126,12 @@ node scripts/check-site.cjs
 ```
 
 Review deployment and browser QA status in GitHub Actions after updates. Do not describe a push as a successfully published live site until GitHub Pages reports a successful deployment.
+
+## Deferred Audit Items
+
+- **Customer reviews and aggregate-rating markup (audit item 1)** are deliberately **deferred** for business-owner verification. Do not modify them as part of audit items 2–7 without a separate decision.
+- Browser QA still requires a confirmed successful run and real-device review; do not state those were completed unless supported by results.
+- Confirm services, service area, contact/pickup logistics, and structured-data claims with the business owner. Do not manufacture eligibility restrictions or guarantees.
 
 ## Maintenance Guidelines
 
