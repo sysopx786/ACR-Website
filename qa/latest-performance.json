@@ -1,11 +1,153 @@
 {
-  "testedCommit": "4db536dc0342743f071b46267ec58e69e17ae386",
-  "runUrl": "https://github.com/sysopx786/ACR-Website/actions/runs/37033262758",
-  "measuredAt": "2026-10-02T16:23:17.511Z",
-  "mobileExit": "not run",
-  "desktopExit": "not run",
-  "mobile": null,
-  "desktop": null,
+  "testedCommit": "51211c78a4ab4d54a0e2993b848fedca4a6ea258",
+  "runUrl": "https://github.com/sysopx786/ACR-Website/actions/runs/37033735369",
+  "measuredAt": "2026-10-02T16:25:26.638Z",
+  "mobileExit": "0",
+  "desktopExit": "0",
+  "mobile": {
+    "testURL": "https://sysopx786.github.io/ACR-Website/",
+    "fetchTime": "2026-10-02T16:25:05.510Z",
+    "scores": {
+      "performance": 72,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": {
+        "value": 2690.826,
+        "display": "2.7 s"
+      },
+      "largest-contentful-paint": {
+        "value": 5135.293,
+        "display": "5.1 s"
+      },
+      "speed-index": {
+        "value": 3471.3530020464377,
+        "display": "3.5 s"
+      },
+      "total-blocking-time": {
+        "value": 102,
+        "display": "100 ms"
+      },
+      "cumulative-layout-shift": {
+        "value": 0.1114619394334431,
+        "display": "0.111"
+      },
+      "interactive": {
+        "value": 5256.0178,
+        "display": "5.3 s"
+      }
+    },
+    "warnings": [],
+    "diagnostics": {
+      "largest-contentful-paint-element": null,
+      "lcp-breakdown-insight": {
+        "score": 1,
+        "detail": "[{\"type\":\"table\",\"headings\":[{\"key\":\"label\",\"valueType\":\"text\",\"label\":\"Subpart\"},{\"key\":\"duration\",\"valueType\":\"ms\",\"label\":\"Duration\"}],\"items\":[{\"subpart\":\"timeToFirstByte\",\"label\":\"Time to first byte\",\"duration\":118.471},{\"subpart\":\"elementRenderDelay\",\"label\":\"Element render delay\",\"duration\":1175.019}]},{\"type\":\"node\",\"lhId\":\"page-2-H1\",\"path\":\"1,HTML,1,BODY,2,MAIN,0,SECTION,0,DIV,1,H1\",\"selector\":\"main#main > section.hero > div > h1.h1\",\"boundingRect\":{\"top\":166,\"bottom\":582,\"left\":20,\"right\":392,\"width\":372,\"height\":416},\"snippet\":\"<h1 class=\\\"h1\\\">\",\"nodeLabel\":\"Fire, Smoke & Water Damage Clothing Restoration in Pennsylvania\"}]"
+      },
+      "lcp-discovery-insight": {
+        "score": null,
+        "detail": "[]"
+      },
+      "render-blocking-resources": null,
+      "image-delivery-insight": {
+        "score": 0,
+        "displayValue": "Est savings of 69 KiB",
+        "detail": "[{\"node\":{\"type\":\"node\",\"lhId\":\"page-0-IMG\",\"path\":\"1,HTML,1,BODY,2,MAIN,2,SECTION,3,ARTICLE,1,DIV,1,IMG\",\"selector\":\"section#before-after > article.comparison-pair > div.ba-slider > img.ba-before\",\"boundingRect\":{\"top\":2529,\"bottom\":2808,\"left\":20,\"right\":392,\"width\":372,\"height\":279},\"snippet\":\"<img class=\\\"ba-before\\\" src=\\\"/ACR-Website/assets/original-jobs/firefighter-turnout-gear-before.jpg\\\" alt=\\\"Firefighter turnout coat and pants with heavy soot and residue before text…\\\" decoding=\\\"async\\\" loading=\\\"lazy\\\" style=\\\"clip-path: inset(0px 50% 0px 0px);\\\">\",\"nodeLabel\":\"Firefighter turnout coat and pants with heavy soot and residue before textile r…\"},\"url\":\"https://sysopx786.github.io/ACR-Website/assets/original-jobs/firefighter-turnout-gear-before.jpg\",\"totalBytes\":65834,\"wastedBytes\":31694,\"subItems\":{\"type\":\"subitems\",\"items\":[{\"reason\":\"This image file is larger than it needs to be (900x678) for its displayed dimensions (648x488). Use responsive images to reduce the image download size.\",\"wastedBytes\":31694}]}},{\"node\":{\"type\":\"node\",\"lhId\":\"page-1-IMG\",\"path\":\"1,HTML,1,BODY,2,MAIN,2,SECTION,3,ARTICLE,1,DIV,0,IMG\",\"selector\":\"section#before-after > article.comparison-pair > div.ba-slider > img.ba-after\",\"boundingRect\":{\"top\":2529,\"bottom\":2808,\"left\":20,\"right\":392,\"width\":372,\"height\":279},\"snippet\":\"<img class=\\\"ba-after\\\" src=\\\"/ACR-Website/assets/original-jobs/firefighter-turnout-gear-after.jpg\\\" alt=\\\"Firefighter turnout coat and pants after restoration\\\" decoding=\\\"async\\\" loading=\\\"lazy\\\">\",\"nodeLabel\":\"Firefighter turnout coat and pants after restoration\"},\"url\":\"https://sysopx786.github.io/ACR-Website/assets/original-jobs/firefighter-turnout-gear-after.jpg\",\"totalBytes\":50247,\"wastedBytes\":24190,\"subItems\":{\"type\":\"subitems\",\"items\":[{\"reason\":\"This image file is larger than it needs to be (900x678) for its displayed dimensions (648x488). Use responsive images to reduce the image download size.\",\"wastedBytes\":24190}]}},{\"url\":\"https://sysopx786.github.io/ACR-Website/assets/acr-hero-facility.jpg\",\"totalBytes\":277450,\"wastedBytes\":15225,\"subItems\":{\"type\":\"subitems\",\"items\":[{\"reason\":\"Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size.\",\"wastedBytes\":15225}]}}]"
+      },
+      "font-display-insight": {
+        "score": 1,
+        "detail": "[]"
+      },
+      "mainthread-work-breakdown": {
+        "score": 1,
+        "displayValue": "1.6 s",
+        "detail": "[{\"group\":\"other\",\"groupLabel\":\"Other\",\"duration\":720.0400000000013},{\"group\":\"styleLayout\",\"groupLabel\":\"Style & Layout\",\"duration\":538.3399999999999},{\"group\":\"paintCompositeRender\",\"groupLabel\":\"Rendering\",\"duration\":251.60000000000005},{\"group\":\"scriptEvaluation\",\"groupLabel\":\"Script Evaluation\",\"duration\":104.40400000000007}]"
+      },
+      "total-byte-weight": {
+        "score": 1,
+        "displayValue": "Total size was 968 KiB",
+        "detail": "[{\"url\":\"https://images.unsplash.com/photo-1523381294911-8d3cead13475?auto=format&fit=crop&w=2200&q=82\",\"totalBytes\":310365},{\"url\":\"https://sysopx786.github.io/ACR-Website/assets/acr-hero-facility.jpg\",\"totalBytes\":277804},{\"url\":\"https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1000&q=80\",\"totalBytes\":101637},{\"url\":\"https://sysopx786.github.io/ACR-Website/assets/original-jobs/firefighter-turnout-gear-before.jpg\",\"totalBytes\":66147}]"
+      },
+      "network-requests": {
+        "score": 1,
+        "detail": "[{\"url\":\"https://sysopx786.github.io/ACR-Website/\",\"sessionTargetType\":\"page\",\"protocol\":\"h2\",\"cache\":\"none\",\"rendererStartTime\":0,\"networkRequestTime\":10.377000000000407,\"networkEndTime\":119.4739999999947,\"finished\":true,\"transferSize\":9610,\"resourceSize\":36573,\"statusCode\":200,\"mimeType\":\"text/html\",\"resourceType\":\"Document\",\"priority\":\"VeryHigh\",\"experimentalFromMainFrame\":true,\"entity\":\"GitHub\"},{\"url\":\"https://sysopx786.github.io/ACR-Website/assets/acr-hero-facility.jpg\",\"sessionTargetType\":\"page\",\"protocol\":\"h2\",\"cache\":\"none\",\"rendererStartTime\":155.46600000000035,\"networkRequestTime\":160.59300000000076,\"networkEndTime\":291.3349999999991,\"finished\":true,\"transferSize\":277804,\"resourceSize\":277450,\"statusCode\":200,\"mimeType\":\"image/jpeg\",\"resourceType\":\"Image\",\"priority\":\"High\",\"isLinkPreload\":true,\"experimentalFromMainFrame\":true,\"entity\":\"GitHub\"},{\"url\":\"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap\",\"sessionTargetType\":\"page\",\"protocol\":\"h2\",\"cache\":\"none\",\"rendererStartTime\":160.1530000000057,\"networkRequestTime\":160.80799999999726,\"networkEndTime\":229.95700000000215,\"finished\":true,\"transferSize\":1271,\"resourceSize\":12650,\"statusCode\":200,\"mimeType\":\"text/css\",\"resourceType\":\"Stylesheet\",\"priority\":\"VeryHigh\",\"experimentalFromMainFrame\":true,\"entity\":\"Google Fonts\"},{\"url\":\"https://sysopx786.github.io/ACR-Website/styles.css\",\"sessionTargetType\":\"page\",\"protocol\":\"h2\",\"cache\":\"none\",\"rendererStartTime\":160.19000000000233,\"networkRequestTime\":163.8619999999937,\"networkEndTime\":227.81999999999243,\"finished\":true,\"transferSize\":6269,\"resourceSize\":24569,\"statusCode\":200,\"mimeType\":\"text/css\",\"resourceType\":\"Stylesheet\",\"priority\":\"VeryHigh\",\"experimentalFromMainFrame\":true,\"entity\":\"GitHub\"}]"
+      }
+    }
+  },
+  "desktop": {
+    "testURL": "https://sysopx786.github.io/ACR-Website/",
+    "fetchTime": "2026-10-02T16:25:17.879Z",
+    "scores": {
+      "performance": 98,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": {
+        "value": 792.9560000000001,
+        "display": "0.8 s"
+      },
+      "largest-contentful-paint": {
+        "value": 1077.4725,
+        "display": "1.1 s"
+      },
+      "speed-index": {
+        "value": 792.9560000000001,
+        "display": "0.8 s"
+      },
+      "total-blocking-time": {
+        "value": 0,
+        "display": "0 ms"
+      },
+      "cumulative-layout-shift": {
+        "value": 0.007452384517858533,
+        "display": "0.007"
+      },
+      "interactive": {
+        "value": 1095.4922500000002,
+        "display": "1.1 s"
+      }
+    },
+    "warnings": [],
+    "diagnostics": {
+      "largest-contentful-paint-element": null,
+      "lcp-breakdown-insight": {
+        "score": 1,
+        "detail": "[{\"type\":\"table\",\"headings\":[{\"key\":\"label\",\"valueType\":\"text\",\"label\":\"Subpart\"},{\"key\":\"duration\",\"valueType\":\"ms\",\"label\":\"Duration\"}],\"items\":[{\"subpart\":\"timeToFirstByte\",\"label\":\"Time to first byte\",\"duration\":41.747},{\"subpart\":\"elementRenderDelay\",\"label\":\"Element render delay\",\"duration\":182.108}]},{\"type\":\"node\",\"lhId\":\"page-2-H1\",\"path\":\"1,HTML,1,BODY,2,MAIN,0,SECTION,0,DIV,1,H1\",\"selector\":\"main#main > section.hero > div > h1.h1\",\"boundingRect\":{\"top\":188,\"bottom\":744,\"left\":95,\"right\":995,\"width\":900,\"height\":556},\"snippet\":\"<h1 class=\\\"h1\\\">\",\"nodeLabel\":\"Fire, Smoke & Water Damage Clothing Restoration in Pennsylvania\"}]"
+      },
+      "lcp-discovery-insight": {
+        "score": null,
+        "detail": "[]"
+      },
+      "render-blocking-resources": null,
+      "image-delivery-insight": {
+        "score": 0,
+        "displayValue": "Est savings of 49 KiB",
+        "detail": "[{\"node\":{\"type\":\"node\",\"lhId\":\"page-0-IMG\",\"path\":\"1,HTML,1,BODY,2,MAIN,2,SECTION,3,ARTICLE,1,DIV,1,IMG\",\"selector\":\"section#before-after > article.comparison-pair > div.ba-slider > img.ba-before\",\"boundingRect\":{\"top\":2519,\"bottom\":3087,\"left\":483,\"right\":1241,\"width\":758,\"height\":569},\"snippet\":\"<img class=\\\"ba-before\\\" src=\\\"/ACR-Website/assets/original-jobs/firefighter-turnout-gear-before.jpg\\\" alt=\\\"Firefighter turnout coat and pants with heavy soot and residue before text…\\\" decoding=\\\"async\\\" loading=\\\"lazy\\\" style=\\\"clip-path: inset(0px 50% 0px 0px);\\\">\",\"nodeLabel\":\"Firefighter turnout coat and pants with heavy soot and residue before textile r…\"},\"url\":\"https://sysopx786.github.io/ACR-Website/assets/original-jobs/firefighter-turnout-gear-before.jpg\",\"totalBytes\":65834,\"wastedBytes\":19548,\"subItems\":{\"type\":\"subitems\",\"items\":[{\"reason\":\"This image file is larger than it needs to be (900x678) for its displayed dimensions (755x569). Use responsive images to reduce the image download size.\",\"wastedBytes\":19548}]}},{\"url\":\"https://sysopx786.github.io/ACR-Website/assets/acr-hero-facility.jpg\",\"totalBytes\":277450,\"wastedBytes\":15225,\"subItems\":{\"type\":\"subitems\",\"items\":[{\"reason\":\"Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size.\",\"wastedBytes\":15225}]}},{\"node\":{\"type\":\"node\",\"lhId\":\"page-1-IMG\",\"path\":\"1,HTML,1,BODY,2,MAIN,2,SECTION,3,ARTICLE,1,DIV,0,IMG\",\"selector\":\"section#before-after > article.comparison-pair > div.ba-slider > img.ba-after\",\"boundingRect\":{\"top\":2519,\"bottom\":3087,\"left\":483,\"right\":1241,\"width\":758,\"height\":569},\"snippet\":\"<img class=\\\"ba-after\\\" src=\\\"/ACR-Website/assets/original-jobs/firefighter-turnout-gear-after.jpg\\\" alt=\\\"Firefighter turnout coat and pants after restoration\\\" decoding=\\\"async\\\" loading=\\\"lazy\\\">\",\"nodeLabel\":\"Firefighter turnout coat and pants after restoration\"},\"url\":\"https://sysopx786.github.io/ACR-Website/assets/original-jobs/firefighter-turnout-gear-after.jpg\",\"totalBytes\":50247,\"wastedBytes\":14920,\"subItems\":{\"type\":\"subitems\",\"items\":[{\"reason\":\"This image file is larger than it needs to be (900x678) for its displayed dimensions (755x569). Use responsive images to reduce the image download size.\",\"wastedBytes\":14920}]}}]"
+      },
+      "font-display-insight": {
+        "score": 1,
+        "detail": "[]"
+      },
+      "mainthread-work-breakdown": {
+        "score": 1,
+        "displayValue": "0.1 s",
+        "detail": "[{\"group\":\"styleLayout\",\"groupLabel\":\"Style & Layout\",\"duration\":36.57699999999999},{\"group\":\"other\",\"groupLabel\":\"Other\",\"duration\":27.427000000000003},{\"group\":\"paintCompositeRender\",\"groupLabel\":\"Rendering\",\"duration\":5.042999999999999},{\"group\":\"scriptEvaluation\",\"groupLabel\":\"Script Evaluation\",\"duration\":3.511999999999997}]"
+      },
+      "total-byte-weight": {
+        "score": 1,
+        "displayValue": "Total size was 968 KiB",
+        "detail": "[{\"url\":\"https://images.unsplash.com/photo-1523381294911-8d3cead13475?auto=format&fit=crop&w=2200&q=82\",\"totalBytes\":310365},{\"url\":\"https://sysopx786.github.io/ACR-Website/assets/acr-hero-facility.jpg\",\"totalBytes\":277795},{\"url\":\"https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1000&q=80\",\"totalBytes\":101637},{\"url\":\"https://sysopx786.github.io/ACR-Website/assets/original-jobs/firefighter-turnout-gear-before.jpg\",\"totalBytes\":66177}]"
+      },
+      "network-requests": {
+        "score": 1,
+        "detail": "[{\"url\":\"https://sysopx786.github.io/ACR-Website/\",\"sessionTargetType\":\"page\",\"protocol\":\"h2\",\"cache\":\"none\",\"rendererStartTime\":0,\"networkRequestTime\":0.8119999999980791,\"networkEndTime\":42.47099999999773,\"finished\":true,\"transferSize\":9610,\"resourceSize\":36573,\"statusCode\":200,\"mimeType\":\"text/html\",\"resourceType\":\"Document\",\"priority\":\"VeryHigh\",\"experimentalFromMainFrame\":true,\"entity\":\"GitHub\"},{\"url\":\"https://sysopx786.github.io/ACR-Website/assets/acr-hero-facility.jpg\",\"sessionTargetType\":\"page\",\"protocol\":\"h2\",\"cache\":\"none\",\"rendererStartTime\":45.08999999999651,\"networkRequestTime\":45.84599999999773,\"networkEndTime\":85.32899999999063,\"finished\":true,\"transferSize\":277795,\"resourceSize\":277450,\"statusCode\":200,\"mimeType\":\"image/jpeg\",\"resourceType\":\"Image\",\"priority\":\"High\",\"isLinkPreload\":true,\"experimentalFromMainFrame\":true,\"entity\":\"GitHub\"},{\"url\":\"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap\",\"sessionTargetType\":\"page\",\"protocol\":\"h2\",\"cache\":\"none\",\"rendererStartTime\":45.31999999999243,\"networkRequestTime\":46.02799999999843,\"networkEndTime\":120.21399999999267,\"finished\":true,\"transferSize\":1271,\"resourceSize\":12650,\"statusCode\":200,\"mimeType\":\"text/css\",\"resourceType\":\"Stylesheet\",\"priority\":\"VeryHigh\",\"experimentalFromMainFrame\":true,\"entity\":\"Google Fonts\"},{\"url\":\"https://sysopx786.github.io/ACR-Website/styles.css\",\"sessionTargetType\":\"page\",\"protocol\":\"h2\",\"cache\":\"none\",\"rendererStartTime\":45.387999999991735,\"networkRequestTime\":49.3859999999986,\"networkEndTime\":60.87999999999738,\"finished\":true,\"transferSize\":6267,\"resourceSize\":24569,\"statusCode\":200,\"mimeType\":\"text/css\",\"resourceType\":\"Stylesheet\",\"priority\":\"VeryHigh\",\"experimentalFromMainFrame\":true,\"entity\":\"GitHub\"}]"
+      }
+    }
+  },
   "mobileLog": "",
   "desktopLog": ""
 }
