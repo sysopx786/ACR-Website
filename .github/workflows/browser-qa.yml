@@ -5,6 +5,10 @@ on:
     paths:
       - .github/workflows/browser-qa.yml
       - scripts/browser-qa.cjs
+      - dist/styles.css
+      - dist/script.js
+      - dist/index.html
+      - dist/es/results/index.html
   workflow_dispatch:
 
 permissions:
