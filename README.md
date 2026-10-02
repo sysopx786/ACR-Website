@@ -29,7 +29,7 @@ Keep the business focused on clothing, textiles, and garment care; do not imply 
 
 ## Page Inventory
 
-The sitemap lists **20 English pages and 20 corresponding Spanish pages**. Spanish equivalents use the same path under `/es/`.
+The sitemap lists **21 English pages and 21 corresponding Spanish pages**. Spanish equivalents use the same path under `/es/`.
 
 | Page | English path |
 | --- | --- |
@@ -43,6 +43,7 @@ The sitemap lists **20 English pages and 20 corresponding Spanish pages**. Spani
 | Fire & Smoke Damage | `/fire-smoke-damage-clothing-restoration/` |
 | Water & Flood Damage | `/water-flood-damage-textile-restoration/` |
 | Frequently Asked Questions | `/faq/` |
+| Regional Service Areas | `/service-areas/` |
 | Chester County Information | `/chester-county-clothing-restoration/` |
 | Firefighter Turnout Gear case study | `/case-studies/firefighter-turnout-gear/` |
 | Wedding Gown case study | `/case-studies/wedding-gown/` |
@@ -65,7 +66,7 @@ English and Spanish desktop and mobile navigation use a common, responsive dropd
 - **For Professionals** (top-level menu link on desktop and mobile; **Para profesionales** in Spanish)
 - **Our Process**
 - **Results:** Before & After and six case studies
-- **Service Areas:** Chester County
+- **Service Areas:** Regional Service Areas, Chester County
 - **About:** About ACR, FAQs, Reviews
 - **Contact**
 
@@ -255,6 +256,14 @@ Inspect the latest machine-readable results in `qa/latest-browser-qa.json` and `
 
 
 **Our Process spacing QA — verified:** [Browser and accessibility QA run 37062168079](https://github.com/sysopx786/ACR-Website/actions/runs/37062168079) **passed**. For English, Spanish and the legacy process route at Android 393px width, all six steps measured **11px vertical padding**, **3px title-to-description gaps** and **0px extra gaps between consecutive steps**; the illustration followed the content at **170px height**. The full audit covered 49 routes with no horizontal overflow, broken tested assets, or blocking accessibility issues.
+
+## Approved Service-Area Directory — October 2, 2026
+
+- Added bilingual /service-areas/ and /es/service-areas/ directories and linked them under Service Areas on desktop and mobile.
+- Business owner approved all listed candidate counties/towns for *service inquiries* across PA, MD, DE, NJ, WV, VA and NY, with Washington DC recorded as a boundary-check jurisdiction.
+- The practical **maximum driving estimate is 145 minutes (2 hours 25 minutes)** from 17A East Queen Street, Ephrata, PA 17522. Published times such as 140 or 142 minutes are within this tolerance. This supersedes the earlier 135-minute screening threshold and an incorrect interim 165-minute interpretation.
+- County lists denote inquiry coverage, not proof every address is reachable within 145 minutes; pickup timing and logistics are confirmed address by address. The listed towns have not all been independently timed by a routing engine.
+- Inventory and routing log: research/service-area-135-minute-inventory.md (legacy filename retained). Do not invent additional branches, carrier agreements, or town-specific promises. Maintain English/Spanish parity and hreflang sitemap.
 
 ## Maintenance Guidelines
 
