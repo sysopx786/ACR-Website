@@ -87,7 +87,7 @@ const navEntries=[
   ]),
   navLink(navLabels.about,navRoot+"about/"),
   navLink(navLabels.faq,navRoot+"faq/"),
-  navLink(navLabels.reviews,navRoot+"#google-reviews"),
+  navLink(navLabels.reviews,navRoot+"#reviews"),
   navLink(navLabels.contact,navRoot+"contact/")
 ];
 document.querySelectorAll(".site-header .links,.site-header .mobile-panel").forEach(node=>{
