@@ -30,13 +30,13 @@ jobs:
         shell: bash
         run: |
           for attempt in {1..15}; do
-            if curl --fail --silent --show-error --max-time 15 --output ./latest-homepage.html https://sysopx786.github.io/ACR-Website/ && grep -Fq 'w=1400&q=76' ./latest-homepage.html; then
+            if curl --fail --silent --show-error --max-time 15 --output ./latest-homepage.html https://sysopx786.github.io/ACR-Website/ && grep -Fq 'Rachel M.' ./latest-homepage.html; then
               echo "Updated homepage is live"
               exit 0
             fi
             sleep 10
           done
-          echo "Updated homepage preload not published within 150 seconds" >&2
+          echo "Updated review drafts not visible on published homepage within 150 seconds" >&2
           exit 1
       - name: Measure published homepage on mobile and desktop
         id: audits
