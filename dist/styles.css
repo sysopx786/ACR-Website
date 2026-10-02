@@ -63,3 +63,8 @@ body:not(.page) main{padding-bottom:88px}body:not(.page) .section{padding-top:cl
 }
 @media(min-width:1281px){.site-header .mobile-panel{display:none!important}}
 @media(prefers-reduced-motion:reduce){.site-header .mobile-panel{transition:none}}
+
+/* Maintain the gold identity while meeting text contrast on light surfaces. */
+:root{--gold-on-light:#75531e}
+.section:not(.dark):not(.brand-break) .eyebrow,
+.section:not(.dark):not(.brand-break) .step .num{color:var(--gold-on-light)}
