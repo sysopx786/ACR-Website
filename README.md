@@ -97,6 +97,13 @@ The site was streamlined to limit repetitive contact and promotional material:
 
 Avoid reintroducing multiple phone numbers, maps, contact buttons, or identical promotional blocks in close proximity. A short service-specific action generally works better than repeated generic calls to action.
 
+## Professional SEO Updates — October 2026
+
+- Updated English and Spanish For Professionals page titles, meta descriptions, Open Graph/Twitter metadata, H1 headings, and lead copy for insurance textile restoration, Xactimate-based estimates, and restoration contractor coordination.
+- Added contextual bilingual links between the professional page and Fire & Smoke, Water & Flood, and Our Process pages, without adding repeated Chester County promotions.
+- Existing canonical links, reciprocal `hreflang` links, sitemap entries for both languages, and permissive `robots.txt` were retained. Do not invent named insurer endorsements, coverage approvals, rankings, or preferred-vendor status.
+- Actual Google Search Console indexing and current live deployment/Android browser QA remain independently verifiable; source updates alone cannot prove those external states.
+
 ## SEO and Search Console
 
 The site includes page titles and descriptions, canonical links, English/Spanish `hreflang` references, structured data where appropriate, `robots.txt`, `sitemap.xml`, and contextual internal links.
