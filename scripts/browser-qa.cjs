@@ -68,6 +68,87 @@ const assert=(condition,message)=>{if(!condition)errors.push(message);};
     console.log("ACCESSIBILITY FINDINGS "+JSON.stringify(violations));
     const blocking=violations.filter(v=>v.impact==="critical"||v.impact==="serious");
     assert(blocking.length===0,"axe: serious or critical accessibility violations: "+JSON.stringify(blocking));
+
+    // Dedicated English/Spanish professional pages at desktop and Android-like mobile sizes.
+    const professionalResults=[];
+    for(const language of ["en","es"]){
+      for(const mode of ["desktop","android"]){
+        const isMobile=mode==="android";
+        const context=await browser.newContext({
+          viewport:isMobile?{width:393,height:851}:{width:1440,height:900},
+          deviceScaleFactor:isMobile?2.75:1,
+          isMobile,hasTouch:isMobile,
+          userAgent:isMobile?"Mozilla/5.0 (Linux; Android 15; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36":undefined
+        });
+        const page=await context.newPage(),badResponses=[],scriptErrors=[];
+        page.on("response",r=>{if(r.url().startsWith(base)&&r.status()>=400)badResponses.push(r.status()+" "+r.url());});
+        page.on("pageerror",e=>scriptErrors.push(String(e)));
+        const target=base+(language==="es"?"es/":"")+"for-professionals/";
+        const response=await page.goto(target,{waitUntil:"networkidle"});
+        assert(response.status()===200,language+" "+mode+": page HTTP "+response.status());
+        assert(await page.locator('html').getAttribute("lang")===language,language+" "+mode+": wrong HTML language");
+        assert(await page.locator("main h1").count()===1,language+" "+mode+": expected one H1");
+        assert(await page.locator(".pro-partner-card").count()===2,language+" "+mode+": two partner panels expected");
+        assert(await page.locator(".claims-step").count()===6,language+" "+mode+": six workflow steps expected");
+        assert(await page.locator(".pro-faq-item").count()===8,language+" "+mode+": eight FAQs expected");
+        assert(await page.locator(".pro-faq-group").count()===2,language+" "+mode+": two FAQ categories expected");
+        assert(await page.locator("[data-ba-slider]").count()===3,language+" "+mode+": three proof sliders expected");
+        const navigation=isMobile?page.locator(".mobile-panel"):page.locator(".site-header .links");
+        if(isMobile)await page.locator(".menu-btn").click();
+        assert(await navigation.locator(':scope > a[href$="/for-professionals/"]').count()===1,language+" "+mode+": professional navigation must be top-level");
+        assert(await navigation.locator(".nav-group a[href$='/for-professionals/']").count()===0,language+" "+mode+": professionals still in submenu");
+        if(isMobile){
+          assert(await page.locator(".mobile-panel.open").count()===1,language+" "+mode+": mobile menu did not open");
+          await page.locator(".menu-btn").click();
+        }else{
+          await navigation.locator(".nav-group summary").first().click();
+          assert(await navigation.locator(".nav-group[open]").count()===1,language+" desktop: nav dropdown did not open");
+          await page.keyboard.press("Escape");
+        }
+        const faq=page.locator(".pro-faq-item").first();
+        await faq.locator("summary").focus();
+        await page.keyboard.press("Enter");
+        assert(await faq.evaluate(e=>e.open),language+" "+mode+": FAQ did not open with Enter");
+        await page.keyboard.press("Enter");
+        assert(!(await faq.evaluate(e=>e.open)),language+" "+mode+": FAQ did not close with Enter");
+        const step=page.locator(".claims-step").nth(1);
+        await step.locator("summary").click();
+        assert(await step.locator("details").evaluate(e=>e.open),language+" "+mode+": workflow accordion did not open");
+        const slider=page.locator("[data-ba-slider]").first();
+        await slider.locator("input[type=range]").evaluate(el=>{el.value="75";el.dispatchEvent(new Event("input",{bubbles:true}));});
+        assert(await slider.locator(".ba-line").evaluate(e=>e.style.left)==="75%",language+" "+mode+": slider line not at 75%");
+        assert((await slider.locator(".ba-before").evaluate(e=>e.style.clipPath)).includes("25%"),language+" "+mode+": damaged-before clipping incorrect");
+        await slider.locator("input[type=range]").focus();
+        await page.keyboard.press("ArrowRight");
+        assert(Number(await slider.locator("input[type=range]").inputValue())>75,language+" "+mode+": keyboard slider not responding");
+        const imageState=await page.locator(".pro-proof img").evaluateAll(nodes=>nodes.map(i=>({src:i.getAttribute("src"),loaded:i.complete&&i.naturalWidth>0})));
+        // Force images into view so lazy images are actually requested, then verify.
+        for(const card of await page.locator(".pro-proof-card").all())await card.scrollIntoViewIfNeeded();
+        await page.waitForTimeout(500);
+        const imageLoaded=await page.locator(".pro-proof img").evaluateAll(nodes=>nodes.every(i=>i.complete&&i.naturalWidth>0));
+        assert(imageLoaded,language+" "+mode+": missing before/after image(s) "+JSON.stringify(imageState));
+        const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth);
+        assert(overflow<=2,language+" "+mode+": horizontal overflow "+overflow+"px");
+        const localLinks=await page.locator('a[href^="/ACR-Website/"]').evaluateAll(nodes=>[...new Set(nodes.map(n=>n.getAttribute("href").split("#")[0]).filter(Boolean))]);
+        for(const href of localLinks){
+          const linkResp=await context.request.get("http://127.0.0.1:"+server.address().port+href);
+          assert(linkResp.status()<400,language+" "+mode+": broken link "+href+" ("+linkResp.status()+")");
+        }
+        const localeHref=await page.locator("[data-lang-switch]").getAttribute("href");
+        assert(localeHref==="/ACR-Website/"+(language==="es"?"":"es/")+"for-professionals/",language+" "+mode+": language switch URL wrong "+localeHref);
+        await page.addScriptTag({path:axePath});
+        const accessibility=await page.evaluate(async()=>{const r=await window.axe.run(document,{runOnly:{type:"tag",values:["wcag2a","wcag2aa","wcag21a","wcag21aa"]}});return r.violations.map(v=>({id:v.id,impact:v.impact,targets:v.nodes.slice(0,6).map(n=>n.target)}));});
+        const blockingIssues=accessibility.filter(v=>v.impact==="critical"||v.impact==="serious");
+        assert(blockingIssues.length===0,language+" "+mode+": blocking accessibility issues "+JSON.stringify(blockingIssues));
+        assert(scriptErrors.length===0,language+" "+mode+": JavaScript errors "+JSON.stringify(scriptErrors));
+        assert(badResponses.length===0,language+" "+mode+": HTTP errors "+JSON.stringify(badResponses));
+        await page.screenshot({path:path.join(screenshots,"professionals-"+language+"-"+mode+".png"),fullPage:true});
+        professionalResults.push({language,mode,sections:2,faq:8,slider:3,workflow:6,localLinks:localLinks.length,overflow,accessibility,scriptErrors,badResponses});
+        await context.close();
+      }
+    }
+    console.log("PROFESSIONAL QA "+JSON.stringify(professionalResults));
+
     assert(d404.length===0&&m404.length===0,"Missing local assets: "+JSON.stringify([...d404,...m404]));
     console.log(JSON.stringify({desktop:"checked",mobile:"checked",spanishGallery:"checked",languageRouting:"checked",assets404s:d404.length+m404.length,accessibility:violations}));
   } finally {await browser.close();}
