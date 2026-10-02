@@ -446,3 +446,17 @@ main .process-page-layout .pro-context-link{margin:15px 0 0}
 /* Contact already supplies complete phone and location; keep only navigation/legal footer columns. */
 .contact-footer-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
 @media(max-width:700px){.contact-footer-grid{grid-template-columns:1fr;}}
+
+/* Fixed header clearance: professional hero must start below the fixed navigation.
+   Other page heroes already include their own clearance; do not double-pad them. */
+body.professional-page main { padding-top:92px; }
+body.professional-page main > .pro-redesign-hero { margin-top:12px!important; }
+body.professional-page main [id] { scroll-margin-top:96px; }
+@media(max-width:1280px) {
+  body.professional-page main { padding-top:84px; }
+  body.professional-page main [id] { scroll-margin-top:86px; }
+}
+@media(max-width:600px) {
+  body.professional-page main { padding-top:82px; }
+  body.professional-page main > .pro-redesign-hero { margin-top:10px!important; }
+}
