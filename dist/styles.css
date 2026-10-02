@@ -438,3 +438,7 @@ main .process-page-layout .pro-context-link{margin:15px 0 0}
   main .process-page-layout .step h3{font-size:18px}
   main .process-page-layout .step p{font-size:15px}
 }
+
+/* Service area hero readability: off-white copy on charcoal, gold reserved for accents */
+.service-area-page .page-hero .copy,.service-area-page .page-hero .lead{color:var(--cream);}
+.service-area-page .page-hero .eyebrow{color:var(--gold);}
