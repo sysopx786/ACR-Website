@@ -113,6 +113,7 @@ The site includes page titles and descriptions, canonical links, English/Spanish
 
 ## Professional Claims Workflow — October 2026
 
+- The professional page includes eight specialist FAQs, divided into adjuster/carrier and restoration-contractor topics, as native accessible expandable answers on both English and Spanish routes. The existing 20 consumer FAQs remain on the separate FAQ pages. No referral form was added.
 - The **For Professionals** page now includes separate, concise insurance-carrier/adjuster and contractor panels outlining only confirmed ACR capabilities, plus three original ACR before-and-after comparisons (chef uniforms/aprons, leather jacket, and household textiles/bedding). The image controls support mouse, touch and keyboard via native range inputs.
 - Spanish `es/for-professionals/` contains matching translated content and the same three original job pairs. No professional intake form was added, per project decision. Keep the full Results galleries as the primary source rather than duplicating all 10 jobs here.
 
