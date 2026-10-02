@@ -72,9 +72,9 @@ const navEntries=[
   navGroup(navLabels.services,[
     navLink(navLabels.fire,navRoot+"fire-smoke-damage-clothing-restoration/"),
     navLink(navLabels.water,navRoot+"water-flood-damage-textile-restoration/"),
-    navLink(navLabels.restore,navRoot+"what-we-restore/"),
-    navLink(navLabels.professionals,navRoot+"for-professionals/")
+    navLink(navLabels.restore,navRoot+"what-we-restore/")
   ]),
+  navLink(navLabels.professionals,navRoot+"for-professionals/"),
   navLink(navLabels.process,navRoot+"our-process/"),
   navGroup(navLabels.results,[
     navLink(navLabels.resultOverview,navRoot+"results/"),
