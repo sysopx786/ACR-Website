@@ -48,7 +48,7 @@ body:not(.page) main{padding-bottom:88px}body:not(.page) .section{padding-top:cl
 .site-header .nav-dropdown a:hover,.site-header .nav-dropdown a:focus-visible{background:var(--cream);color:var(--charcoal)}
 .site-header .nav-subheading{display:block;padding:13px 18px 3px;color:var(--muted);font-size:10px;letter-spacing:.13em;font-weight:700;text-transform:uppercase}
 .site-header .nav-group>summary:focus-visible{outline:2px solid var(--gold);outline-offset:5px}
-@media(max-width:1280px){
+@media(max-width:1500px){
  .site-header .links{display:none}
  .site-header .menu-btn{display:block}
  .site-header .mobile-panel{display:block;position:fixed;top:70px;left:0;right:0;max-height:calc(100dvh - 70px);overflow-y:auto;overscroll-behavior:contain;background:var(--off);color:var(--charcoal);padding:14px 22px 95px;transform:translateY(calc(-100% - 80px));transition:transform .25s ease;z-index:35;border-bottom:1px solid var(--line);visibility:hidden}
@@ -61,7 +61,7 @@ body:not(.page) main{padding-bottom:88px}body:not(.page) .section{padding-top:cl
  .site-header .mobile-panel .nav-subheading{padding:13px 6px 3px;font-size:11px}
  .site-header .nav{height:70px;padding:0 18px}
 }
-@media(min-width:1281px){.site-header .mobile-panel{display:none!important}}
+@media(min-width:1501px){.site-header .mobile-panel{display:none!important}}
 @media(prefers-reduced-motion:reduce){.site-header .mobile-panel{transition:none}}
 
 /* Maintain the gold identity while meeting text contrast on light surfaces. */
@@ -460,3 +460,7 @@ body.professional-page main [id] { scroll-margin-top:96px; }
   body.professional-page main { padding-top:82px; }
   body.professional-page main > .pro-redesign-hero { margin-top:10px!important; }
 }
+
+/* Reviews anchor remains on homepage; offset fixed header when using the new top-level menu link. */
+#google-reviews{scroll-margin-top:90px}
+@media(max-width:1500px){#google-reviews{scroll-margin-top:80px}}
