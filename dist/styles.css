@@ -334,3 +334,41 @@ main .home-service-grid article p,
 main .claim-context-acr .claim-context-card p{
   color:#514a40;
 }
+
+/* Text-only editorial sections: fix the actual stacked-column gap.
+   Mobile .split changes to one column; its former two-column gutter plus two
+   independent 30px section paddings were causing the large white bands. */
+main > section.section.split:has(> div:first-child > h2):has(> div:nth-child(2) > p){
+  padding-top:clamp(16px,2.5vw,28px);
+  padding-bottom:clamp(16px,2.5vw,28px);
+}
+main > section.section.split:has(> div:first-child > h2):has(> div:nth-child(2) > p) > div:first-child > h2 {
+  margin-top:0;
+}
+main > section.section.split:has(> div:first-child > h2):has(> div:nth-child(2) > p) > div:nth-child(2) > p {
+  margin-top:0;
+  margin-bottom:0;
+}
+@media(max-width:900px){
+  body:not(.page) main > section.section.split:has(> div:first-child > h2):has(> div:nth-child(2) > p),
+  body.page main > section.section.split:has(> div:first-child > h2):has(> div:nth-child(2) > p),
+  body main > section.section.split:has(> div:first-child > h2):has(> div:nth-child(2) > p){
+    padding-top:10px!important;
+    padding-bottom:10px!important;
+    row-gap:9px!important;
+    align-items:start;
+  }
+  main > section.section.split:has(> div:first-child > h2):has(> div:nth-child(2) > p) > div:first-child > h2{
+    margin:0!important;
+  }
+  main > section.section.split:has(> div:first-child > h2):has(> div:nth-child(2) > p) > div:nth-child(2) > p{
+    margin:0!important;
+  }
+  /* Other ordinary text-only sections get a modest vertical rhythm too;
+     retain larger breathing room around photos, galleries and hero images. */
+  body main > section.section:not(.split):not(.results-section):not(.pro-proof):not(.about-banner-section):not(.legal-copy):not(:has(img)):not(:has(iframe)){
+    padding-top:22px;
+    padding-bottom:22px;
+  }
+  main > section.section:has(> .acr-faq-group){padding-top:23px;padding-bottom:23px}
+}
