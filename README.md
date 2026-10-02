@@ -113,6 +113,9 @@ The site includes page titles and descriptions, canonical links, English/Spanish
 
 ## Professional Claims Workflow — October 2026
 
+- Browser QA now explicitly exercises **both professional pages** at 1440px desktop and Android-style 393px mobile width: top-level navigation, dropdowns, six workflow steps, eight FAQs with keyboard toggling, three slider interactions including keyboard, bilingual routing, local link HTTP checks, original image loading, overflow, JavaScript errors, WCAG axe serious/critical findings, and screenshots. The workflow triggers when either professional page changes. A report for an earlier commit is not proof that the latest professional pages passed; check `qa/latest-browser-qa.json` and the associated Actions job conclusion before stating success.
+
+
 - The professional page includes eight specialist FAQs, divided into adjuster/carrier and restoration-contractor topics, as native accessible expandable answers on both English and Spanish routes. The existing 20 consumer FAQs remain on the separate FAQ pages. No referral form was added.
 - The **For Professionals** page now includes separate, concise insurance-carrier/adjuster and contractor panels outlining only confirmed ACR capabilities, plus three original ACR before-and-after comparisons (chef uniforms/aprons, leather jacket, and household textiles/bedding). The image controls support mouse, touch and keyboard via native range inputs.
 - Spanish `es/for-professionals/` contains matching translated content and the same three original job pairs. No professional intake form was added, per project decision. Keep the full Results galleries as the primary source rather than duplicating all 10 jobs here.
