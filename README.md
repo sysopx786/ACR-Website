@@ -114,10 +114,11 @@ The site includes page titles and descriptions, canonical links, English/Spanish
 - Website files: `dist/`
 - GitHub Pages workflow: `.github/workflows/pages.yml`
 - Browser QA workflow: `.github/workflows/browser-qa.yml`
+- Live mobile/desktop Lighthouse workflow: `.github/workflows/performance-qa.yml`
 - Static-site validator: `scripts/check-site.cjs`
 - ChatGPT Sites configuration: `.openai/hosting.json`
 
-The Pages workflow runs on pushes to `main`, checks site content and links, and publishes `dist/` to GitHub Pages. The independent browser QA workflow includes desktop/mobile checks and screenshots.
+The Pages workflow runs on pushes to `main`, checks site content and links, and publishes `dist/` to GitHub Pages. The independent browser QA workflow includes desktop/mobile checks and screenshots. The repeatable Lighthouse workflow measures the published homepage on simulated mobile and desktop network profiles; it is not a substitute for real-user Core Web Vitals.
 
 Local site check:
 
@@ -125,7 +126,7 @@ Local site check:
 node scripts/check-site.cjs
 ```
 
-Review deployment and browser QA status in GitHub Actions after updates. Do not describe a push as a successfully published live site until GitHub Pages reports a successful deployment.
+Inspect the latest machine-readable results in `qa/latest-browser-qa.json` and `qa/latest-performance.json` along with the corresponding **job conclusion** in GitHub Actions. Generated results can be saved even if a workflow is later cancelled or fails, so confirm both. Performance scores are single laboratory runs and may vary. Real-device and real-user performance checks remain necessary. Review deployment and browser QA status in GitHub Actions after updates. Do not describe a push as a successfully published live site until GitHub Pages reports a successful deployment.
 
 ## Deferred Audit Items
 
