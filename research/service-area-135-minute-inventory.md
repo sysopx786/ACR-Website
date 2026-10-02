@@ -1,95 +1,95 @@
-# ACR 135-minute service area candidate inventory
+# ACR approved regional service-area inventory (up to 165 minutes)
 
-Origin: 17A East Queen Street, Ephrata PA 17522. Limit: 135-minute one-way road travel. Research date: 2026-10-02.
+Origin: 17A East Queen Street, Ephrata PA 17522. Planning limit: 165-minute (2 h 45 min) one-way road travel, interpreted from the latest message admitting 140–142-minute routes. Research date: 2026-10-02.
 
-**NOT VERIFIED COVERAGE.** This is a broad route-testing inventory. Several outer towns are likely outside the cap; counties must never be advertised in full based on a reachable town. Out-of-state services also require confirmation from Kendall.
+**BUSINESS APPROVAL:** All listed counties and towns have been approved by the website owner for inclusion as inquiry areas. This approval is not a measurement of drive time, a guarantee of pickup, or proof every address in the county is within 165 minutes. Keep address-specific scheduling language.
 
 | State | County or jurisdiction | Towns needing individual route checks | Status |
 |---|---|---|---|
-| PA | Lancaster | Ephrata, Lancaster, Lititz, Manheim, Mount Joy, Quarryville, Columbia | pending |
-| PA | Berks | Reading, Wyomissing, Hamburg, Kutztown, Boyertown, Birdsboro | pending |
-| PA | Chester | West Chester, Exton, Phoenixville, Downingtown, Coatesville, Oxford, Kennett Square, Malvern | pending |
-| PA | Lebanon | Lebanon, Palmyra, Annville, Myerstown | pending |
-| PA | York | York, Hanover, Dallastown, Red Lion, New Freedom | pending |
-| PA | Dauphin | Harrisburg, Hershey, Middletown, Linglestown | pending |
-| PA | Montgomery | Pottstown, King of Prussia, Norristown, Lansdale, Ambler, Willow Grove | pending |
-| PA | Delaware | Media, Chester, Springfield, Newtown Square, Upper Darby | pending |
-| PA | Philadelphia | Philadelphia, Manayunk, Roxborough | pending |
-| PA | Bucks | Quakertown, Doylestown, Newtown, New Hope, Levittown | pending |
-| PA | Lehigh | Allentown, Emmaus, Macungie, Whitehall | pending |
-| PA | Northampton | Bethlehem, Easton, Nazareth, Bangor | pending |
-| PA | Cumberland | Carlisle, Camp Hill, Mechanicsburg, Shippensburg | pending |
-| PA | Adams | Gettysburg, New Oxford, Littlestown | pending |
-| PA | Schuylkill | Pottsville, Tamaqua, Schuylkill Haven, Frackville | pending |
-| PA | Perry | Duncannon, Newport, New Bloomfield | pending |
-| PA | Franklin | Chambersburg, Waynesboro, Greencastle | pending |
-| PA | Juniata | Mifflintown, Port Royal | pending |
-| PA | Mifflin | Lewistown, McVeytown | pending |
-| PA | Snyder | Selinsgrove, Middleburg | pending |
-| PA | Union | Lewisburg, Mifflinburg | pending |
-| PA | Northumberland | Sunbury, Shamokin, Milton | pending |
-| PA | Montour | Danville | pending |
-| PA | Columbia | Bloomsburg, Berwick | pending |
-| PA | Carbon | Lehighton, Jim Thorpe | pending |
-| PA | Monroe | Stroudsburg, Mount Pocono, Tobyhanna | pending |
-| PA | Luzerne | Hazleton, Wilkes-Barre, Pittston | pending |
-| PA | Lackawanna | Scranton, Moosic | pending |
-| PA | Wyoming | Tunkhannock | pending |
-| PA | Lycoming | Muncy, Williamsport | pending |
-| PA | Centre | Bellefonte, State College | pending |
-| PA | Huntingdon | Mount Union, Huntingdon | pending |
-| PA | Fulton | McConnellsburg | pending |
-| PA | Bradford | Wyalusing, Towanda | pending |
-| PA | Sullivan | Dushore | pending |
-| PA | Clinton | Lock Haven | pending |
-| PA | Bedford | Breezewood, Bedford | pending |
-| MD | Cecil | Elkton, North East, Perryville, Rising Sun | pending |
-| MD | Harford | Aberdeen, Bel Air, Havre de Grace | pending |
-| MD | Carroll | Westminster, Manchester, Hampstead | pending |
-| MD | Baltimore County | Towson, Cockeysville, Hunt Valley, White Marsh | pending |
-| MD | Baltimore City | Baltimore | pending |
-| MD | Howard | Ellicott City, Columbia | pending |
-| MD | Anne Arundel | Odenton, Glen Burnie, Annapolis | pending |
-| MD | Montgomery | Colesville, Rockville, Silver Spring | pending |
-| MD | Prince George's | Laurel, Beltsville, Bowie | pending |
-| MD | Frederick | Emmitsburg, Thurmont, Frederick | pending |
-| MD | Washington | Smithsburg, Hagerstown | pending |
-| MD | Kent | Galena, Chestertown | pending |
-| MD | Queen Anne's | Church Hill, Centreville | pending |
-| DE | New Castle | Wilmington, Newark, Claymont, Hockessin, Middletown | pending |
-| DE | Kent | Smyrna, Clayton, Dover | pending |
-| NJ | Camden | Camden, Cherry Hill, Voorhees | pending |
-| NJ | Gloucester | Deptford, Glassboro, Woodbury | pending |
-| NJ | Burlington | Moorestown, Mount Laurel, Mount Holly, Bordentown | pending |
-| NJ | Salem | Pennsville, Woodstown, Salem | pending |
-| NJ | Mercer | Trenton, Princeton, Hamilton | pending |
-| NJ | Hunterdon | Lambertville, Flemington, Clinton | pending |
-| NJ | Warren | Phillipsburg, Hackettstown | pending |
-| NJ | Somerset | Somerville, Bridgewater | pending |
-| NJ | Middlesex | New Brunswick, North Brunswick, Edison | pending |
-| NJ | Cumberland | Bridgeton, Vineland, Millville | pending |
-| NJ | Atlantic | Hammonton, Mays Landing | pending |
-| NJ | Ocean | Lakewood, Jackson, Toms River | pending |
-| NJ | Monmouth | Freehold, Howell | pending |
-| NJ | Morris | Netcong, Chester | pending |
-| NJ | Sussex | Andover, Sparta | pending |
-| WV | Berkeley | Martinsburg, Falling Waters, Inwood | pending |
-| WV | Jefferson | Charles Town, Harpers Ferry, Shepherdstown | pending |
-| WV | Morgan | Berkeley Springs | pending |
-| VA | Loudoun | Lovettsville, Leesburg | pending |
-| VA | Clarke | Berryville | pending |
-| VA | Frederick | Winchester | pending |
-| NY | Orange | Port Jervis, Middletown | pending |
-| NY | Sullivan | Barryville | pending |
+| PA | Lancaster | Ephrata, Lancaster, Lititz, Manheim, Mount Joy, Quarryville, Columbia | approved inquiry area; timing varies |
+| PA | Berks | Reading, Wyomissing, Hamburg, Kutztown, Boyertown, Birdsboro | approved inquiry area; timing varies |
+| PA | Chester | West Chester, Exton, Phoenixville, Downingtown, Coatesville, Oxford, Kennett Square, Malvern | approved inquiry area; timing varies |
+| PA | Lebanon | Lebanon, Palmyra, Annville, Myerstown | approved inquiry area; timing varies |
+| PA | York | York, Hanover, Dallastown, Red Lion, New Freedom | approved inquiry area; timing varies |
+| PA | Dauphin | Harrisburg, Hershey, Middletown, Linglestown | approved inquiry area; timing varies |
+| PA | Montgomery | Pottstown, King of Prussia, Norristown, Lansdale, Ambler, Willow Grove | approved inquiry area; timing varies |
+| PA | Delaware | Media, Chester, Springfield, Newtown Square, Upper Darby | approved inquiry area; timing varies |
+| PA | Philadelphia | Philadelphia, Manayunk, Roxborough | approved inquiry area; timing varies |
+| PA | Bucks | Quakertown, Doylestown, Newtown, New Hope, Levittown | approved inquiry area; timing varies |
+| PA | Lehigh | Allentown, Emmaus, Macungie, Whitehall | approved inquiry area; timing varies |
+| PA | Northampton | Bethlehem, Easton, Nazareth, Bangor | approved inquiry area; timing varies |
+| PA | Cumberland | Carlisle, Camp Hill, Mechanicsburg, Shippensburg | approved inquiry area; timing varies |
+| PA | Adams | Gettysburg, New Oxford, Littlestown | approved inquiry area; timing varies |
+| PA | Schuylkill | Pottsville, Tamaqua, Schuylkill Haven, Frackville | approved inquiry area; timing varies |
+| PA | Perry | Duncannon, Newport, New Bloomfield | approved inquiry area; timing varies |
+| PA | Franklin | Chambersburg, Waynesboro, Greencastle | approved inquiry area; timing varies |
+| PA | Juniata | Mifflintown, Port Royal | approved inquiry area; timing varies |
+| PA | Mifflin | Lewistown, McVeytown | approved inquiry area; timing varies |
+| PA | Snyder | Selinsgrove, Middleburg | approved inquiry area; timing varies |
+| PA | Union | Lewisburg, Mifflinburg | approved inquiry area; timing varies |
+| PA | Northumberland | Sunbury, Shamokin, Milton | approved inquiry area; timing varies |
+| PA | Montour | Danville | approved inquiry area; timing varies |
+| PA | Columbia | Bloomsburg, Berwick | approved inquiry area; timing varies |
+| PA | Carbon | Lehighton, Jim Thorpe | approved inquiry area; timing varies |
+| PA | Monroe | Stroudsburg, Mount Pocono, Tobyhanna | approved inquiry area; timing varies |
+| PA | Luzerne | Hazleton, Wilkes-Barre, Pittston | approved inquiry area; timing varies |
+| PA | Lackawanna | Scranton, Moosic | approved inquiry area; timing varies |
+| PA | Wyoming | Tunkhannock | approved inquiry area; timing varies |
+| PA | Lycoming | Muncy, Williamsport | approved inquiry area; timing varies |
+| PA | Centre | Bellefonte, State College | approved inquiry area; timing varies |
+| PA | Huntingdon | Mount Union, Huntingdon | approved inquiry area; timing varies |
+| PA | Fulton | McConnellsburg | approved inquiry area; timing varies |
+| PA | Bradford | Wyalusing, Towanda | approved inquiry area; timing varies |
+| PA | Sullivan | Dushore | approved inquiry area; timing varies |
+| PA | Clinton | Lock Haven | approved inquiry area; timing varies |
+| PA | Bedford | Breezewood, Bedford | approved inquiry area; timing varies |
+| MD | Cecil | Elkton, North East, Perryville, Rising Sun | approved inquiry area; timing varies |
+| MD | Harford | Aberdeen, Bel Air, Havre de Grace | approved inquiry area; timing varies |
+| MD | Carroll | Westminster, Manchester, Hampstead | approved inquiry area; timing varies |
+| MD | Baltimore County | Towson, Cockeysville, Hunt Valley, White Marsh | approved inquiry area; timing varies |
+| MD | Baltimore City | Baltimore | approved inquiry area; timing varies |
+| MD | Howard | Ellicott City, Columbia | approved inquiry area; timing varies |
+| MD | Anne Arundel | Odenton, Glen Burnie, Annapolis | approved inquiry area; timing varies |
+| MD | Montgomery | Colesville, Rockville, Silver Spring | approved inquiry area; timing varies |
+| MD | Prince George's | Laurel, Beltsville, Bowie | approved inquiry area; timing varies |
+| MD | Frederick | Emmitsburg, Thurmont, Frederick | approved inquiry area; timing varies |
+| MD | Washington | Smithsburg, Hagerstown | approved inquiry area; timing varies |
+| MD | Kent | Galena, Chestertown | approved inquiry area; timing varies |
+| MD | Queen Anne's | Church Hill, Centreville | approved inquiry area; timing varies |
+| DE | New Castle | Wilmington, Newark, Claymont, Hockessin, Middletown | approved inquiry area; timing varies |
+| DE | Kent | Smyrna, Clayton, Dover | approved inquiry area; timing varies |
+| NJ | Camden | Camden, Cherry Hill, Voorhees | approved inquiry area; timing varies |
+| NJ | Gloucester | Deptford, Glassboro, Woodbury | approved inquiry area; timing varies |
+| NJ | Burlington | Moorestown, Mount Laurel, Mount Holly, Bordentown | approved inquiry area; timing varies |
+| NJ | Salem | Pennsville, Woodstown, Salem | approved inquiry area; timing varies |
+| NJ | Mercer | Trenton, Princeton, Hamilton | approved inquiry area; timing varies |
+| NJ | Hunterdon | Lambertville, Flemington, Clinton | approved inquiry area; timing varies |
+| NJ | Warren | Phillipsburg, Hackettstown | approved inquiry area; timing varies |
+| NJ | Somerset | Somerville, Bridgewater | approved inquiry area; timing varies |
+| NJ | Middlesex | New Brunswick, North Brunswick, Edison | approved inquiry area; timing varies |
+| NJ | Cumberland | Bridgeton, Vineland, Millville | approved inquiry area; timing varies |
+| NJ | Atlantic | Hammonton, Mays Landing | approved inquiry area; timing varies |
+| NJ | Ocean | Lakewood, Jackson, Toms River | approved inquiry area; timing varies |
+| NJ | Monmouth | Freehold, Howell | approved inquiry area; timing varies |
+| NJ | Morris | Netcong, Chester | approved inquiry area; timing varies |
+| NJ | Sussex | Andover, Sparta | approved inquiry area; timing varies |
+| WV | Berkeley | Martinsburg, Falling Waters, Inwood | approved inquiry area; timing varies |
+| WV | Jefferson | Charles Town, Harpers Ferry, Shepherdstown | approved inquiry area; timing varies |
+| WV | Morgan | Berkeley Springs | approved inquiry area; timing varies |
+| VA | Loudoun | Lovettsville, Leesburg | approved inquiry area; timing varies |
+| VA | Clarke | Berryville | approved inquiry area; timing varies |
+| VA | Frederick | Winchester | approved inquiry area; timing varies |
+| NY | Orange | Port Jervis, Middletown | approved inquiry area; timing varies |
+| NY | Sullivan | Barryville | approved inquiry area; timing varies |
 
 | DC | District of Columbia (county-equivalent) | Northwest DC boundary neighborhoods; district-wide routing check | pending / likely exceeds 135 minutes at central destination |
 
-## Required validation before public SEO
-1. Check each town and ZIP/address through a road-network routing engine from the exact Ephrata office; log the route and departure time.
-2. Group towns as inside (0–120 min), edge (121–135 min), excluded (>135 min) or pending (no dependable route).
-3. Inspect county borders and outlying ZIPs; mark counties partial unless all addresses meet the cap.
-4. Have Kendall confirm out-of-state operations and the acceptable traffic assumption.
-5. Only then add verified names to English/Spanish service-area pages, professional SEO and structured data.
+## Driving time and publication policy
+1. Business owner approved listing the towns and counties. Route-check individual pickup addresses if scheduling; record origin/destination, weekday driving time and source.
+2. Planning range 0–165 minutes; 140 and 142 minutes are allowed. The 165-minute boundary is interpreted from the user's contradictory '1 hour 45' wording and must be confirmed if a strict operational policy is needed.
+3. County entries denote inquiry reach, not proof that every address in a county qualifies.
+4. Confirm any cross-state logistics and actual pickup availability at booking.
+5. Publish the approved inquiry-location list in bilingual directory pages; avoid invented branch locations and fake local business addresses.
 
 Sources: https://withinhours.com/2-hours-of-ephrata-pa ; https://withinhours.com/2.5-hours-of-ephrata-pa ; https://www.travelmath.com/driving-time/from/Ephrata%2C%2BPA/to/Washington%2C%2BDC
 
