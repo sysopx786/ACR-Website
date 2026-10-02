@@ -133,6 +133,39 @@ The site includes page titles and descriptions, canonical links, English/Spanish
 - ACR has confirmed direct adjuster coordination, itemized photographic inventories, written and Xactimate estimates, off-site storage and scheduled return, essential-clothing emergency handling, direct insurance billing **when authorized**, and existing vendor agreements. Do not infer particular carriers, guaranteed payment, coverage, or approval from these facts.
 - Keep the workflow bilingual and avoid adding redundant maps, phone blocks, or referral forms without separate approval.
 
+## Project Status and Next Steps — October 2, 2026
+
+**Completed in the repository:** bilingual English/Spanish pages and shared navigation; top-level For Professionals menu (including Android/mobile navigation); 20 consumer FAQs per language; six-step professional claims workflow; eight professional FAQs per language; insurer/contractor capability panels; 10 original ACR before-and-after comparisons on each Results page, including three reused on the professional pages; six case studies; Chester County content; professional SEO titles, metadata, and contextual links; contact/CTA cleanup; README maintenance notes.
+
+**Pending / skipped by project decision (do not silently implement):**
+- **Google Analytics 4 and conversion tracking — PENDING.** No Measurement ID or consent-integrated analytics implementation has been approved. Do not infer actual visitor/call data.
+- **Professional referral form — SKIPPED.** Use existing telephone and Contact page instead.
+- **Insurance and restoration-contractor outreach and partnership PDF — SKIPPED.** No applications, vendor enrollment, or outreach were authorized.
+- **Search Console and Google Business Profile setup/review — SKIPPED for now.** Ownership, account access, sitemap submission, index status, and search performance have not been confirmed.
+- **Additional performance optimization — SKIPPED for now.**
+- **Security, privacy, and legal audit — SKIPPED for now.**
+- **Final editorial/content review — SKIPPED for now.**
+- **Customer review/aggregate-rating verification (earlier audit item 1) — DEFERRED pending Kendall's confirmation.**
+
+**Current phase: Launch readiness and handover to Kendall.** Obtain business-owner approval before changing the production domain, managing ownership or publishing unverified content.
+
+### Launch and handover checklist
+
+1. **Domain:** Confirm with Kendall who owns and controls `americangarmentrestoration.com`, the existing DNS settings, and which domain should serve the replacement site. Do not repoint DNS or disrupt the current business site without approval and a rollback plan.
+2. **Access and ownership:** Confirm Kendall's appropriate administrative access to domain registration, DNS, deployment/hosting, and any connected business accounts. Do not store passwords, tokens, or private account information in GitHub.
+3. **Approval:** Have Kendall confirm contact details, 24/7 availability, free pickup, professional/insurance claims, service areas, insurance-billing qualifiers, photographs, and appropriate image/review permissions.
+4. **Contact paths:** Test every telephone, address/directions, language-switch, and Contact link at the actual published domain.
+5. **QA and deployment:** Run `node scripts/check-site.cjs`, browser and accessibility checks, and examine GitHub Actions *job conclusions* and GitHub Pages deployment success for the **release commit**. Include real Android testing where possible.
+6. **Backup and rollback:** Retain known-good release commit, repository history, deployed image assets, DNS records, and a documented GitHub Pages redeployment/rollback path. Test recovery steps before switching the domain.
+7. **Operations:** Provide simple instructions for editing bilingual content, FAQs, case studies, and original before/after image pairs; require approvals for claims and media changes. Record who maintains the site and how to report urgent problems.
+8. **Handover:** Present final English/Spanish page links and release checklist to Kendall; keep deferred analytics and audit work outside the launch scope unless approved.
+
+### Latest recorded automated QA (not a release sign-off)
+
+- `qa/latest-browser-qa.json` records **success** for tested commit `7f054a217073b2af6d16a2e9b1d827c7c4380ad3`. The log reports **four passing professional-page configurations** (English and Spanish, desktop at 1440px and emulated Android at 393px), with eight FAQs, three sliders, six workflow steps per language, no horizontal overflow, no local HTTP failures, no page-script errors, and no axe WCAG findings.
+- `qa/latest-performance.json` for the same tested commit records mobile **77** and desktop **91** performance, with accessibility, best practices, and SEO scoring **100** in both simulated runs.
+- These reports are for an **earlier commit** than subsequent SEO, README, and launch documentation updates; do not say the current live release or a physical Android device passed until the new release is tested and the job/deployment conclusions are checked.
+
 ## Hosting and Deployment
 
 - Website files: `dist/`
@@ -155,7 +188,7 @@ Inspect the latest machine-readable results in `qa/latest-browser-qa.json` and `
 ## Deferred Audit Items
 
 - **Customer reviews and aggregate-rating markup (audit item 1)** are deliberately **deferred** for business-owner verification. Do not modify them as part of audit items 2–7 without a separate decision.
-- Browser QA still requires a confirmed successful run and real-device review; do not state those were completed unless supported by results.
+- Automated browser QA has a saved successful report for an earlier tested commit; recheck the current release's test/job conclusions and conduct a physical Android review before claiming full launch verification.
 - Confirm services, service area, contact/pickup logistics, and structured-data claims with the business owner. Do not manufacture eligibility restrictions or guarantees.
 
 ## Maintenance Guidelines
