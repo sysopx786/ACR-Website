@@ -74,7 +74,7 @@ Navigation links are built by `dist/script.js` for desktop and mobile. `dist/sty
 
 ## Page Content and Media
 
-- Homepage includes key service information, before-and-after previews, restoration guidance, reviews, six selected FAQ answers, and a link to Chester County information.
+- Homepage includes key service information, before-and-after previews, restoration guidance, reviews, six selected FAQ answers, and a **View All Service Areas** link to the regional directory.
 - The FAQ page groups **20 questions** by subject. English and Spanish answers must stay aligned.
 - English and Spanish Results galleries each display the **same 10 original ACR before-and-after job pairs**. Maintain the correct damaged **Before** and restored **After** labels. Six bilingual case studies reuse appropriate original images; do not misidentify illustrative images as ACR work.
 - Original job photographs are separate media assets in `dist/assets/original-jobs/`, rather than base64 images embedded in HTML. Keep below-the-fold image loading lazy where appropriate, and preserve slider accessibility. This reduces HTML document size but does **not** by itself verify live performance scores.
@@ -264,6 +264,13 @@ Inspect the latest machine-readable results in `qa/latest-browser-qa.json` and `
 - The practical **maximum driving estimate is 145 minutes (2 hours 25 minutes)** from 17A East Queen Street, Ephrata, PA 17522. Published times such as 140 or 142 minutes are within this tolerance. This supersedes the earlier 135-minute screening threshold and an incorrect interim 165-minute interpretation.
 - County lists denote inquiry coverage, not proof every address is reachable within 145 minutes; pickup timing and logistics are confirmed address by address. The listed towns have not all been independently timed by a routing engine.
 - Inventory and routing log: research/service-area-145-minute-inventory.md. Do not invent additional branches, carrier agreements, or town-specific promises. Maintain English/Spanish parity and hreflang sitemap.
+
+
+### Service-area links — October 2, 2026
+
+- Homepage final action now links to **View All Service Areas** (Spanish: **Ver todas las zonas de servicio**) at the bilingual `/service-areas/` directory; the separate Contact action remains.
+- The Chester County-specific English and Spanish pages remain at their original canonical URLs for local SEO. Both now link to the regional directory instead of duplicating every county and town.
+- Shared desktop/Android menu retains **Service Areas → All Service Areas, Chester County** with bilingual translations. Avoid adding a second long county list to the Chester County page.
 
 ## Maintenance Guidelines
 
