@@ -54,14 +54,14 @@ const navLabels=navSpanish?{
   resultOverview:"Antes y después",areas:"Zonas de servicio",about:"Acerca de",
   contact:"Contacto",fire:"Fuego y humo",water:"Agua e inundaciones",
   restore:"Qué restauramos",professionals:"Para profesionales",cases:"Casos reales",
-  chester:"Condado de Chester",aboutUs:"Sobre ACR",faq:"Preguntas frecuentes",reviews:"Reseñas",
+  chester:"Condado de Chester",regional:"Todas las zonas",aboutUs:"Sobre ACR",faq:"Preguntas frecuentes",reviews:"Reseñas",
   caseNames:["Equipo de bomberos","Vestido de novia","Uniformes y delantales de chef","Chaqueta de cuero","Ropa de cama y textiles","Colcha de retazos"]
 }:{
   home:"Home",services:"Services",process:"Our Process",results:"Results",
   resultOverview:"Before & After",areas:"Service Areas",about:"About",
   contact:"Contact",fire:"Fire & Smoke",water:"Water & Flood",
   restore:"What We Restore",professionals:"For Professionals",cases:"Case Studies",
-  chester:"Chester County",aboutUs:"About ACR",faq:"FAQs",reviews:"Reviews",
+  chester:"Chester County",regional:"All Service Areas",aboutUs:"About ACR",faq:"FAQs",reviews:"Reviews",
   caseNames:["Firefighter Turnout Gear","Wedding Gown","Chef Uniforms & Aprons","Leather Jacket","Bedding & Textiles","Patchwork Quilt"]
 };
 const navCaseSlugs=["firefighter-turnout-gear","wedding-gown","chef-uniforms-aprons","leather-jacket","bedding-textiles","patchwork-quilt"];
@@ -82,6 +82,7 @@ const navEntries=[
     ...navCaseSlugs.map((slug,i)=>navLink(navLabels.caseNames[i],navRoot+"case-studies/"+slug+"/"))
   ]),
   navGroup(navLabels.areas,[
+    navLink(navLabels.regional,navRoot+"service-areas/"),
     navLink(navLabels.chester,navRoot+"chester-county-clothing-restoration/")
   ]),
   navGroup(navLabels.about,[
