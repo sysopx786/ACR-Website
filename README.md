@@ -217,6 +217,14 @@ Inspect the latest machine-readable results in `qa/latest-browser-qa.json` and `
 
 - Linked text is visibly underlined throughout English and Spanish content with original ACR gold accents, while navigation and buttons retain their own styles. Four **For Professionals** audience cards now link directly to adjuster/carrier details, contractor details, or the relevant Contact page; their service panels have stable anchors. The homepage retains equal entry points for homeowners and professionals rather than moving all four professional cards above them.
 
+
+### Professional-first homepage direction — October 2, 2026
+
+- Business priority clarified: **insurance adjusters, insurance carriers and restoration contractors are ACR's primary customers**. The homepage now leads with insurance clothing/textile restoration for property-loss claims. This supersedes the earlier equal-audience homepage positioning, while retaining a clearly available path for homeowners and policyholders.
+- Replaced equal-size audience selection cards with four role-specific links on both English and Spanish homepages: adjusters, carriers, contractors and policyholders. Professional links lead to specific confirmed capability sections on the existing For Professionals page, while policyholders can reach the Contact page without a form. The professional call to action is primary.
+- Revised homepage and professional-page titles, descriptions and social metadata to accurately reference insurance-related textile restoration, Xactimate-based estimates, inventories and Ephrata, PA, without keyword stuffing, invented geographic branches or unsupported insurer endorsements. These revisions **do not establish Google indexing or ranking**; Search Console verification and real search results remain pending.
+- Kept original charcoal, gold, cream, taupe and off-white design. Preserved original ACR before/after sliders, 24/7 inquiry availability, free pickup, service pages, FAQs and existing bilingual site architecture. Check current GitHub Pages and mobile/accessibility workflow results for latest release.
+
 ## Maintenance Guidelines
 
 1. Keep English and Spanish copy, navigation, URLs, SEO metadata, and links aligned.
