@@ -367,3 +367,6 @@ _Last documentation update: October 2, 2026._
 - Shared menu comes from `dist/script.js` and appears in desktop and Android/mobile navigation. The header collapses its expanded links to the accessible mobile menu at widths up to 1500px to prevent desktop text collisions. `#reviews` is the current section anchor.
 - All 42 sitemap HTML pages now request versioned shared CSS and JS assets to avoid stale menus.
 - GitHub-source changes were checked; live device testing and deployment validation are separate.
+
+### Deployment retrigger — October 2, 2026
+- Re-triggered the main-branch GitHub Pages push workflow after reports of stale public review copy. Source verification confirms `dist/index.html` and `dist/es/index.html` contain the supplied 14 review drafts, names, town labels, and explicit unverified-example disclosures. A GitHub source commit is not independent proof that the public Pages deployment succeeded.
