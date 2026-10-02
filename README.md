@@ -225,6 +225,14 @@ Inspect the latest machine-readable results in `qa/latest-browser-qa.json` and `
 - Revised homepage and professional-page titles, descriptions and social metadata to accurately reference insurance-related textile restoration, Xactimate-based estimates, inventories and Ephrata, PA, without keyword stuffing, invented geographic branches or unsupported insurer endorsements. These revisions **do not establish Google indexing or ranking**; Search Console verification and real search results remain pending.
 - Kept original charcoal, gold, cream, taupe and off-white design. Preserved original ACR before/after sliders, 24/7 inquiry availability, free pickup, service pages, FAQs and existing bilingual site architecture. Check current GitHub Pages and mobile/accessibility workflow results for latest release.
 
+
+### Sitewide spacing and redundant-brand cleanup — October 2, 2026
+
+- Removed redundant **American Clothing Restoration** eyebrow text from the English and Spanish **For Professionals** hero sections. The English and Spanish homepage hero sections retain a single clear heading below the persistent site logo rather than repeating the company name.
+- Standardized vertical spacing sitewide through `dist/styles.css`: tightened spacing around consecutive paragraphs, eyebrows, titles, top-level sections, page introductions, professional claims content, result comparisons, card groups, and responsive layouts. Kept text sizes, colors and actual image content intact.
+- On Android/mobile, replaced the oversized fixed full-width **Call ACR** strip with a small gold floating pill, reducing how much content it covers. Retained the same telephone action.
+- Added a GitHub browser-QA regression pass to visit **every HTML page** (English, Spanish and legacy aliases), checking shared stylesheet use, narrow-screen overflow, excessive section padding, and duplicate brand text in hero labels. Check the current Actions result before stating this automated pass is successful.
+
 ## Maintenance Guidelines
 
 1. Keep English and Spanish copy, navigation, URLs, SEO metadata, and links aligned.
