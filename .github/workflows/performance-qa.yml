@@ -4,7 +4,14 @@ on:
   push:
     paths:
       - .github/workflows/performance-qa.yml
+      - dist/index.html
+      - dist/es/index.html
+      - dist/styles.css
   workflow_dispatch:
+
+concurrency:
+  group: acr-lighthouse
+  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -19,6 +26,18 @@ jobs:
           node-version: '22'
       - name: Install Lighthouse
         run: npm install --no-save --no-package-lock lighthouse
+      - name: Wait until updated homepage is live
+        shell: bash
+        run: |
+          for attempt in {1..15}; do
+            if curl --fail --silent --show-error --max-time 15 https://sysopx786.github.io/ACR-Website/ | grep -q 'fetchpriority="high"'; then
+              echo "Updated homepage is live"
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "Updated homepage preload not published within 150 seconds" >&2
+          exit 1
       - name: Measure published homepage on mobile and desktop
         id: audits
         continue-on-error: true
@@ -49,7 +68,11 @@ jobs:
               return {testURL:j.finalDisplayedUrl||j.finalUrl, fetchTime:j.fetchTime,
                 scores:Object.fromEntries(Object.entries(c).map(([k,v])=>[k,Math.round((v.score||0)*100)])),
                 metrics:Object.fromEntries(['first-contentful-paint','largest-contentful-paint','speed-index','total-blocking-time','cumulative-layout-shift','interactive'].map(k=>[k,a[k]?{value:a[k].numericValue,display:a[k].displayValue}:null])),
-                warnings:j.runWarnings||[]};
+                warnings:j.runWarnings||[],
+                diagnostics:Object.fromEntries(['largest-contentful-paint-element','lcp-breakdown-insight','lcp-discovery-insight','render-blocking-resources','image-delivery-insight','font-display-insight','mainthread-work-breakdown','total-byte-weight','network-requests'].map(id=>{
+                  const entry=a[id];
+                  return [id,entry?{score:entry.score,displayValue:entry.displayValue,detail:JSON.stringify(entry.details?.items?.slice(0,4)||[]).slice(0,4500)}:null];
+                }))};
             }catch(e){return {error:String(e)}}
           }
           const output={testedCommit:process.env.GITHUB_SHA,
