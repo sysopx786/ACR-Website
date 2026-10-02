@@ -291,6 +291,16 @@ Inspect the latest machine-readable results in `qa/latest-browser-qa.json` and `
 - Added `scripts/check-duplicate-copy.cjs` to GitHub Pages deployment checks. It scans canonical English and Spanish pages for duplicate long paragraphs and guards against repeating the homepage FAQ answers or Service Areas disclaimer.
 - Shared navigation, legal links, business contact footer, photo comparisons and canonical legacy URLs intentionally remain where needed. Legacy `.html` routes declare canonical URLs to their modern pages. Source-level checks do not replace live desktop/mobile accessibility and visual QA.
 
+
+### Content duplication review — October 2, 2026
+
+- Audited the **42 canonical English/Spanish HTML pages in `dist/sitemap.xml`**, reviewing page-specific headings and paragraph repeats, contact/phone actions, embedded maps, homepage and service-area sections, case-study pages, FAQ and policy pages.
+- Service Areas English/Spanish now display the **120-minute (2-hour)** travel notice **once**, directly above locality search. The duplicate hero note was removed; keep that single search-area disclaimer.
+- Removed the two overlapping **What to Discuss / Information to Provide** and **Where ACR Is Located / Location and Logistics** sections from *both* Chester County pages. Their practical guidance or address already appears in the page's contact action/footer, so the extra blocks were repetitive.
+- Keep intentional reusable elements (main navigation, language switch, footer, accessibility controls, case-study navigation) and useful page-specific specialist descriptions; text on different services is not an automatic duplicate.
+- Contact retains the sole embedded map. The service-area directory remains the central long county/town index; do not restore large lists on Chester County pages.
+- Source inspection is **not** a live Chrome/Android accessibility or navigation test. Independently verify latest Actions and browser results after deployment.
+
 ## Maintenance Guidelines
 
 1. Keep English and Spanish copy, navigation, URLs, SEO metadata, and links aligned.
