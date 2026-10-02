@@ -302,6 +302,22 @@ Inspect the latest machine-readable results in `qa/latest-browser-qa.json` and `
 - Eight legacy `.html` content pages already have canonical tags pointing to their corresponding modern slash URLs; one legacy results file has no main content. Leave compatibility pages in place until legacy QA and links can be migrated safely; the legacy `/our-process.html` URL is tested by existing geometry checks.
 - Source inspection is **not** a live Chrome/Android accessibility or navigation test. Independently verify latest Actions and browser results after deployment.
 
+## Site-Wide Duplicate-Content Cleanup — October 2, 2026
+
+Completed a source-level review of the **42 English and Spanish pages listed in the sitemap**. Content guidelines and changes:
+
+- **Service Areas:** Retain the **120-minute (2-hour)** estimate **once**, beside the locality search. The hero introduces ACR without repeating that notice. Preserve approved inquiry-area lists and address-specific confirmation caveat.
+- **Homepage:** Use short, distinct overview copy linking to the detailed **What We Restore** page; do not duplicate that page's explanations. The six FAQ questions are links to the dedicated answers, not second copies of the answers. Keep geographic navigation centered on the regional directory.
+- **About:** Use a distinct explanation of fabric expertise instead of duplicating the homepage brand statement.
+- **Fire / Water:** Each page keeps its own damage-specific guidance and CTA; deleted the identical Ephrata/restoreability paragraph repeated on both pages.
+- **For Professionals:** Retain the detailed six-step `#professional-workflow` and audience-specific service details. Removed the overlapping general insurance-claim timeline.
+- **Six original-photo case studies:** Each page retains unique material-specific limitations, original imagery and its case narrative. Removed the repeated multi-paragraph generic disclaimer and duplicated contact/Results promotional sections. The shared footer and gallery navigation still give access to Contact and Results.
+- **Contact:** The phone, public location and map appear together in the main panel. Suppress the duplicate phone/address in this page's footer while retaining footer navigation and policies.
+- **Shared site elements:** Repeated header navigation, footer links, necessary policy disclosures, the gallery's original images, and appropriate contextual links are intentional interface and factual references, **not duplicate editorial paragraphs**. Do not remove legally meaningful notices for cosmetic deduplication.
+- Maintained English/Spanish parity and existing local/case-study URLs. Source markup checked across sitemap pages for balanced `div` / `section` tags, main sections and same-page exact paragraphs over 100 characters. Browser/device deployment testing is separate.
+
+Editorial rule: each section must answer a different visitor question. For additional detail, link to its canonical content page rather than repeating large paragraphs, phone/address panels, claim workflows or full town lists.
+
 ## Maintenance Guidelines
 
 1. Keep English and Spanish copy, navigation, URLs, SEO metadata, and links aligned.
