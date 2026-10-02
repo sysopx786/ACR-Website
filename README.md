@@ -318,6 +318,15 @@ Completed a source-level review of the **42 English and Spanish pages listed in 
 
 Editorial rule: each section must answer a different visitor question. For additional detail, link to its canonical content page rather than repeating large paragraphs, phone/address panels, claim workflows or full town lists.
 
+
+## Regional SEO Positioning — October 2, 2026
+
+- ACR is **based in Ephrata, Pennsylvania** but receives address-specific service inquiries from communities in nearby states shown in the regional directory. The website must **not** describe Fire, Water, or general clothing restoration as available **only “in Pennsylvania”**.
+- General pages use geographically neutral service titles and H1s; homepage SEO titles no longer end with “Pennsylvania.” The Fire and Water descriptions and the service-area FAQ (including FAQ JSON-LD) have been aligned in both English and Spanish.
+- Retain Pennsylvania and `PA` where **factually necessary**: physical postal address, LocalBusiness `addressRegion: PA`, About/Contact details, Chester County local SEO, state labels within the directory, maps, legal business details, footer, and legitimate Ephrata-based origins. Do not rewrite these as multistate offices.
+- **Service-area directory is authoritative for geographic inquiries**. The driving estimate is **120 minutes (2 hours)** from Ephrata; county and locality listings are **not proof** that any particular address is inside the limit or approved for pickup. Link to the directory instead of repeating lists across service pages.
+- Keep all English and Spanish canonical/hreflang paths intact; no thin state-specific SEO doorway pages or unsupported blanket state coverage guarantees.
+
 ## Maintenance Guidelines
 
 1. Keep English and Spanish copy, navigation, URLs, SEO metadata, and links aligned.
