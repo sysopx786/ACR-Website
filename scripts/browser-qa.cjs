@@ -149,6 +149,47 @@ const assert=(condition,message)=>{if(!condition)errors.push(message);};
     }
     console.log("PROFESSIONAL QA "+JSON.stringify(professionalResults));
 
+
+    // Regression: check every published English/Spanish and legacy HTML route.
+    // The shared stylesheet must keep the main content compact without overflow.
+    const routeFiles=[];
+    const visit=(folder,relative="")=>{
+      for(const entry of fs.readdirSync(folder,{withFileTypes:true})){
+        const name=path.posix.join(relative,entry.name);
+        if(entry.isDirectory())visit(path.join(folder,entry.name),name);
+        else if(entry.name.endsWith(".html"))routeFiles.push(name);
+      }
+    };
+    visit(site);
+    const spacingResults=[];
+    const auditContext=await browser.newContext({viewport:{width:393,height:851},isMobile:true,hasTouch:true});
+    await auditContext.route(/^https:\/\/(fonts\.googleapis\.com|fonts\.gstatic\.com|images\.unsplash\.com)\//,route=>route.abort());
+    const auditPage=await auditContext.newPage();
+    for(const relative of routeFiles){
+      const slug=relative.endsWith("/index.html")?relative.slice(0,-10):relative;
+      const pathName=slug==="index.html"?"":slug;
+      const response=await auditPage.goto(base+pathName,{waitUntil:"domcontentloaded"});
+      assert(response&&response.status()===200,"sitewide: unable to load "+relative);
+      await auditPage.waitForFunction(()=>[...document.styleSheets].some(s=>s.href?.includes("/ACR-Website/styles.css")),{timeout:10000}).catch(()=>{});
+      const metric=await auditPage.evaluate(()=>{
+        const main=document.querySelector("main");
+        const sections=[...(main?.children||[])].filter(el=>el.matches("section.section"));
+        return {
+          overflow:Math.round(document.documentElement.scrollWidth-innerWidth),
+          hasCss:[...document.querySelectorAll('link[rel="stylesheet"]')].some(el=>el.href.includes("/ACR-Website/styles.css")),
+          largestSectionPadding:Math.max(0,...sections.map(el=>Math.max(parseFloat(getComputedStyle(el).paddingTop)||0,parseFloat(getComputedStyle(el).paddingBottom)||0))),
+          duplicateHeroBrand:!!main?.querySelector(".hero .eyebrow, .pro-redesign-hero .eyebrow")?.textContent.trim().match(/^American Clothing Restoration$/i)
+        };
+      });
+      assert(metric.hasCss,"sitewide: shared stylesheet absent "+relative);
+      assert(metric.overflow<=2,"sitewide: horizontal overflow "+metric.overflow+"px on "+relative);
+      assert(metric.largestSectionPadding<=72,"sitewide: excess section padding "+metric.largestSectionPadding+"px on "+relative);
+      assert(!metric.duplicateHeroBrand,"sitewide: repeated brand hero eyebrow on "+relative);
+      spacingResults.push({route:relative,...metric});
+    }
+    await auditContext.close();
+    console.log("SITEWIDE SPACING QA "+JSON.stringify({checked:spacingResults.length,maxOverflow:Math.max(...spacingResults.map(x=>x.overflow)),maxSectionPadding:Math.max(...spacingResults.map(x=>x.largestSectionPadding))}));
+
     assert(d404.length===0&&m404.length===0,"Missing local assets: "+JSON.stringify([...d404,...m404]));
     console.log(JSON.stringify({desktop:"checked",mobile:"checked",spanishGallery:"checked",languageRouting:"checked",assets404s:d404.length+m404.length,accessibility:violations}));
   } finally {await browser.close();}
