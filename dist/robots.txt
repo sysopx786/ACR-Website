@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://american-clothing-restoration.valli349022.chatgpt.site/sitemap.xml
+Sitemap: https://sysopx786.github.io/ACR-Website/sitemap.xml
