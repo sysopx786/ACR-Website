@@ -224,3 +224,24 @@ a[href]:focus-visible{
   outline:3px solid var(--gold-on-light);
   outline-offset:4px;
 }
+
+/* Professional-first homepage, original ACR charcoal/gold/cream palette. */
+.pro-first-hero{min-height:0!important}
+.pro-first-hero .h1{max-width:980px}
+.pro-first-actions{margin-top:24px;gap:12px}
+.pro-first-actions .btn{min-height:52px;text-align:center}
+.pro-first-section{max-width:1350px;margin-inline:auto;padding-top:clamp(38px,5vw,72px);padding-bottom:clamp(48px,6vw,95px)}
+.pro-first-section>.h2{font-size:clamp(30px,4.3vw,58px);line-height:1.15}
+.pro-first-section>.copy{max-width:850px;line-height:1.7}
+.pro-first-role-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin:30px 0 25px}
+.pro-first-role-grid article{min-width:0;background:#fff;border:1px solid var(--line);border-top:3px solid var(--gold);padding:clamp(18px,2vw,26px);display:flex;flex-direction:column}
+.pro-first-role-grid h3{font-family:var(--serif);font-size:clamp(21px,2.1vw,27px);line-height:1.18;margin:0 0 13px}
+.pro-first-role-grid p{font-size:14px;line-height:1.65;color:var(--muted);margin:0 0 17px;flex:1}
+.pro-first-role-grid a{font-weight:700;text-underline-offset:4px}
+.pro-first-paths{display:flex;flex-wrap:wrap;gap:12px;align-items:stretch}
+.pro-first-paths>a{display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;min-height:52px;font-size:13px;font-weight:700;text-align:center}
+.pro-first-paths .pro-first-primary{background:var(--gold);color:var(--charcoal);text-decoration:none;border:2px solid var(--gold)}
+.pro-first-paths .pro-first-secondary{background:var(--cream);color:var(--charcoal);text-decoration:underline;text-decoration-color:var(--gold-on-light);border:2px solid var(--taupe)}
+.pro-first-paths a:hover,.pro-first-paths a:focus-visible{border-color:var(--charcoal);outline-offset:3px}
+@media(max-width:1050px){.pro-first-role-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.pro-first-actions{flex-direction:column}.pro-first-actions .btn{width:100%}.pro-first-section{padding:32px 20px 48px}.pro-first-role-grid{gap:12px;margin-top:24px}.pro-first-role-grid article{padding:15px}.pro-first-role-grid h3{font-size:20px}.pro-first-role-grid p{font-size:13px}.pro-first-paths{flex-direction:column}.pro-first-paths>a{width:100%}}
