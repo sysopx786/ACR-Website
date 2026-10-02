@@ -234,6 +234,14 @@ Inspect the latest machine-readable results in `qa/latest-browser-qa.json` and `
 - Added a GitHub browser-QA regression pass to visit **every HTML page** (English, Spanish and legacy aliases), checking shared stylesheet use, narrow-screen overflow, excessive section padding, and duplicate brand text in hero labels. Check the current Actions result before stating this automated pass is successful.
 - Corrected low-contrast muted paragraphs on cream Fire/Water service cards and the gold-highlighted ACR claims step using an existing dark brown/charcoal text color; test with axe before claiming accessibility pass.
 
+
+### Full-site text-spacing correction — October 2, 2026
+
+- The previous spacing audit was insufficient: it measured outer section padding but **did not measure the actual vertical distance between text blocks**. The Fire & Smoke page revealed that stacked two-column `section.split` layouts retained their grid gutter plus margins and two separate sets of section padding on Android.
+- Fixed this at the shared CSS level for English/Spanish service pages and other text-only split layouts. Text-only section groups now have tighter vertical padding, and the mobile heading-to-paragraph gutter is **9px** rather than the old inherited large grid gap. Photo and media sections retain independent spacing to avoid cropping or crowding before-and-after proof.
+- Added real browser geometry assertions across all HTML routes: heading-to-paragraph gaps at or below **23px**, and transitions between consecutive text-only split sections at or below **45px** at Android width. The tests also continue checking horizontal overflow, visible branding, and shared stylesheet coverage. These are thresholds to be **measured** on actual browser runs, not assertions of a pass before Actions reports success.
+- Retain the original ACR charcoal, gold, cream, taupe and off-white appearance, all copy and original photo assets, and the compact floating mobile telephone action.
+
 ## Maintenance Guidelines
 
 1. Keep English and Spanish copy, navigation, URLs, SEO metadata, and links aligned.
