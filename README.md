@@ -110,6 +110,22 @@ The transformation gallery includes representative imagery for:
 
 Representative imagery can be replaced with real American Clothing Restoration project photography when available.
 
+## Google Search Console
+
+- Add this exact URL-prefix property after signing in to the business's Google account: `https://sysopx786.github.io/ACR-Website/`.
+- Submit the public sitemap: `https://sysopx786.github.io/ACR-Website/sitemap.xml`.
+- The sitemap includes English and Spanish canonical pages and hreflang alternates.
+- Verify ownership using the **actual** token or HTML file supplied by Google. Do not publish fabricated verification tokens or claim verification before Google confirms it.
+- After verification, inspect indexing for Home, Results, FAQ, Chester County, and the six case-study pages. Record impressions, clicks, queries, and indexed URLs as a baseline.
+- Do not infer Google indexing or top rankings from a successful GitHub Pages deployment.
+
+## Quality checks
+
+- `node scripts/check-site.cjs` runs before every Pages deployment. It checks local links, image assets, headings, canonical tags, language markup, sitemap targets, and original Results comparisons.
+- `.github/workflows/browser-qa.yml` runs independent browser smoke tests on desktop and mobile layouts, the Spanish Results gallery, language routing, and accessibility. It saves screenshots as an Actions artifact.
+- Confirm mobile rendering and key customer flows with actual devices before client sign-off.
+- Customer reviews and aggregate-rating schema remain subject to Kendall's verification, intentionally deferred.
+
 ## Deployment
 
 The deployable website lives in:
