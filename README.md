@@ -272,6 +272,14 @@ Inspect the latest machine-readable results in `qa/latest-browser-qa.json` and `
 - The Chester County-specific English and Spanish pages remain at their original canonical URLs for local SEO. Both now link to the regional directory instead of duplicating every county and town.
 - Shared desktop/Android menu retains **Service Areas → All Service Areas, Chester County** with bilingual translations. Avoid adding a second long county list to the Chester County page.
 
+### Expanded searchable service-area directory — October 2, 2026
+
+- Expanded the approved-county research list from 213 to **1,842 locality entries**, including boroughs, townships and communities, using existing county grouping and reference municipality/gazetteer research.
+- Both /service-areas/ and /es/service-areas/ render the locality names in the HTML for readable, indexable text, plus accessible search inputs that filter county cards and the matching town names; clearing search restores all entries. Search works without a server.
+- Refreshed the Chester County-specific English and Spanish pages with **69 locality names** and a visible regional directory link. Keep Chester's canonical URLs and local SEO purpose.
+- Important limit: ACR's **145-minute** maximum remains the routing target. These are expanded *inquiry indexes*, not 1,842 verified in-range points. Certain outer-county names may exceed the travel limit. Confirm driving time and actual pickup availability before making a specific commitment. Do not generate thin doorways, arbitrary ZIP/service-area guarantees, or incorrect branch listings.
+- Location reference sources: U.S. Census Gazetteer (https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.2025.html) and Pennsylvania DCED municipality list (https://dced.pa.gov/local-government/municipal-statistics/municipalities/). These identify names, **not travel times**.
+
 ## Maintenance Guidelines
 
 1. Keep English and Spanish copy, navigation, URLs, SEO metadata, and links aligned.
