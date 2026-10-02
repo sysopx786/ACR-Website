@@ -372,3 +372,69 @@ main > section.section.split:has(> div:first-child > h2):not(:has(> div:first-ch
   }
   main > section.section:has(> .acr-faq-group){padding-top:23px;padding-bottom:23px}
 }
+
+/* Process page layout: use a compact vertical timeline rather than the
+   old 3-row stack (number, title and description with 24px padding each).
+   Specific to /our-process/ in both languages and the legacy .html alias. */
+main > section.process-page-layout{
+  grid-template-columns:minmax(0,1fr) minmax(220px,.76fr);
+  align-items:start;
+  gap:clamp(20px,3vw,42px);
+  padding-top:clamp(22px,3vw,42px);
+  padding-bottom:clamp(22px,3vw,42px);
+}
+main .process-page-layout .process-page-content{grid-column:1;grid-row:1;min-width:0}
+main .process-page-layout .rich-image{
+  grid-column:2;grid-row:1;
+  min-height:360px;
+  border-radius:9px;
+}
+main .process-page-layout .process{margin:0!important}
+main .process-page-layout .step{
+  display:grid;
+  grid-template-columns:50px minmax(0,1fr);
+  grid-template-rows:auto auto;
+  column-gap:14px;
+  row-gap:3px;
+  align-items:start;
+  padding:13px 0;
+}
+main .process-page-layout .step .num{
+  grid-column:1;grid-row:1/span 2;
+  font-size:32px;line-height:1.12;
+  align-self:start;
+}
+main .process-page-layout .step h3{
+  grid-column:2;grid-row:1;
+  font-size:19px;line-height:1.25;margin:0;
+}
+main .process-page-layout .step p{
+  grid-column:2;grid-row:2;
+  font-size:15px;line-height:1.6;
+  margin:0;
+}
+main .process-page-layout .pro-context-link{margin:15px 0 0}
+@media(max-width:900px){
+  body main > section.process-page-layout{
+    grid-template-columns:minmax(0,1fr);
+    gap:17px;
+    padding-top:17px;
+    padding-bottom:19px;
+  }
+  main .process-page-layout .process-page-content{grid-column:1;grid-row:1}
+  main .process-page-layout .rich-image{
+    grid-column:1;grid-row:2;
+    min-height:170px;
+    max-height:200px;
+    width:100%;
+  }
+  main .process-page-layout .step{
+    grid-template-columns:40px minmax(0,1fr);
+    column-gap:11px;
+    row-gap:3px;
+    padding:11px 0;
+  }
+  main .process-page-layout .step .num{font-size:27px}
+  main .process-page-layout .step h3{font-size:18px}
+  main .process-page-layout .step p{font-size:15px}
+}
