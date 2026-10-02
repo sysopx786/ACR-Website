@@ -67,7 +67,9 @@ English and Spanish desktop and mobile navigation use a common, responsive dropd
 - **Our Process**
 - **Results:** Before & After and six case studies
 - **Service Areas:** Regional Service Areas, Chester County
-- **About:** About ACR, FAQs, Reviews
+- **About** (standalone top-level link)
+- **FAQs** (standalone top-level link to the 20-question page)
+- **Reviews** (standalone top-level link to the homepage Google Reviews section)
 - **Contact**
 
 Navigation links are built by `dist/script.js` for desktop and mobile. `dist/styles.css` provides dropdown and responsive styles. The language switch maps visitors to the corresponding translated page. The sticky mobile **Call ACR** control is retained. Test actual desktop and mobile interaction, including Android, after any navigation change.
@@ -354,3 +356,12 @@ _Last documentation update: October 2, 2026._
 - Removed the six existing Google-branded quotes/ratings/links from both homepages, including attribution referencing a different business.
 - Added 14 **fictional, visibly labeled layout-only examples**: seven insurance/restoration professional scenarios and seven homeowner scenarios, in English and Spanish. These are **not** real testimonials, endorsements, or verified reviews and must never be represented as such or marked up as Review/AggregateRating structured data.
 - Shared menu points to `#reviews`. Replace sample content with sourced, authorized customer feedback before external publication as testimonials.
+
+### Menu clarification — October 2, 2026
+
+- Promoted **FAQs** and **Reviews** from the About dropdown into **two separate top-level links**. About is now also a direct top-level link; Services, Results and Service Areas retain their dropdowns.
+- English: **FAQs**, **Reviews**; Spanish: **Preguntas frecuentes**, **Reseñas**.
+- FAQs links to `/faq/` (Spanish: `/es/faq/`); Reviews links to the existing `#google-reviews` homepage section in each language rather than generating a duplicate reviews page.
+- Shared menu comes from `dist/script.js` and appears in desktop and Android/mobile navigation. The header collapses its expanded links to the accessible mobile menu at widths up to 1500px to prevent desktop text collisions. `#google-reviews` accounts for sticky-header scrolling.
+- All 42 sitemap HTML pages now request versioned shared CSS and JS assets to avoid stale menus.
+- GitHub-source changes were checked; live device testing and deployment validation are separate.
