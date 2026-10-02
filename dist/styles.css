@@ -328,3 +328,9 @@ main .columns{margin-top:24px;gap:23px}
 @media(max-width:390px){
   .sticky-call{font-size:11px!important;padding:10px 13px!important;max-width:144px}
 }
+
+/* Maintain accessible text contrast on cream and gold-tinted service surfaces. */
+main .home-service-grid article p,
+main .claim-context-acr .claim-context-card p{
+  color:#514a40;
+}
