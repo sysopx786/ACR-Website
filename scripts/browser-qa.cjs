@@ -178,17 +178,31 @@ const assert=(condition,message)=>{if(!condition)errors.push(message);};
           overflow:Math.round(document.documentElement.scrollWidth-innerWidth),
           hasCss:[...document.querySelectorAll('link[rel="stylesheet"]')].some(el=>el.href.includes("/ACR-Website/styles.css")),
           largestSectionPadding:Math.max(0,...sections.map(el=>Math.max(parseFloat(getComputedStyle(el).paddingTop)||0,parseFloat(getComputedStyle(el).paddingBottom)||0))),
-          duplicateHeroBrand:!!main?.querySelector(".hero .eyebrow, .pro-redesign-hero .eyebrow")?.textContent.trim().match(/^American Clothing Restoration$/i)
+          duplicateHeroBrand:!!main?.querySelector(".hero .eyebrow, .pro-redesign-hero .eyebrow")?.textContent.trim().match(/^American Clothing Restoration$/i),
+          textOnlySplitGaps:[...document.querySelectorAll("main > section.section.split")].filter(el=>{
+            return el.children[0]?.querySelector(":scope > h2")&&el.children[1]?.querySelector(":scope > p");
+          }).map(el=>{
+            const heading=el.children[0].querySelector(":scope > h2");
+            const paragraph=el.children[1].querySelector(":scope > p");
+            const following=el.nextElementSibling;
+            const nextHeading=following?.matches("section.section.split")?following.children[0]?.querySelector(":scope > h2"):null;
+            return {
+              within:Math.round(paragraph.getBoundingClientRect().top-heading.getBoundingClientRect().bottom),
+              toNext:nextHeading?Math.round(nextHeading.getBoundingClientRect().top-paragraph.getBoundingClientRect().bottom):null
+            };
+          })
         };
       });
       assert(metric.hasCss,"sitewide: shared stylesheet absent "+relative);
       assert(metric.overflow<=2,"sitewide: horizontal overflow "+metric.overflow+"px on "+relative);
       assert(metric.largestSectionPadding<=72,"sitewide: excess section padding "+metric.largestSectionPadding+"px on "+relative);
       assert(!metric.duplicateHeroBrand,"sitewide: repeated brand hero eyebrow on "+relative);
+      assert(metric.textOnlySplitGaps.every(g=>g.within<=23 && (g.toNext===null || g.toNext<=45)),
+        "sitewide: stacked text blocks still too far apart on "+relative+": "+JSON.stringify(metric.textOnlySplitGaps));
       spacingResults.push({route:relative,...metric});
     }
     await auditContext.close();
-    console.log("SITEWIDE SPACING QA "+JSON.stringify({checked:spacingResults.length,maxOverflow:Math.max(...spacingResults.map(x=>x.overflow)),maxSectionPadding:Math.max(...spacingResults.map(x=>x.largestSectionPadding))}));
+    console.log("SITEWIDE SPACING QA "+JSON.stringify({checked:spacingResults.length,maxOverflow:Math.max(...spacingResults.map(x=>x.overflow)),maxSectionPadding:Math.max(...spacingResults.map(x=>x.largestSectionPadding)),maxTextBlockGap:Math.max(0,...spacingResults.flatMap(x=>x.textOnlySplitGaps.map(g=>Math.max(g.within,g.toNext||0))))}));
 
     assert(d404.length===0&&m404.length===0,"Missing local assets: "+JSON.stringify([...d404,...m404]));
     console.log(JSON.stringify({desktop:"checked",mobile:"checked",spanishGallery:"checked",languageRouting:"checked",assets404s:d404.length+m404.length,accessibility:violations}));
