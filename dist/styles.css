@@ -245,3 +245,86 @@ a[href]:focus-visible{
 .pro-first-paths a:hover,.pro-first-paths a:focus-visible{border-color:var(--charcoal);outline-offset:3px}
 @media(max-width:1050px){.pro-first-role-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.pro-first-actions{flex-direction:column}.pro-first-actions .btn{width:100%}.pro-first-section{padding:32px 20px 48px}.pro-first-role-grid{gap:12px;margin-top:24px}.pro-first-role-grid article{padding:15px}.pro-first-role-grid h3{font-size:20px}.pro-first-role-grid p{font-size:13px}.pro-first-paths{flex-direction:column}.pro-first-paths>a{width:100%}}
+
+/* Site-wide editorial rhythm: October 2026. Applies to all English and Spanish routes.
+   Consolidates overlarge empty bands without shrinking body copy or photo content. */
+body:not(.page) main > section.section,
+body.page main > section.section,
+body main > section.section {
+  padding-top:clamp(34px,4.4vw,62px);
+  padding-bottom:clamp(34px,4.4vw,62px);
+}
+main > section.page-hero:not(.pro-redesign-hero) {
+  padding-top:clamp(112px,10vw,148px);
+  padding-bottom:clamp(29px,4vw,48px);
+}
+main > .section.about-banner-section{padding-top:28px;padding-bottom:28px}
+main > .section.legal-copy{padding-top:32px;padding-bottom:48px}
+main .eyebrow{margin-top:0;margin-bottom:8px}
+main :is(.h1,.h2,.h3){line-height:1.15}
+main .h2{margin-top:8px;margin-bottom:14px}
+main .h3{margin-top:7px;margin-bottom:11px}
+main :is(.h1,.h2,.h3,h1,h2,h3) + :is(p,.copy,.lead){margin-top:9px}
+main p + p{margin-top:9px}
+main p{margin-bottom:12px}
+main .lead{margin-bottom:14px}
+main .pro-heading{margin-bottom:20px}
+main .professional-workflow-intro{margin-bottom:20px}
+main .claims-footnote{margin-top:15px}
+main .claim-context-note{margin-bottom:27px}
+main .claim-responsibilities{padding-top:28px}
+main .results-section{gap:clamp(24px,3.5vw,38px)}
+main .comparison-pair{gap:clamp(16px,2.4vw,26px);padding-top:clamp(18px,2.5vw,29px)}
+main .ba-home-grid{row-gap:clamp(22px,3vw,34px)}
+main .home-process-grid{margin-top:23px}
+main .home-benefits-grid{margin-top:20px}
+main .pro-first-role-grid{margin-top:22px;margin-bottom:18px}
+main .pro-audience-grid{margin-top:17px}
+main .pro-redesign-hero{
+  margin-top:12px!important;
+  padding:clamp(25px,3.5vw,43px)!important;
+}
+main .pro-redesign-hero .h1{margin-top:6px;margin-bottom:13px}
+main .pro-hero-actions{margin-top:18px}
+main .audience-hero{
+  padding-top:clamp(110px,11vw,154px)!important;
+  padding-bottom:clamp(30px,4vw,55px)!important;
+}
+body:not(.page) main{padding-bottom:24px}
+main .brand-break{min-height:unset;padding:clamp(46px,7vw,85px) 20px!important}
+main .split{gap:clamp(20px,3.5vw,46px)}
+main .photo-grid{margin-top:24px;gap:14px}
+main .loss-grid{margin-top:25px}
+main .columns{margin-top:24px;gap:23px}
+/* Reduce fixed mobile CTA obstruction: keep it reachable but avoid covering the text column. */
+@media(max-width:900px){
+  .sticky-call{
+    left:auto!important;right:calc(12px + env(safe-area-inset-right,0px))!important;
+    bottom:calc(12px + env(safe-area-inset-bottom,0px))!important;
+    width:auto!important;max-width:160px;
+    padding:12px 16px!important;min-height:44px;line-height:20px;
+    border-radius:999px;box-shadow:0 3px 12px rgba(26,26,26,.18);
+  }
+  body{padding-bottom:calc(66px + env(safe-area-inset-bottom,0px))}
+  body:not(.page) main > section.section,
+  body.page main > section.section,
+  body main > section.section {
+    padding-top:30px;padding-bottom:30px;
+  }
+  main > section.page-hero:not(.pro-redesign-hero){
+    padding-top:108px;padding-bottom:28px;
+  }
+  main .pro-redesign-hero{
+    margin:10px 12px 0!important;padding:24px 20px!important;
+  }
+  main .audience-hero{padding:112px 20px 31px!important}
+  main .pro-first-section{padding-top:26px;padding-bottom:32px}
+  main .h2{margin-bottom:12px}
+  main .pro-audience-card{min-height:0}
+  main .claim-context-step{padding-bottom:12px}
+  main .comparison-pair{padding-top:20px}
+  main .brand-break{padding:40px 20px!important}
+}
+@media(max-width:390px){
+  .sticky-call{font-size:11px!important;padding:10px 13px!important;max-width:144px}
+}
