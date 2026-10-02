@@ -147,6 +147,15 @@ The site includes page titles and descriptions, canonical links, English/Spanish
 
 - Refreshed both professional landing pages with a calm sage hero and direct phone/contact actions, four separately identified audiences with accessible decorative icons, and a clearer order: overview → six-step workflow → confirmed specialist capabilities → original before-and-after sliders → eight FAQs. Shared responsive styling supports narrow Android displays; independent live browser QA remains necessary.
 
+
+### Audience-first homepage redesign — October 2, 2026
+
+- Rebuilt **both English and Spanish homepages** around equally prominent, same-size **Homeowners & Families** and **Insurance & Restoration Professionals** cards. Homeowners go to the existing Contact page; professionals go to the dedicated bilingual For Professionals page. Neither audience requires a new form.
+- Restored the shorter **Restoring What Matters** hero, with 24/7 inquiry availability and free pickup, and kept the original ACR facility background image. The two audience actions share identical sizing and styling; the palette uses charcoal, gold, cream, taupe and off-white with no newly introduced green or navy.
+- Consolidated several repetitive homepage blocks into concise Fire & Smoke and Water & Flood service links; retained the What We Restore collection, a four-step overview linking to the detailed process, four original ACR before-and-after slider pairs, four verified service/capability highlights, existing Google review section, About section, six FAQ answers, and one closing Contact call to action.
+- Replaced the Spanish homepage's older illustrative comparison gallery with the same four original ACR photo pairs and accessible range-controlled sliders, with translated headings and labels. The original photo gallery remains the primary source for all ten pairs on the Results pages.
+- Preserved legacy navigation anchors where practical: `#services`, `#loss-types`, `#what-we-restore`, `#process`, `#google-reviews`, `#about-acr`, `#faq-guide-link` and `#business-details`. Confirm live browser behavior, deployment success and accessibility QA independently before marking the release verified.
+
 ## Project Status and Next Steps — October 2, 2026
 
 **Completed in the repository:** bilingual English/Spanish pages and shared navigation; top-level For Professionals menu (including Android/mobile navigation); 20 consumer FAQs per language; six-step professional claims workflow; eight professional FAQs per language; insurer/contractor capability panels; 10 original ACR before-and-after comparisons on each Results page, including three reused on the professional pages; six case studies; Chester County content; professional SEO titles, metadata, and contextual links; contact/CTA cleanup; README maintenance notes.
