@@ -63,7 +63,7 @@ const assert=(condition,message)=>{if(!condition)errors.push(message);};
     await desktop.addScriptTag({path:axePath});
     const violations=await desktop.evaluate(async()=>{
       const r=await window.axe.run(document,{runOnly:{type:"tag",values:["wcag2a","wcag2aa","wcag21a","wcag21aa"]}});
-      return r.violations.map(v=>({id:v.id,impact:v.impact,count:v.nodes.length}));
+      return r.violations.map(v=>({id:v.id,impact:v.impact,count:v.nodes.length,targets:v.nodes.slice(0,30).map(n=>({target:n.target,summary:n.failureSummary?.slice(0,200)}))}));
     });
     console.log("ACCESSIBILITY FINDINGS "+JSON.stringify(violations));
     const critical=violations.filter(v=>v.impact==="critical");
