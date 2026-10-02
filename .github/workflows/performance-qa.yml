@@ -1,0 +1,73 @@
+name: ACR live mobile and desktop performance audit
+
+on:
+  push:
+    paths:
+      - .github/workflows/performance-qa.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Lighthouse
+        run: npm install --no-save --no-package-lock lighthouse
+      - name: Measure published homepage on mobile and desktop
+        id: audits
+        continue-on-error: true
+        shell: bash
+        run: |
+          set +e
+          npx lighthouse https://sysopx786.github.io/ACR-Website/ --chrome-flags="--headless --no-sandbox --disable-dev-shm-usage" --output=json --output-path=./lighthouse-mobile.json --only-categories=performance,accessibility,best-practices,seo --quiet > lighthouse-mobile.log 2>&1
+          mobile_exit=$?
+          npx lighthouse https://sysopx786.github.io/ACR-Website/ --preset=desktop --chrome-flags="--headless --no-sandbox --disable-dev-shm-usage" --output=json --output-path=./lighthouse-desktop.json --only-categories=performance,accessibility,best-practices,seo --quiet > lighthouse-desktop.log 2>&1
+          desktop_exit=$?
+          echo "MOBILE_EXIT=$mobile_exit" >> "$GITHUB_ENV"
+          echo "DESKTOP_EXIT=$desktop_exit" >> "$GITHUB_ENV"
+          if [ "$mobile_exit" -ne 0 ] || [ "$desktop_exit" -ne 0 ]; then exit 1; fi
+      - name: Publish compact verified measurements
+        if: always()
+        run: |
+          git fetch origin main
+          git checkout main
+          git pull --ff-only origin main
+          mkdir -p qa
+          node - <<'NODE'
+          const fs=require('fs');
+          function read(file){
+            if(!fs.existsSync(file))return null;
+            try{
+              const j=JSON.parse(fs.readFileSync(file,'utf8'));
+              const a=j.audits||{},c=j.categories||{};
+              return {testURL:j.finalDisplayedUrl||j.finalUrl, fetchTime:j.fetchTime,
+                scores:Object.fromEntries(Object.entries(c).map(([k,v])=>[k,Math.round((v.score||0)*100)])),
+                metrics:Object.fromEntries(['first-contentful-paint','largest-contentful-paint','speed-index','total-blocking-time','cumulative-layout-shift','interactive'].map(k=>[k,a[k]?{value:a[k].numericValue,display:a[k].displayValue}:null])),
+                warnings:j.runWarnings||[]};
+            }catch(e){return {error:String(e)}}
+          }
+          const output={testedCommit:process.env.GITHUB_SHA,
+            runUrl:'https://github.com/'+process.env.GITHUB_REPOSITORY+'/actions/runs/'+process.env.GITHUB_RUN_ID,
+            measuredAt:new Date().toISOString(),
+            mobileExit:process.env.MOBILE_EXIT||'not run',desktopExit:process.env.DESKTOP_EXIT||'not run',
+            mobile:read('lighthouse-mobile.json'),desktop:read('lighthouse-desktop.json'),
+            mobileLog:fs.existsSync('lighthouse-mobile.log')?fs.readFileSync('lighthouse-mobile.log','utf8').slice(-1800):'',
+            desktopLog:fs.existsSync('lighthouse-desktop.log')?fs.readFileSync('lighthouse-desktop.log','utf8').slice(-1800):''};
+          fs.writeFileSync('qa/latest-performance.json',JSON.stringify(output,null,2)+String.fromCharCode(10));
+          NODE
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add qa/latest-performance.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Record measured ACR homepage Lighthouse results [skip ci]"
+            git push origin HEAD:main
+          fi
+      - name: Mark unsuccessful audits as failed
+        if: steps.audits.outcome != 'success'
+        run: exit 1
