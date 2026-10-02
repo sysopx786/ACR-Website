@@ -462,8 +462,8 @@ body.professional-page main [id] { scroll-margin-top:96px; }
 }
 
 /* Reviews anchor remains on homepage; offset fixed header when using the new top-level menu link. */
-#google-reviews{scroll-margin-top:90px}
-@media(max-width:1500px){#google-reviews{scroll-margin-top:80px}}
+#google-reviews,#reviews{scroll-margin-top:90px}
+@media(max-width:1500px){#google-reviews,#reviews{scroll-margin-top:80px}}
 
 /* Clearly identified fictional design-preview examples; no stars or Google branding. */
 .sample-reviews-section .reviews-heading{margin-bottom:22px}.sample-reviews-section .review-group-heading{font-family:var(--serif);font-size:clamp(23px,3vw,32px);margin:30px 0 16px}.sample-reviews-section .reviews-list{gap:14px}.sample-reviews-section .review-card{padding:20px 22px}.sample-reviews-section .review-card h4{font-size:18px;margin:9px 0 6px}.sample-reviews-section .review-type{font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:#65542c}.sample-reviews-section .review-card blockquote{font-family:inherit;font-size:16px;line-height:1.55;font-weight:400;margin:8px 0 0}
