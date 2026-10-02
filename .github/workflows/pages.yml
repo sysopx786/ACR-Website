@@ -31,6 +31,9 @@ jobs:
       - name: Audit internal links, assets, languages and image galleries
         run: node scripts/check-site.cjs
 
+      - name: Check for repeated content
+        run: node scripts/check-duplicate-copy.cjs
+
       - name: Verify Chester County pages
         run: |
           test -s dist/index.html
