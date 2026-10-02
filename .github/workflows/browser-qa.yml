@@ -1,0 +1,33 @@
+name: ACR browser and accessibility QA
+
+on:
+  push:
+    paths:
+      - .github/workflows/browser-qa.yml
+      - scripts/browser-qa.cjs
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  browser-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser test dependencies
+        run: |
+          npm install --no-save --no-package-lock playwright axe-core
+          npx playwright install --with-deps chromium
+      - name: Test navigation, mobile, Spanish gallery and accessibility
+        run: node scripts/browser-qa.cjs
+      - name: Save browser screenshots
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: acr-browser-qa-screenshots
+          path: qa-screenshots/
+          if-no-files-found: ignore
