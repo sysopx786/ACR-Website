@@ -1,8 +1,8 @@
-# ACR approved regional service-area inventory (up to 165 minutes)
+# ACR approved regional service-area inventory (up to 145 minutes)
 
-Origin: 17A East Queen Street, Ephrata PA 17522. Planning limit: 165-minute (2 h 45 min) one-way road travel, interpreted from the latest message admitting 140–142-minute routes. Research date: 2026-10-02.
+Origin: 17A East Queen Street, Ephrata PA 17522. Planning limit: 145-minute (2 h 25 min) one-way road travel, as explicitly confirmed by the website owner, inclusive of routes of 140–142 minutes. Research date: 2026-10-02.
 
-**BUSINESS APPROVAL:** All listed counties and towns have been approved by the website owner for inclusion as inquiry areas. This approval is not a measurement of drive time, a guarantee of pickup, or proof every address in the county is within 165 minutes. Keep address-specific scheduling language.
+**BUSINESS APPROVAL:** All listed counties and towns have been approved by the website owner for inclusion as inquiry areas. This approval is not a measurement of drive time, a guarantee of pickup, or proof every address in the county is within 145 minutes. Keep address-specific scheduling language.
 
 | State | County or jurisdiction | Towns needing individual route checks | Status |
 |---|---|---|---|
@@ -86,7 +86,7 @@ Origin: 17A East Queen Street, Ephrata PA 17522. Planning limit: 165-minute (2 h
 
 ## Driving time and publication policy
 1. Business owner approved listing the towns and counties. Route-check individual pickup addresses if scheduling; record origin/destination, weekday driving time and source.
-2. Planning range 0–165 minutes; 140 and 142 minutes are allowed. The 165-minute boundary is interpreted from the user's contradictory '1 hour 45' wording and must be confirmed if a strict operational policy is needed.
+2. Planning range 0–145 minutes; 140 and 142 minutes are allowed. The 145-minute boundary is interpreted from the user's contradictory '1 hour 45' wording and must be confirmed if a strict operational policy is needed.
 3. County entries denote inquiry reach, not proof that every address in a county qualifies.
 4. Confirm any cross-state logistics and actual pickup availability at booking.
 5. Publish the approved inquiry-location list in bilingual directory pages; avoid invented branch locations and fake local business addresses.
