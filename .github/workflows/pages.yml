@@ -50,3 +50,16 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Confirm published reviews match current source
+        shell: bash
+        run: |
+          for attempt in {1..18}; do
+            if curl --fail --silent --show-error --max-time 20 --output /tmp/acr-published.html "https://sysopx786.github.io/ACR-Website/?deployment-check=${GITHUB_SHA}" && grep -Fq 'Rachel M.' /tmp/acr-published.html && grep -Fq 'Review Drafts' /tmp/acr-published.html && ! grep -Fq 'id="google-reviews"' /tmp/acr-published.html; then
+              echo 'PASS: Published homepage contains the updated review drafts and no previous Google review section.'
+              exit 0
+            fi
+            sleep 10
+          done
+          echo 'FAIL: Published homepage does not match updated review drafts.' >&2
+          exit 1
