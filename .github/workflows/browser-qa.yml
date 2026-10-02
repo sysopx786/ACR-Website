@@ -41,6 +41,9 @@ jobs:
         env:
           BROWSER_OUTCOME: ${{ steps.browser_tests.outcome }}
         run: |
+          git fetch origin main
+          git checkout main
+          git pull --ff-only origin main
           mkdir -p qa
           node - <<'NODE'
           const fs=require('fs');
@@ -52,13 +55,10 @@ jobs:
             runUrl:'https://github.com/'+process.env.GITHUB_REPOSITORY+'/actions/runs/'+process.env.GITHUB_RUN_ID,
             completedAt:new Date().toISOString(),
             log:log.slice(-25000)
-          },null,2)+'\\n');
+          },null,2)+String.fromCharCode(10));
           NODE
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git fetch origin main
-          git checkout main
-          git pull --ff-only origin main
           git add qa/latest-browser-qa.json
           if ! git diff --cached --quiet; then
             git commit -m "Record latest ACR browser QA results [skip ci]"
