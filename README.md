@@ -109,6 +109,14 @@ The site includes page titles and descriptions, canonical links, English/Spanish
 - FAQ structured data is not a guarantee of FAQ rich results.
 - Do not create unverified town-specific service claims, ratings, guarantees, insurance partnerships, certifications, or turnaround promises.
 
+
+## Professional Claims Workflow — October 2026
+
+- The English and Spanish `for-professionals/` pages include a six-step **How Our Partnership Works** accordion timeline: Referral, Assessment, Inventory & Estimate, Pickup & Restoration, Coordination, and Delivery & Billing.
+- The timeline uses native `<details>`/`<summary>` elements for keyboard accessibility, with responsive three-, two-, and one-column layouts in `dist/styles.css`.
+- ACR has confirmed direct adjuster coordination, itemized photographic inventories, written and Xactimate estimates, off-site storage and scheduled return, essential-clothing emergency handling, direct insurance billing **when authorized**, and existing vendor agreements. Do not infer particular carriers, guaranteed payment, coverage, or approval from these facts.
+- Keep the workflow bilingual and avoid adding redundant maps, phone blocks, or referral forms without separate approval.
+
 ## Hosting and Deployment
 
 - Website files: `dist/`
