@@ -153,9 +153,9 @@ The site includes page titles and descriptions, canonical links, English/Spanish
 
 - Rebuilt **both English and Spanish homepages** around equally prominent, same-size **Homeowners & Families** and **Insurance & Restoration Professionals** cards. Homeowners go to the existing Contact page; professionals go to the dedicated bilingual For Professionals page. Neither audience requires a new form.
 - Restored the shorter **Restoring What Matters** hero, with 24/7 inquiry availability and free pickup, and kept the original ACR facility background image. The two audience actions share identical sizing and styling; the palette uses charcoal, gold, cream, taupe and off-white with no newly introduced green or navy.
-- Consolidated several repetitive homepage blocks into concise Fire & Smoke and Water & Flood service links; retained the What We Restore collection, a four-step overview linking to the detailed process, four original ACR before-and-after slider pairs, four verified service/capability highlights, existing Google review section, About section, six FAQ answers, and one closing Contact call to action.
+- Consolidated several repetitive homepage blocks into concise Fire & Smoke and Water & Flood service links; retained the What We Restore collection, a four-step overview linking to the detailed process, four original ACR before-and-after slider pairs, four verified service/capability highlights, clearly labeled fictional review-layout preview section, About section, six FAQ answers, and one closing Contact call to action.
 - Replaced the Spanish homepage's older illustrative comparison gallery with the same four original ACR photo pairs and accessible range-controlled sliders, with translated headings and labels. The original photo gallery remains the primary source for all ten pairs on the Results pages.
-- Preserved legacy navigation anchors where practical: `#services`, `#loss-types`, `#what-we-restore`, `#process`, `#google-reviews`, `#about-acr`, `#faq-guide-link` and `#business-details`. Confirm live browser behavior, deployment success and accessibility QA independently before marking the release verified.
+- Preserved legacy navigation anchors where practical: `#services`, `#loss-types`, `#what-we-restore`, `#process`, `#reviews`, `#about-acr`, `#faq-guide-link` and `#business-details`. Confirm live browser behavior, deployment success and accessibility QA independently before marking the release verified.
 
 ## Project Status and Next Steps — October 2, 2026
 
@@ -348,3 +348,9 @@ _Last documentation update: October 2, 2026._
 - Android screenshot showed the fixed/sticky navigation obscuring the top of the For Professionals hero, because `.pro-redesign-hero` intentionally uses compact padding, unlike other `.page-hero` sections.
 - English and Spanish professional pages now set `body.professional-page` and request `styles.css?v=20261002-header-offset`; the scoped stylesheet adds main top clearance for 76px desktop and 70px responsive navigation, keeps a small gap above the hero, and offsets in-page anchors. Other page layouts are unchanged.
 - Source-level class, CSS, and both language variants checked. Live Android/desktop visual testing still needs confirmation after GitHub Pages deployment.
+
+
+### Review preview — October 2, 2026
+- Removed the six existing Google-branded quotes/ratings/links from both homepages, including attribution referencing a different business.
+- Added 14 **fictional, visibly labeled layout-only examples**: seven insurance/restoration professional scenarios and seven homeowner scenarios, in English and Spanish. These are **not** real testimonials, endorsements, or verified reviews and must never be represented as such or marked up as Review/AggregateRating structured data.
+- Shared menu points to `#reviews`. Replace sample content with sourced, authorized customer feedback before external publication as testimonials.
