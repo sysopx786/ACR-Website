@@ -82,6 +82,8 @@ Origin: 17A East Queen Street, Ephrata PA 17522. Limit: 135-minute one-way road 
 | NY | Orange | Port Jervis, Middletown | pending |
 | NY | Sullivan | Barryville | pending |
 
+| DC | District of Columbia (county-equivalent) | Northwest DC boundary neighborhoods; district-wide routing check | pending / likely exceeds 135 minutes at central destination |
+
 ## Required validation before public SEO
 1. Check each town and ZIP/address through a road-network routing engine from the exact Ephrata office; log the route and departure time.
 2. Group towns as inside (0–120 min), edge (121–135 min), excluded (>135 min) or pending (no dependable route).
