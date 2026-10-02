@@ -28,6 +28,9 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
+      - name: Audit internal links, assets, languages and image galleries
+        run: node scripts/check-site.cjs
+
       - name: Verify Chester County pages
         run: |
           test -s dist/index.html
