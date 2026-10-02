@@ -20,7 +20,10 @@ menuBtn?.addEventListener("click",()=>{
   menuBtn.setAttribute("aria-expanded",String(open));
   document.body.classList.toggle("no-scroll",open);
 });
-mobile?.querySelectorAll("a").forEach(link=>link.addEventListener("click",closeMobileMenu));
+// Navigation links are injected below, so delegate clicks from the mobile panel.
+mobile?.addEventListener("click",event=>{
+  if(event.target.closest("a"))closeMobileMenu();
+});
 
 // GitHub Pages hosts this project below /ACR-Website/, not at domain root.
 // Only a deliberate language-switch click changes the displayed language.
