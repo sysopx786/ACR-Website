@@ -242,6 +242,9 @@ Inspect the latest machine-readable results in `qa/latest-browser-qa.json` and `
 - Added real browser geometry assertions across all HTML routes for heading-only text split sections: heading-to-paragraph gaps at or below **23px**, and transitions between consecutive such sections at or below **45px** at Android width. Split sections with an existing paragraph beneath their heading (as in case-study notes) are handled separately, rather than incorrectly measuring across real content. English and Spanish Fire & Smoke and Water & Flood pages receive full-height mobile screenshots in the browser QA artifacts. The tests also continue checking horizontal overflow, visible branding, and shared stylesheet coverage. These are thresholds to be **measured** on actual browser runs, not assertions of a pass before Actions reports success.
 - Retain the original ACR charcoal, gold, cream, taupe and off-white appearance, all copy and original photo assets, and the compact floating mobile telephone action.
 
+
+**Verified browser-QA result (October 2, 2026):** GitHub Actions run [37060619211](https://github.com/sysopx786/ACR-Website/actions/runs/37060619211) passed for source commit `7632c6d55f39a30a23d3733e2fd5cb6666422dc1`. The mobile audit visited all **49 HTML routes** and reported **0px horizontal overflow**, maximum checked top-level section padding **54px**, and maximum measured gap for qualifying adjacent text blocks **20px**. The English and Spanish Fire/Smoke and Water/Flood pages each measured **9px heading-to-paragraph** and **20px between consecutive text sections**. English and Spanish service-page screenshots were captured in the QA artifact. The automated test also verified core desktop/mobile navigation, the professional workflow, before-and-after sliders, local links and accessibility; a physical-device review remains separate.
+
 ## Maintenance Guidelines
 
 1. Keep English and Spanish copy, navigation, URLs, SEO metadata, and links aligned.
