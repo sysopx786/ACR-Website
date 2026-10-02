@@ -66,8 +66,8 @@ const assert=(condition,message)=>{if(!condition)errors.push(message);};
       return r.violations.map(v=>({id:v.id,impact:v.impact,count:v.nodes.length,targets:v.nodes.slice(0,30).map(n=>({target:n.target,summary:n.failureSummary?.slice(0,200)}))}));
     });
     console.log("ACCESSIBILITY FINDINGS "+JSON.stringify(violations));
-    const critical=violations.filter(v=>v.impact==="critical");
-    assert(critical.length===0,"axe: critical accessibility violations: "+JSON.stringify(critical));
+    const blocking=violations.filter(v=>v.impact==="critical"||v.impact==="serious");
+    assert(blocking.length===0,"axe: serious or critical accessibility violations: "+JSON.stringify(blocking));
     assert(d404.length===0&&m404.length===0,"Missing local assets: "+JSON.stringify([...d404,...m404]));
     console.log(JSON.stringify({desktop:"checked",mobile:"checked",spanishGallery:"checked",languageRouting:"checked",assets404s:d404.length+m404.length,accessibility:violations}));
   } finally {await browser.close();}
