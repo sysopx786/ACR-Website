@@ -84,7 +84,7 @@ Origin: 17A East Queen Street, Ephrata PA 17522. Planning limit: 120-minute (2 h
 | NY | Orange | Chester, Cornwall, Florida, Greenwood Lake, Highland Falls, Kiryas Joel, Middletown, Monroe, Montgomery, New Windsor, Newburgh, Otisville, Port Jervis, Tuxedo, Walden, Wallkill, Warwick, Washingtonville | approved inquiry area; timing varies |
 | NY | Sullivan | Barryville, Bloomingburg, Callicoon, Cochecton, Fallsburg, Forestburgh, Fremont, Highland, Liberty, Lumberland, Mamakating, Monticello, Narrowsburg, Rockland, Thompson, Tusten, Wurtsboro | approved inquiry area; timing varies |
 
-| DC | District of Columbia (county-equivalent) | Northwest DC boundary neighborhoods; district-wide routing check | pending / likely exceeds 135 minutes at central destination |
+| DC | District of Columbia (county-equivalent) | Northwest DC boundary neighborhoods; district-wide routing check | pending / likely exceeds 120 minutes at central destination |
 
 ## Driving time and publication policy
 1. Business owner approved listing the towns and counties. Route-check individual pickup addresses if scheduling; record origin/destination, weekday driving time and source.
