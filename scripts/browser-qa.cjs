@@ -199,6 +199,10 @@ const assert=(condition,message)=>{if(!condition)errors.push(message);};
       assert(!metric.duplicateHeroBrand,"sitewide: repeated brand hero eyebrow on "+relative);
       assert(metric.textOnlySplitGaps.every(g=>g.within<=23 && (g.toNext===null || g.toNext<=45)),
         "sitewide: stacked text blocks still too far apart on "+relative+": "+JSON.stringify(metric.textOnlySplitGaps));
+      if(["fire-smoke-damage-clothing-restoration/index.html","es/fire-smoke-damage-clothing-restoration/index.html","water-flood-damage-textile-restoration/index.html","es/water-flood-damage-textile-restoration/index.html"].includes(relative)){
+        console.log("TEXT SPACING EXAMPLE "+JSON.stringify({route:relative,gaps:metric.textOnlySplitGaps}));
+        await auditPage.screenshot({path:path.join(screenshots,"spacing-"+relative.replace(/[\\/.]/g,"-")+".png"),fullPage:true});
+      }
       spacingResults.push({route:relative,...metric});
     }
     await auditContext.close();
