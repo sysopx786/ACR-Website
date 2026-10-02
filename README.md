@@ -261,7 +261,7 @@ Inspect the latest machine-readable results in `qa/latest-browser-qa.json` and `
 
 - Added bilingual /service-areas/ and /es/service-areas/ directories and linked them under Service Areas on desktop and mobile.
 - Business owner approved all listed candidate counties/towns for *service inquiries* across PA, MD, DE, NJ, WV, VA and NY, with Washington DC recorded as a boundary-check jurisdiction.
-- The practical **maximum driving estimate is 120 minutes (2 hours 25 minutes)** from 17A East Queen Street, Ephrata, PA 17522. Published times such as 120 minutes is the published estimated maximum. This supersedes the earlier 135-minute screening threshold and an incorrect interim 165-minute interpretation.
+- The practical **maximum driving estimate is 120 minutes (2 hours)** from 17A East Queen Street, Ephrata, PA 17522. The 120-minute estimate is the public planning guideline. This supersedes the earlier 135-minute screening threshold and an earlier 165-minute interpretation.
 - County lists denote inquiry coverage, not proof every address is reachable within 120 minutes; pickup timing and logistics are confirmed address by address. The listed towns have not all been independently timed by a routing engine.
 - Inventory and routing log: research/service-area-120-minute-inventory.md. Do not invent additional branches, carrier agreements, or town-specific promises. Maintain English/Spanish parity and hreflang sitemap.
 
