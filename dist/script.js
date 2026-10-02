@@ -85,11 +85,9 @@ const navEntries=[
     navLink(navLabels.regional,navRoot+"service-areas/"),
     navLink(navLabels.chester,navRoot+"chester-county-clothing-restoration/")
   ]),
-  navGroup(navLabels.about,[
-    navLink(navLabels.aboutUs,navRoot+"about/"),
-    navLink(navLabels.faq,navRoot+"faq/"),
-    navLink(navLabels.reviews,navRoot+"#google-reviews")
-  ]),
+  navLink(navLabels.about,navRoot+"about/"),
+  navLink(navLabels.faq,navRoot+"faq/"),
+  navLink(navLabels.reviews,navRoot+"#google-reviews"),
   navLink(navLabels.contact,navRoot+"contact/")
 ];
 document.querySelectorAll(".site-header .links,.site-header .mobile-panel").forEach(node=>{
