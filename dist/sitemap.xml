@@ -216,4 +216,16 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://sysopx786.github.io/ACR-Website/es/case-studies/patchwork-quilt/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sysopx786.github.io/ACR-Website/case-studies/patchwork-quilt/"/>
   </url>
+  <url>
+    <loc>https://sysopx786.github.io/ACR-Website/faq/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sysopx786.github.io/ACR-Website/faq/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sysopx786.github.io/ACR-Website/es/faq/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sysopx786.github.io/ACR-Website/faq/"/>
+  </url>
+  <url>
+    <loc>https://sysopx786.github.io/ACR-Website/es/faq/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sysopx786.github.io/ACR-Website/faq/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sysopx786.github.io/ACR-Website/es/faq/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sysopx786.github.io/ACR-Website/faq/"/>
+  </url>
 </urlset>
