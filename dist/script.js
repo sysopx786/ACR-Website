@@ -41,3 +41,70 @@ document.querySelectorAll("[data-lang-switch]").forEach(link=>{
   const target=link.textContent.trim().toLowerCase().startsWith("english")?"en":"es";
   link.href=equivalentPath(target);
 });
+
+// Shared bilingual navigation, identical on every page (desktop and mobile).
+// Links use the GitHub Pages project prefix to avoid root-path 404s.
+const navSpanish=document.documentElement.lang.toLowerCase().startsWith("es")||location.pathname.startsWith("/ACR-Website/es/");
+const navRoot="/ACR-Website/"+(navSpanish?"es/":"");
+const navLabels=navSpanish?{
+  home:"Inicio",services:"Servicios",process:"Nuestro proceso",results:"Resultados",
+  resultOverview:"Antes y después",areas:"Zonas de servicio",about:"Acerca de",
+  contact:"Contacto",fire:"Fuego y humo",water:"Agua e inundaciones",
+  restore:"Qué restauramos",professionals:"Para profesionales",cases:"Casos reales",
+  chester:"Condado de Chester",aboutUs:"Sobre ACR",faq:"Preguntas frecuentes",reviews:"Reseñas",
+  caseNames:["Equipo de bomberos","Vestido de novia","Uniformes y delantales de chef","Chaqueta de cuero","Ropa de cama y textiles","Colcha de retazos"]
+}:{
+  home:"Home",services:"Services",process:"Our Process",results:"Results",
+  resultOverview:"Before & After",areas:"Service Areas",about:"About",
+  contact:"Contact",fire:"Fire & Smoke",water:"Water & Flood",
+  restore:"What We Restore",professionals:"For Professionals",cases:"Case Studies",
+  chester:"Chester County",aboutUs:"About ACR",faq:"FAQs",reviews:"Reviews",
+  caseNames:["Firefighter Turnout Gear","Wedding Gown","Chef Uniforms & Aprons","Leather Jacket","Bedding & Textiles","Patchwork Quilt"]
+};
+const navCaseSlugs=["firefighter-turnout-gear","wedding-gown","chef-uniforms-aprons","leather-jacket","bedding-textiles","patchwork-quilt"];
+const navLink=(label,url,cls="")=>'<a'+(cls?' class="'+cls+'"':'')+' href="'+url+'">'+label+'</a>';
+const navGroup=(label,items)=>'<details class="nav-group"><summary>'+label+'</summary><div class="nav-dropdown">'+items.join("")+'</div></details>';
+const navEntries=[
+  navLink(navLabels.home,navRoot),
+  navGroup(navLabels.services,[
+    navLink(navLabels.fire,navRoot+"fire-smoke-damage-clothing-restoration/"),
+    navLink(navLabels.water,navRoot+"water-flood-damage-textile-restoration/"),
+    navLink(navLabels.restore,navRoot+"what-we-restore/"),
+    navLink(navLabels.professionals,navRoot+"for-professionals/")
+  ]),
+  navLink(navLabels.process,navRoot+"our-process/"),
+  navGroup(navLabels.results,[
+    navLink(navLabels.resultOverview,navRoot+"results/"),
+    '<span class="nav-subheading">'+navLabels.cases+'</span>',
+    ...navCaseSlugs.map((slug,i)=>navLink(navLabels.caseNames[i],navRoot+"case-studies/"+slug+"/"))
+  ]),
+  navGroup(navLabels.areas,[
+    navLink(navLabels.chester,navRoot+"chester-county-clothing-restoration/")
+  ]),
+  navGroup(navLabels.about,[
+    navLink(navLabels.aboutUs,navRoot+"about/"),
+    navLink(navLabels.faq,navRoot+"faq/"),
+    navLink(navLabels.reviews,navRoot+"#google-reviews")
+  ]),
+  navLink(navLabels.contact,navRoot+"contact/")
+];
+document.querySelectorAll(".site-header .links,.site-header .mobile-panel").forEach(node=>{
+  node.innerHTML=navEntries.join("");
+});
+document.querySelectorAll(".site-header .nav-group").forEach(group=>{
+  group.addEventListener("toggle",()=>{
+    if(group.open)group.parentElement.querySelectorAll(".nav-group").forEach(other=>{
+      if(other!==group)other.open=false;
+    });
+  });
+});
+document.addEventListener("click",event=>{
+  if(!event.target.closest(".site-header .nav-group"))
+    document.querySelectorAll(".site-header .nav-group[open]").forEach(group=>group.open=false);
+});
+document.addEventListener("keydown",event=>{
+  if(event.key==="Escape"){
+    document.querySelectorAll(".site-header .nav-group[open]").forEach(group=>group.open=false);
+    closeMobileMenu();
+  }
+});
