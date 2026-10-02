@@ -13,7 +13,7 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -27,6 +27,14 @@ jobs:
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
+
+      - name: Verify Chester County pages
+        run: |
+          test -s dist/index.html
+          test -s dist/chester-county-clothing-restoration/index.html
+          test -s dist/es/chester-county-clothing-restoration/index.html
+          test -s dist/sitemap.xml
+          grep -q 'Chester County' dist/chester-county-clothing-restoration/index.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
