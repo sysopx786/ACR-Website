@@ -232,6 +232,7 @@ Inspect the latest machine-readable results in `qa/latest-browser-qa.json` and `
 - Standardized vertical spacing sitewide through `dist/styles.css`: tightened spacing around consecutive paragraphs, eyebrows, titles, top-level sections, page introductions, professional claims content, result comparisons, card groups, and responsive layouts. Kept text sizes, colors and actual image content intact.
 - On Android/mobile, replaced the oversized fixed full-width **Call ACR** strip with a small gold floating pill, reducing how much content it covers. Retained the same telephone action.
 - Added a GitHub browser-QA regression pass to visit **every HTML page** (English, Spanish and legacy aliases), checking shared stylesheet use, narrow-screen overflow, excessive section padding, and duplicate brand text in hero labels. Check the current Actions result before stating this automated pass is successful.
+- Corrected low-contrast muted paragraphs on cream Fire/Water service cards and the gold-highlighted ACR claims step using an existing dark brown/charcoal text color; test with axe before claiming accessibility pass.
 
 ## Maintenance Guidelines
 
