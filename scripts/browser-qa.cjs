@@ -170,7 +170,7 @@ const assert=(condition,message)=>{if(!condition)errors.push(message);};
       const pathName=slug==="index.html"?"":slug;
       const response=await auditPage.goto(base+pathName,{waitUntil:"domcontentloaded"});
       assert(response&&response.status()===200,"sitewide: unable to load "+relative);
-      await auditPage.waitForFunction(()=>[...document.styleSheets].some(s=>s.href?.includes("/ACR-Website/styles.css")),{timeout:10000}).catch(()=>{});
+      await auditPage.waitForFunction(()=>[...document.styleSheets].some(s=>s.href?.includes("/ACR-Website/styles.css")),null,{timeout:10000}).catch(()=>{});
       const metric=await auditPage.evaluate(()=>{
         const main=document.querySelector("main");
         const sections=[...(main?.children||[])].filter(el=>el.matches("section.section"));
