@@ -113,6 +113,10 @@ The site includes page titles and descriptions, canonical links, English/Spanish
 
 ## Professional Claims Workflow — October 2026
 
+- The **For Professionals** page now includes separate, concise insurance-carrier/adjuster and contractor panels outlining only confirmed ACR capabilities, plus three original ACR before-and-after comparisons (chef uniforms/aprons, leather jacket, and household textiles/bedding). The image controls support mouse, touch and keyboard via native range inputs.
+- Spanish `es/for-professionals/` contains matching translated content and the same three original job pairs. No professional intake form was added, per project decision. Keep the full Results galleries as the primary source rather than duplicating all 10 jobs here.
+
+
 - The English and Spanish `for-professionals/` pages include a six-step **How Our Partnership Works** accordion timeline: Referral, Assessment, Inventory & Estimate, Pickup & Restoration, Coordination, and Delivery & Billing.
 - The timeline uses native `<details>`/`<summary>` elements for keyboard accessibility, with responsive three-, two-, and one-column layouts in `dist/styles.css`.
 - ACR has confirmed direct adjuster coordination, itemized photographic inventories, written and Xactimate estimates, off-site storage and scheduled return, essential-clothing emergency handling, direct insurance billing **when authorized**, and existing vendor agreements. Do not infer particular carriers, guaranteed payment, coverage, or approval from these facts.
