@@ -133,6 +133,9 @@ The site includes page titles and descriptions, canonical links, English/Spanish
 - ACR has confirmed direct adjuster coordination, itemized photographic inventories, written and Xactimate estimates, off-site storage and scheduled return, essential-clothing emergency handling, direct insurance billing **when authorized**, and existing vendor agreements. Do not infer particular carriers, guaranteed payment, coverage, or approval from these facts.
 - Keep the workflow bilingual and avoid adding redundant maps, phone blocks, or referral forms without separate approval.
 
+
+- Added a four-audience **Who We Work With** overview (adjusters, restoration contractors, carriers, and policyholders) to both For Professionals pages; retained the detailed partnership panels, six-step workflow, professional FAQs, and original comparison sliders. Responsive audience cards use shared CSS.
+
 ## Project Status and Next Steps — October 2, 2026
 
 **Completed in the repository:** bilingual English/Spanish pages and shared navigation; top-level For Professionals menu (including Android/mobile navigation); 20 consumer FAQs per language; six-step professional claims workflow; eight professional FAQs per language; insurer/contractor capability panels; 10 original ACR before-and-after comparisons on each Results page, including three reused on the professional pages; six case studies; Chester County content; professional SEO titles, metadata, and contextual links; contact/CTA cleanup; README maintenance notes.
