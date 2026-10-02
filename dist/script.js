@@ -22,39 +22,22 @@ menuBtn?.addEventListener("click",()=>{
 });
 mobile?.querySelectorAll("a").forEach(link=>link.addEventListener("click",closeMobileMenu));
 
-const langStore={
-  get(){try{return localStorage.getItem("acrLanguage")}catch{return null}},
-  set(value){try{localStorage.setItem("acrLanguage",value)}catch{}}
-};
-
-function currentLang(){
-  return document.documentElement.lang==="es"?"es":"en";
-}
-
+// GitHub Pages hosts this project below /ACR-Website/, not at domain root.
+// Only a deliberate language-switch click changes the displayed language.
+// This avoids cached preferences redirecting explicitly opened links to a 404.
+const SITE_BASE="/ACR-Website/";
 function equivalentPath(targetLang){
-  const path=location.pathname;
+  let path=location.pathname;
   const hash=location.hash||"";
-  if(targetLang==="es"){
-    if(path==="/")return "/es/"+hash;
-    if(path.startsWith("/es/"))return path+hash;
-    const cleaned=path.replace(/\.html$/,"/").replace(/\/$/,"");
-    return (`/es${cleaned || ""}/`).replace(/\/{2,}/g,"/")+hash;
-  }
-  if(!path.startsWith("/es/"))return path+hash;
-  const without=path.replace(/^\/es/,"")||"/";
-  return without+hash;
+  const search=location.search||"";
+  if(!path.startsWith(SITE_BASE))return path+search+hash;
+  let relative=path.slice(SITE_BASE.length).replace(/^es\//,"");
+  if(relative.endsWith("index.html"))relative=relative.slice(0,-"index.html".length);
+  else if(relative.endsWith(".html"))relative=relative.slice(0,-".html".length);
+  if(relative&&!relative.endsWith("/"))relative+="/";
+  return SITE_BASE+(targetLang==="es"?"es/":"")+relative+search+hash;
 }
-
-const savedLang=langStore.get();
-if(!savedLang&&currentLang()==="es")langStore.set("es");
-if(savedLang&&savedLang!==currentLang()){
-  location.replace(equivalentPath(savedLang));
-}
-
 document.querySelectorAll("[data-lang-switch]").forEach(link=>{
   const target=link.textContent.trim().toLowerCase().startsWith("english")?"en":"es";
   link.href=equivalentPath(target);
-  link.addEventListener("click",()=>{
-    langStore.set(target);
-  });
 });
