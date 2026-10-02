@@ -12,6 +12,8 @@ on:
       - dist/results/index.html
       - dist/faq/index.html
       - dist/es/faq/index.html
+      - dist/for-professionals/index.html
+      - dist/es/for-professionals/index.html
   workflow_dispatch:
 
 permissions:
@@ -29,7 +31,7 @@ jobs:
         run: |
           npm install --no-save --no-package-lock playwright axe-core
           npx playwright install --with-deps chromium
-      - name: Test navigation, mobile, Spanish gallery and accessibility
+      - name: Test English/Spanish professional pages, desktop/mobile, sliders, links and accessibility
         id: browser_tests
         continue-on-error: true
         shell: bash
