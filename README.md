@@ -69,7 +69,7 @@ English and Spanish desktop and mobile navigation use a common, responsive dropd
 - **Service Areas:** Regional Service Areas, Chester County
 - **About** (standalone top-level link)
 - **FAQs** (standalone top-level link to the 20-question page)
-- **Reviews** (standalone top-level link to the homepage Google Reviews section)
+- **Reviews** (standalone top-level link to the draft review section)
 - **Contact**
 
 Navigation links are built by `dist/script.js` for desktop and mobile. `dist/styles.css` provides dropdown and responsive styles. The language switch maps visitors to the corresponding translated page. The sticky mobile **Call ACR** control is retained. Test actual desktop and mobile interaction, including Android, after any navigation change.
@@ -155,7 +155,7 @@ The site includes page titles and descriptions, canonical links, English/Spanish
 
 - Rebuilt **both English and Spanish homepages** around equally prominent, same-size **Homeowners & Families** and **Insurance & Restoration Professionals** cards. Homeowners go to the existing Contact page; professionals go to the dedicated bilingual For Professionals page. Neither audience requires a new form.
 - Restored the shorter **Restoring What Matters** hero, with 24/7 inquiry availability and free pickup, and kept the original ACR facility background image. The two audience actions share identical sizing and styling; the palette uses charcoal, gold, cream, taupe and off-white with no newly introduced green or navy.
-- Consolidated several repetitive homepage blocks into concise Fire & Smoke and Water & Flood service links; retained the What We Restore collection, a four-step overview linking to the detailed process, four original ACR before-and-after slider pairs, four verified service/capability highlights, customer-supplied review-book testimonial section, About section, six FAQ answers, and one closing Contact call to action.
+- Consolidated several repetitive homepage blocks into concise Fire & Smoke and Water & Flood service links; retained the What We Restore collection, a four-step overview linking to the detailed process, four original ACR before-and-after slider pairs, four verified service/capability highlights, clearly labeled draft review example section, About section, six FAQ answers, and one closing Contact call to action.
 - Replaced the Spanish homepage's older illustrative comparison gallery with the same four original ACR photo pairs and accessible range-controlled sliders, with translated headings and labels. The original photo gallery remains the primary source for all ten pairs on the Results pages.
 - Preserved legacy navigation anchors where practical: `#services`, `#loss-types`, `#what-we-restore`, `#process`, `#reviews`, `#about-acr`, `#faq-guide-link` and `#business-details`. Confirm live browser behavior, deployment success and accessibility QA independently before marking the release verified.
 
@@ -352,17 +352,18 @@ _Last documentation update: October 2, 2026._
 - Source-level class, CSS, and both language variants checked. Live Android/desktop visual testing still needs confirmation after GitHub Pages deployment.
 
 
-### Customer testimonials — October 2, 2026
-- Replaced the review-layout preview with **14 customer-supplied review-book testimonials**, with reviewer names, exact English quote text, category, and only the locations stated in the source. Seven are from homeowners and seven from insurance/restoration professionals.
-- Spanish reviews use translations with each original English quote available in an expandable panel. The old Google-branded review section, unsupported aggregate rating, rating/review structured data, and Google review links remain removed.
-- The testimonials were supplied by the project owner as review-book entries; their accuracy and publication authorization have not been independently audited. Do not add stars, dates, Google attribution, further geographical claims, or review structured data without evidence.
-- The shared Reviews menu links to `#reviews` on the respective homepage.
+### Draft review examples — October 2, 2026
+- User clarified that the supplied 14 geographically distributed reviews are **draft examples, not verified customer quotes or entries verified against a review book**. Never describe them as real customer feedback, testimonials, documented job outcomes, or verified endorsements.
+- Replaced older invented/geographically inconsistent cards on both English and Spanish homepages with the exact 14 supplied English drafts: seven homeowner and seven insurance/restoration professional cases. All eight represented jurisdictions (PA, MD, DE, NJ, WV, VA, NY, DC) are represented. Reviewer initials and towns are *sample labels*, not verified identities or service records.
+- Spanish content has clearly labeled translations and expandable English originals. All staff references use only Kendall and his team where supplied.
+- Visible headings and disclosures label the content as draft examples. No invented stars, aggregate ratings, Google branding, Google review links, customer Review schema or testimonial claims. Replace with consented genuine customer quotes before labeling them customer testimonials.
+- The shared Reviews menu links to `#reviews` on each homepage.
 
 ### Menu clarification — October 2, 2026
 
 - Promoted **FAQs** and **Reviews** from the About dropdown into **two separate top-level links**. About is now also a direct top-level link; Services, Results and Service Areas retain their dropdowns.
 - English: **FAQs**, **Reviews**; Spanish: **Preguntas frecuentes**, **Reseñas**.
-- FAQs links to `/faq/` (Spanish: `/es/faq/`); Reviews links to the existing homepage `#reviews` section in each language rather than generating a duplicate reviews page. The section now contains 14 customer-supplied review-book testimonials, replacing the former layout examples.
+- FAQs links to `/faq/` (Spanish: `/es/faq/`); Reviews links to the existing homepage `#reviews` section in each language rather than generating a duplicate reviews page. The section now contains 14 explicitly labeled draft examples, pending authentic customer-review verification.
 - Shared menu comes from `dist/script.js` and appears in desktop and Android/mobile navigation. The header collapses its expanded links to the accessible mobile menu at widths up to 1500px to prevent desktop text collisions. `#reviews` is the current section anchor.
 - All 42 sitemap HTML pages now request versioned shared CSS and JS assets to avoid stale menus.
 - GitHub-source changes were checked; live device testing and deployment validation are separate.
