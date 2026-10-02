@@ -261,9 +261,9 @@ Inspect the latest machine-readable results in `qa/latest-browser-qa.json` and `
 
 - Added bilingual /service-areas/ and /es/service-areas/ directories and linked them under Service Areas on desktop and mobile.
 - Business owner approved all listed candidate counties/towns for *service inquiries* across PA, MD, DE, NJ, WV, VA and NY, with Washington DC recorded as a boundary-check jurisdiction.
-- The practical **maximum driving estimate is 145 minutes (2 hours 25 minutes)** from 17A East Queen Street, Ephrata, PA 17522. Published times such as 140 or 142 minutes are within this tolerance. This supersedes the earlier 135-minute screening threshold and an incorrect interim 165-minute interpretation.
-- County lists denote inquiry coverage, not proof every address is reachable within 145 minutes; pickup timing and logistics are confirmed address by address. The listed towns have not all been independently timed by a routing engine.
-- Inventory and routing log: research/service-area-145-minute-inventory.md. Do not invent additional branches, carrier agreements, or town-specific promises. Maintain English/Spanish parity and hreflang sitemap.
+- The practical **maximum driving estimate is 120 minutes (2 hours 25 minutes)** from 17A East Queen Street, Ephrata, PA 17522. Published times such as 120 minutes is the published estimated maximum. This supersedes the earlier 135-minute screening threshold and an incorrect interim 165-minute interpretation.
+- County lists denote inquiry coverage, not proof every address is reachable within 120 minutes; pickup timing and logistics are confirmed address by address. The listed towns have not all been independently timed by a routing engine.
+- Inventory and routing log: research/service-area-120-minute-inventory.md. Do not invent additional branches, carrier agreements, or town-specific promises. Maintain English/Spanish parity and hreflang sitemap.
 
 
 ### Service-area links — October 2, 2026
@@ -277,7 +277,7 @@ Inspect the latest machine-readable results in `qa/latest-browser-qa.json` and `
 - Expanded the approved-county research list from 213 to **1,842 locality entries**, including boroughs, townships and communities, using existing county grouping and reference municipality/gazetteer research.
 - Both /service-areas/ and /es/service-areas/ render the locality names in the HTML for readable, indexable text, plus accessible search inputs that filter county cards and the matching town names; clearing search restores all entries. Search works without a server.
 - Refreshed the Chester County-specific English and Spanish pages with **69 locality names** and a visible regional directory link. Keep Chester's canonical URLs and local SEO purpose.
-- Important limit: ACR's **145-minute** maximum remains the routing target. These are expanded *inquiry indexes*, not 1,842 verified in-range points. Certain outer-county names may exceed the travel limit. Confirm driving time and actual pickup availability before making a specific commitment. Do not generate thin doorways, arbitrary ZIP/service-area guarantees, or incorrect branch listings.
+- Important limit: ACR's **120-minute** maximum remains the routing target. These are expanded *inquiry indexes*, not 1,842 verified in-range points. Certain outer-county names may exceed the travel limit. Confirm driving time and actual pickup availability before making a specific commitment. Do not generate thin doorways, arbitrary ZIP/service-area guarantees, or incorrect branch listings.
 - Location reference sources: U.S. Census Gazetteer (https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.2025.html) and Pennsylvania DCED municipality list (https://dced.pa.gov/local-government/municipal-statistics/municipalities/). These identify names, **not travel times**.
 
 ## Maintenance Guidelines
@@ -293,3 +293,5 @@ Inspect the latest machine-readable results in `qa/latest-browser-qa.json` and `
 9. Keep source QA scripts, required deployment configurations, and published media assets; remove only genuinely unused temporary files.
 
 _Last documentation update: October 2, 2026._
+
+- Public-facing service-area language standardized to **120 minutes (2 hours)**. Hero paragraph colors scoped to the regional directory: existing cream (`--cream`) on charcoal, gold (`--gold`) for eyebrow accents. This supersedes the prior 145-minute site policy; listed localities still require address-level pickup confirmation.
