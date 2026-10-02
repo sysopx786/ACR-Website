@@ -342,3 +342,9 @@ Editorial rule: each section must answer a different visitor question. For addit
 _Last documentation update: October 2, 2026._
 
 - Public-facing service-area language standardized to **120 minutes (2 hours)**. Hero paragraph colors scoped to the regional directory: existing cream (`--cream`) on charcoal, gold (`--gold`) for eyebrow accents. This supersedes the prior 145-minute site policy; listed localities still require address-level pickup confirmation.
+
+### Fixed professional-page header clearance — October 2, 2026
+
+- Android screenshot showed the fixed/sticky navigation obscuring the top of the For Professionals hero, because `.pro-redesign-hero` intentionally uses compact padding, unlike other `.page-hero` sections.
+- English and Spanish professional pages now set `body.professional-page` and request `styles.css?v=20261002-header-offset`; the scoped stylesheet adds main top clearance for 76px desktop and 70px responsive navigation, keeps a small gap above the hero, and offsets in-page anchors. Other page layouts are unchanged.
+- Source-level class, CSS, and both language variants checked. Live Android/desktop visual testing still needs confirmation after GitHub Pages deployment.
