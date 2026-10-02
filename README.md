@@ -74,13 +74,13 @@ Navigation links are built by `dist/script.js` for desktop and mobile. `dist/sty
 
 ## Page Content and Media
 
-- Homepage includes key service information, before-and-after previews, restoration guidance, reviews, six selected FAQ answers, and a **View All Service Areas** link to the regional directory.
+- Homepage includes key service information, before-and-after previews, restoration guidance, reviews, six linked FAQ questions (answers live only on the dedicated FAQ page), and a **View All Service Areas** link to the regional directory.
 - The FAQ page groups **20 questions** by subject. English and Spanish answers must stay aligned.
 - English and Spanish Results galleries each display the **same 10 original ACR before-and-after job pairs**. Maintain the correct damaged **Before** and restored **After** labels. Six bilingual case studies reuse appropriate original images; do not misidentify illustrative images as ACR work.
 - Original job photographs are separate media assets in `dist/assets/original-jobs/`, rather than base64 images embedded in HTML. Keep below-the-fold image loading lazy where appropriate, and preserve slider accessibility. This reduces HTML document size but does **not** by itself verify live performance scores.
 - Decorative or illustrative imagery elsewhere must not be presented as documented customer work.
 - Reviews, ratings, and business claims require source verification before being presented as verified.
-- The Chester County page is informational, not a representation of a separate branch location.
+- The Chester County page is informational, not a representation of a separate branch location. The complete searchable town list lives only on the Service Areas page.
 
 ## Contact and Content Cleanup — October 2026
 
@@ -268,7 +268,7 @@ Inspect the latest machine-readable results in `qa/latest-browser-qa.json` and `
 
 ### Service-area links — October 2, 2026
 
-- Homepage final action now links to **View All Service Areas** (Spanish: **Ver todas las zonas de servicio**) at the bilingual `/service-areas/` directory; the separate Contact action remains.
+- Homepage final action links to **View All Service Areas** (Spanish: **Ver todas las zonas de servicio**) without repeating the Contact action. The homeowner audience card retains a direct Contact link.
 - The Chester County-specific English and Spanish pages remain at their original canonical URLs for local SEO. Both now link to the regional directory instead of duplicating every county and town.
 - Shared desktop/Android menu retains **Service Areas → All Service Areas, Chester County** with bilingual translations. Avoid adding a second long county list to the Chester County page.
 
@@ -276,9 +276,20 @@ Inspect the latest machine-readable results in `qa/latest-browser-qa.json` and `
 
 - Expanded the approved-county research list from 213 to **1,842 locality entries**, including boroughs, townships and communities, using existing county grouping and reference municipality/gazetteer research.
 - Both /service-areas/ and /es/service-areas/ render the locality names in the HTML for readable, indexable text, plus accessible search inputs that filter county cards and the matching town names; clearing search restores all entries. Search works without a server.
-- Refreshed the Chester County-specific English and Spanish pages with **69 locality names** and a visible regional directory link. Keep Chester's canonical URLs and local SEO purpose.
+- Consolidated the former Chester County town list into the searchable regional Service Areas directory. English and Spanish Chester pages retain distinct local SEO information and link directly to that directory.
 - Important limit: ACR's **120-minute** maximum remains the routing target. These are expanded *inquiry indexes*, not 1,842 verified in-range points. Certain outer-county names may exceed the travel limit. Confirm driving time and actual pickup availability before making a specific commitment. Do not generate thin doorways, arbitrary ZIP/service-area guarantees, or incorrect branch listings.
 - Location reference sources: U.S. Census Gazetteer (https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.2025.html) and Pennsylvania DCED municipality list (https://dced.pa.gov/local-government/municipal-statistics/municipalities/). These identify names, **not travel times**.
+
+## Sitewide Content-Duplication Cleanup — October 2, 2026
+
+- Removed the second 120-minute (2 hours) paragraph from English and Spanish Service Areas heroes; travel/availability guidance appears once in the search introduction.
+- Removed the identical county caveat repeated under eight state headings in each language, as well as the redundant regional page closing contact panel. Chester details now appear beside Chester County in the directory.
+- Reduced duplicated homepage contact buttons and professional-page contact prompts without removing the primary contact path or specialist workflow.
+- Changed six homepage FAQ previews into visibly underlined, direct links to `/faq/#q1`, `#q2`, `#q5`, `#q12`, `#q16`, and `#q20` (translated equivalents in `/es/faq/`). Answers remain on the full FAQ pages.
+- Removed the six identical filler captions on the Spanish Results page. The original job photographs/sliders and case studies remain unchanged.
+- Preserved the Chester County local information page but removed its copied 69-place index and a redundant second link panel. The complete searchable index remains on the region-wide service page.
+- Added `scripts/check-duplicate-copy.cjs` to GitHub Pages deployment checks. It scans canonical English and Spanish pages for duplicate long paragraphs and guards against repeating the homepage FAQ answers or Service Areas disclaimer.
+- Shared navigation, legal links, business contact footer, photo comparisons and canonical legacy URLs intentionally remain where needed. Legacy `.html` routes declare canonical URLs to their modern pages. Source-level checks do not replace live desktop/mobile accessibility and visual QA.
 
 ## Maintenance Guidelines
 
