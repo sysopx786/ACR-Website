@@ -253,6 +253,9 @@ Inspect the latest machine-readable results in `qa/latest-browser-qa.json` and `
 - Versioned the shared stylesheet URL on the three process routes to reduce stale cached CSS on Android.
 - Added mobile browser geometry tests and screenshots for **all three process URLs**: six items present, no large internal title/description or inter-step gaps, and photo below the process. Verify the latest successful GitHub Actions QA result before treating the change as tested.
 
+
+**Our Process spacing QA — verified:** [Browser and accessibility QA run 37062168079](https://github.com/sysopx786/ACR-Website/actions/runs/37062168079) **passed**. For English, Spanish and the legacy process route at Android 393px width, all six steps measured **11px vertical padding**, **3px title-to-description gaps** and **0px extra gaps between consecutive steps**; the illustration followed the content at **170px height**. The full audit covered 49 routes with no horizontal overflow, broken tested assets, or blocking accessibility issues.
+
 ## Maintenance Guidelines
 
 1. Keep English and Spanish copy, navigation, URLs, SEO metadata, and links aligned.
