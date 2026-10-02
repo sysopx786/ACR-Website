@@ -118,6 +118,14 @@ The site includes page titles and descriptions, canonical links, English/Spanish
 - Do not create unverified town-specific service claims, ratings, guarantees, insurance partnerships, certifications, or turnaround promises.
 
 
+
+### Insurance claim context and visual consistency — October 2, 2026
+
+- English and Spanish For Professionals pages now add a five-step **illustrative insurance claim overview**, with the third step highlighting ACR's involvement, plus a five-role **Who Is Responsible for What?** section covering policyholder, adjuster, carrier, restoration contractor and ACR. This describes typical parties, not a fixed insurance or internal ACR workflow; authorizations, coverage and payments vary.
+- Page order: introduction, four audience cards, five-step claims context with role definitions, existing six-step ACR workflow, service details, original photo comparisons and FAQs.
+- Restored the initial professional-page green overrides to the established ACR palette of charcoal, gold, cream, taupe and off-white. Scope new layouts to professional pages; avoid green and navy accents in new work.
+- Retain existing bilingual links, no professional intake form, and the fixed mobile call action. Validate latest browser QA and deployment runs separately from source inspection.
+
 ## Professional Claims Workflow — October 2026
 
 - Browser QA now explicitly exercises **both professional pages** at 1440px desktop and Android-style 393px mobile width: top-level navigation, dropdowns, six workflow steps, eight FAQs with keyboard toggling, three slider interactions including keyboard, bilingual routing, local link HTTP checks, original image loading, overflow, JavaScript errors, WCAG axe serious/critical findings, and screenshots. The workflow triggers when either professional page changes. A report for an earlier commit is not proof that the latest professional pages passed; check `qa/latest-browser-qa.json` and the associated Actions job conclusion before stating success.
