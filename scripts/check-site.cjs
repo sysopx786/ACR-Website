@@ -30,6 +30,10 @@ for (const page of pages) {
   const html = fs.readFileSync(page, "utf8");
   const relative = path.relative(site, page).replaceAll(path.sep, "/");
   const isSpanish = relative.startsWith("es/");
+  // Old navigation anchors must not survive the review-section rename.
+  if (html.includes("#google-reviews")) {
+    problem(page, "obsolete #google-reviews link; update to #reviews");
+  }
   if ((html.match(/<h1\b/g) || []).length !== 1) problem(page, "expected exactly one H1");
   if (!html.includes('<html lang="' + (isSpanish ? "es" : "en") + '"')) problem(page, "language mismatch");
   if (!html.includes('rel="canonical"')) problem(page, "canonical link missing");
