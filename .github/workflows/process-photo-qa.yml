@@ -1,0 +1,36 @@
+name: ACR process-photo layout QA
+on:
+  push:
+    paths:
+      - scripts/prepare-restoration-images.cjs
+      - scripts/process-layout-qa.cjs
+      - scripts/fetch-restoration-images.cjs
+      - .github/workflows/process-photo-qa.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  layout-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Chromium
+        run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install --with-deps chromium
+      - name: Prepare approved photos and page layout
+        run: |
+          node scripts/fetch-restoration-images.cjs
+          node scripts/check-site.cjs
+      - name: Test photos at desktop, tablet and phone widths in both languages
+        run: node scripts/process-layout-qa.cjs
+      - name: Save layout screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: process-layout-screenshots
+          path: qa-screenshots/process-*.png
+          if-no-files-found: ignore
