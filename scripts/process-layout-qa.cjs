@@ -25,6 +25,9 @@ const server=http.createServer((req,res)=>{
    for(const [device,width,height] of [['desktop',1440,900],['tablet',820,1000],['phone',390,844]]){
     const page=await browser.newPage({viewport:{width,height}});
     await page.goto(base+(lang==='es'?'es/':'')+'our-process/',{waitUntil:'load'});
+    // Lazy-loaded images below the fold load only after scrolling in a real browser.
+    await page.locator('.process-photo-grid > .step img').evaluateAll(imgs=>imgs.forEach(img=>{img.loading='eager';}));
+    await page.waitForFunction(()=>[...document.querySelectorAll('.process-photo-grid > .step img')].every(img=>img.complete&&img.naturalWidth>0));
     const metrics=await page.locator('.process-photo-grid > .step').evaluateAll(cards=>cards.map(card=>{
       const img=card.querySelector('img'),r=card.getBoundingClientRect(),i=img.getBoundingClientRect(),
         copy=card.querySelector('.num').getBoundingClientRect();
