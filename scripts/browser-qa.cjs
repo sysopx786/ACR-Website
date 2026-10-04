@@ -25,7 +25,7 @@ const assert=(condition,message)=>{if(!condition)errors.push(message);};
   const base="http://127.0.0.1:"+server.address().port+"/ACR-Website/";
   const browser=await chromium.launch({headless:true,args:["--no-sandbox"]});
   try {
-    const desktop=await browser.newPage({viewport:{width:1440,height:900}});
+    const desktop=await browser.newPage({viewport:{width:1600,height:900}});
     const d404=[];desktop.on("response",r=>{if(r.url().startsWith(base)&&r.status()===404)d404.push(r.url());});
     await desktop.goto(base,{waitUntil:"domcontentloaded"});
     await desktop.locator(".site-header .links .nav-group").first().waitFor({state:"attached"});
@@ -69,13 +69,42 @@ const assert=(condition,message)=>{if(!condition)errors.push(message);};
     const blocking=violations.filter(v=>v.impact==="critical"||v.impact==="serious");
     assert(blocking.length===0,"axe: serious or critical accessibility violations: "+JSON.stringify(blocking));
 
+    // Our Story: verified original media, English/Spanish routes and compact mobile layout.
+    const storyResults=[];
+    for(const language of ["en","es"]){
+      for(const mode of ["desktop","android"]){
+        const isMobile=mode==="android";
+        const page=await browser.newPage({viewport:isMobile?{width:393,height:851}:{width:1600,height:900},isMobile,hasTouch:isMobile});
+        const path=base+(language==="es"?"es/":"")+"about/";
+        const resp=await page.goto(path,{waitUntil:"networkidle"});
+        assert(resp.status()===200,"story "+language+" "+mode+": HTTP "+resp.status());
+        assert(await page.locator("html").getAttribute("lang")===language,"story: language mismatch");
+        assert(await page.locator("main h1").count()===1,"story: expected one H1");
+        assert(await page.locator(".story-hero-photo img, .story-photo img").count()===4,"story: expected four original ACR images");
+        assert(await page.locator('.story-ending .btn').count()===2,"story: missing contact/results links");
+        const imgs=page.locator(".story-hero-photo img, .story-photo img");
+        for(const image of await imgs.all()){await image.scrollIntoViewIfNeeded();}
+        await page.waitForTimeout(450);
+        const pictureStatus=await imgs.evaluateAll(nodes=>nodes.map(n=>({src:n.getAttribute("src"),loaded:n.complete&&n.naturalWidth>0})));
+        assert(pictureStatus.every(n=>n.loaded),"story: image not loaded "+JSON.stringify(pictureStatus));
+        assert(pictureStatus.every(n=>!(/kendall|about-process|unsplash/i.test(n.src))),"story: unverified or owner photo");
+        const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth);
+        assert(overflow<=2,"story "+language+" "+mode+": horizontal overflow "+overflow);
+        await page.screenshot({path:require("node:path").join(screenshots,"story-"+language+"-"+mode+".png"),fullPage:true});
+        storyResults.push({language,mode,overflow,photos:pictureStatus.length});
+        await page.close();
+      }
+    }
+    console.log("STORY QA "+JSON.stringify(storyResults));
+
+
     // Dedicated English/Spanish professional pages at desktop and Android-like mobile sizes.
     const professionalResults=[];
     for(const language of ["en","es"]){
       for(const mode of ["desktop","android"]){
         const isMobile=mode==="android";
         const context=await browser.newContext({
-          viewport:isMobile?{width:393,height:851}:{width:1440,height:900},
+          viewport:isMobile?{width:393,height:851}:{width:1600,height:900},
           deviceScaleFactor:isMobile?2.75:1,
           isMobile,hasTouch:isMobile,
           userAgent:isMobile?"Mozilla/5.0 (Linux; Android 15; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36":undefined
