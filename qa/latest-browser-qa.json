@@ -1,8 +1,8 @@
 {
   "workflow": "ACR browser and accessibility QA",
-  "testedCommit": "f8e70d06027d1510022c5eb664afe5d34382b2c2",
+  "testedCommit": "1a1fb3836530dbdbfadd401e3fd82190545196da",
   "result": "failure",
-  "runUrl": "https://github.com/sysopx786/ACR-Website/actions/runs/37079216285",
-  "completedAt": "2026-10-02T23:48:32.593Z",
+  "runUrl": "https://github.com/sysopx786/ACR-Website/actions/runs/37233256792",
+  "completedAt": "2026-10-04T20:45:23.250Z",
   "log": "DESKTOP NAV {\"width\":1440,\"linksDisplay\":\"none\",\"desktopItems\":3,\"mobileDisplay\":\"block\"}\nFAILED desktop: menu links are hidden at 1440px\nlocator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('.site-header .links .nav-group summary').first()\n    - locator resolved to <summary>Services</summary>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n      - waiting 100ms\n    58 × waiting for element to be visible, enabled and stable\n       - element is not visible\n     - retrying click action\n       - waiting 500ms\n\n    at /home/runner/work/ACR-Website/ACR-Website/scripts/browser-qa.cjs:37:77\n"
 }
