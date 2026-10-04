@@ -370,3 +370,10 @@ _Last documentation update: October 2, 2026._
 
 ### Deployment retrigger — October 2, 2026
 - Re-triggered the main-branch GitHub Pages push workflow after reports of stale public review copy. Source verification confirms `dist/index.html` and `dist/es/index.html` contain the supplied 14 review drafts, names, town labels, and explicit unverified-example disclosures. A GitHub source commit is not independent proof that the public Pages deployment succeeded.
+
+
+### About / Our Story refresh — October 4, 2026
+- English `/about/` and Spanish `/es/about/` use a new editorial story layout and corresponding translated copy, with a compact homepage teaser in both languages.
+- Four existing original ACR job photographs are reused on each story page (wedding gown, leather jacket before restoration, facility, patchwork quilt). No Kendall photograph or synthetic imagery is included.
+- Founder-origin scenes are **not represented as actual historical events**. The copy expresses the company's restoration philosophy; Kendall should verify personal attributions before publishing stronger biography claims.
+- Styles are isolated in `dist/our-story.css`; legacy `dist/about.html` matches the canonical page. Keep the `/ACR-Website/` prefix and bilingual links intact.
