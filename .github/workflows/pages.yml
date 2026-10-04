@@ -28,6 +28,30 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
+      - name: Download approved restoration photos
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p dist/assets
+          curl --fail --location --retry 3 --silent --show-error 'https://d2ol7oe51mr4n9.cloudfront.net/user_2yjODSAkv4hC5W0OWhtp3cqVHm5/e577732b-1197-4952-9ee9-1e17beb97b2d.jpg' -o 'dist/assets/process-assess.jpg'
+          test -s 'dist/assets/process-assess.jpg'
+          curl --fail --location --retry 3 --silent --show-error 'https://d2ol7oe51mr4n9.cloudfront.net/user_2yjODSAkv4hC5W0OWhtp3cqVHm5/db5aec22-b572-4589-8d77-52a8f0467916.jpg' -o 'dist/assets/process-sort.jpg'
+          test -s 'dist/assets/process-sort.jpg'
+          curl --fail --location --retry 3 --silent --show-error 'https://d2ol7oe51mr4n9.cloudfront.net/user_2yjODSAkv4hC5W0OWhtp3cqVHm5/a4e8ff17-95ab-4b74-874a-fd0bf263e735.jpg' -o 'dist/assets/process-clean.jpg'
+          test -s 'dist/assets/process-clean.jpg'
+          curl --fail --location --retry 3 --silent --show-error 'https://d2ol7oe51mr4n9.cloudfront.net/user_2yjODSAkv4hC5W0OWhtp3cqVHm5/f4ce6312-2d74-45e8-af10-08ee3d48a53e.jpg' -o 'dist/assets/process-restore.jpg'
+          test -s 'dist/assets/process-restore.jpg'
+          curl --fail --location --retry 3 --silent --show-error 'https://d2ol7oe51mr4n9.cloudfront.net/user_2yjODSAkv4hC5W0OWhtp3cqVHm5/aefebb9e-6ac2-4de2-9153-8a52cf6c8446.jpg' -o 'dist/assets/process-finish.jpg'
+          test -s 'dist/assets/process-finish.jpg'
+          curl --fail --location --retry 3 --silent --show-error 'https://d2ol7oe51mr4n9.cloudfront.net/user_2yjODSAkv4hC5W0OWhtp3cqVHm5/871f65b1-807b-4d88-a809-4749a92abb16.jpg' -o 'dist/assets/process-return.jpg'
+          test -s 'dist/assets/process-return.jpg'
+          curl --fail --location --retry 3 --silent --show-error 'https://d2ol7oe51mr4n9.cloudfront.net/user_2yjODSAkv4hC5W0OWhtp3cqVHm5/bd36e572-f054-4a4f-96ae-fafb378a0e86.jpg' -o 'dist/assets/loss-water.jpg'
+          test -s 'dist/assets/loss-water.jpg'
+          curl --fail --location --retry 3 --silent --show-error 'https://d2ol7oe51mr4n9.cloudfront.net/user_2yjODSAkv4hC5W0OWhtp3cqVHm5/28b122c7-74f5-4b0d-a79a-cbc6f1b9ed11.jpg' -o 'dist/assets/hero-garment-racks.jpg'
+          test -s 'dist/assets/hero-garment-racks.jpg'
+          curl --fail --location --retry 3 --silent --show-error 'https://d2ol7oe51mr4n9.cloudfront.net/user_2yjODSAkv4hC5W0OWhtp3cqVHm5/89def0ed-4672-4e61-bfa9-503e10dbbd66.jpg' -o 'dist/assets/craft-fabric-macro.jpg'
+          test -s 'dist/assets/craft-fabric-macro.jpg'
+
       - name: Audit internal links, assets, languages and image galleries
         run: node scripts/check-site.cjs
 
