@@ -1,42 +1,42 @@
 {
-  "testedCommit": "5e6158c398be4ae806f0fdf41590b9e650de1ccd",
-  "runUrl": "https://github.com/sysopx786/ACR-Website/actions/runs/37079313117",
-  "measuredAt": "2026-10-02T23:50:32.937Z",
+  "testedCommit": "1a1fb3836530dbdbfadd401e3fd82190545196da",
+  "runUrl": "https://github.com/sysopx786/ACR-Website/actions/runs/37233256774",
+  "measuredAt": "2026-10-04T20:45:02.533Z",
   "mobileExit": "0",
   "desktopExit": "0",
   "mobile": {
     "testURL": "https://sysopx786.github.io/ACR-Website/",
-    "fetchTime": "2026-10-02T23:50:09.836Z",
+    "fetchTime": "2026-10-04T20:44:42.363Z",
     "scores": {
-      "performance": 79,
+      "performance": 85,
       "accessibility": 100,
       "best-practices": 100,
       "seo": 100
     },
     "metrics": {
       "first-contentful-paint": {
-        "value": 2729.929,
-        "display": "2.7 s"
+        "value": 2614.5055,
+        "display": "2.6 s"
       },
       "largest-contentful-paint": {
-        "value": 4485.584,
-        "display": "4.5 s"
+        "value": 3742.849,
+        "display": "3.7 s"
       },
       "speed-index": {
-        "value": 3080.9035660000013,
-        "display": "3.1 s"
+        "value": 2614.5055,
+        "display": "2.6 s"
       },
       "total-blocking-time": {
-        "value": 0.5,
-        "display": "0 ms"
+        "value": 14.5,
+        "display": "10 ms"
       },
       "cumulative-layout-shift": {
-        "value": 0.002332226238680785,
+        "value": 0.002332387494585923,
         "display": "0.002"
       },
       "interactive": {
-        "value": 4554.187400000001,
-        "display": "4.6 s"
+        "value": 4493.516500000001,
+        "display": "4.5 s"
       }
     },
     "warnings": [],
@@ -44,7 +44,7 @@
       "largest-contentful-paint-element": null,
       "lcp-breakdown-insight": {
         "score": 1,
-        "detail": "[{\"type\":\"table\",\"headings\":[{\"key\":\"label\",\"valueType\":\"text\",\"label\":\"Subpart\"},{\"key\":\"duration\",\"valueType\":\"ms\",\"label\":\"Duration\"}],\"items\":[{\"subpart\":\"timeToFirstByte\",\"label\":\"Time to first byte\",\"duration\":135.674},{\"subpart\":\"resourceLoadDelay\",\"label\":\"Resource load delay\",\"duration\":36.417},{\"subpart\":\"resourceLoadDuration\",\"label\":\"Resource load duration\",\"duration\":139.7},{\"subpart\":\"elementRenderDelay\",\"label\":\"Element render delay\",\"duration\":1220.166}]},{\"type\":\"node\",\"lhId\":\"page-0-SECTION\",\"path\":\"1,HTML,1,BODY,2,MAIN,0,SECTION\",\"selector\":\"body > main#main > section.hero\",\"boundingRect\":{\"top\":0,\"bottom\":557,\"left\":0,\"right\":412,\"width\":412,\"height\":557},\"snippet\":\"<section class=\\\"hero audience-hero pro-first-hero\\\" style=\\\"--hero:url('/ACR-Website/assets/acr-hero-facility.jpg')\\\" aria-labelledby=\\\"home-main-title\\\">\",\"nodeLabel\":\"Insurance Clothing & Textile Restoration.\\n\\nFor insurance adjusters, carriers an…\"}]"
+        "detail": "[{\"type\":\"table\",\"headings\":[{\"key\":\"label\",\"valueType\":\"text\",\"label\":\"Subpart\"},{\"key\":\"duration\",\"valueType\":\"ms\",\"label\":\"Duration\"}],\"items\":[{\"subpart\":\"timeToFirstByte\",\"label\":\"Time to first byte\",\"duration\":42.912},{\"subpart\":\"resourceLoadDelay\",\"label\":\"Resource load delay\",\"duration\":13.538},{\"subpart\":\"resourceLoadDuration\",\"label\":\"Resource load duration\",\"duration\":55.375},{\"subpart\":\"elementRenderDelay\",\"label\":\"Element render delay\",\"duration\":67.037}]},{\"type\":\"node\",\"lhId\":\"page-0-SECTION\",\"path\":\"1,HTML,1,BODY,2,MAIN,0,SECTION\",\"selector\":\"body > main#main > section.hero\",\"boundingRect\":{\"top\":0,\"bottom\":557,\"left\":0,\"right\":412,\"width\":412,\"height\":557},\"snippet\":\"<section class=\\\"hero audience-hero pro-first-hero\\\" style=\\\"--hero:url('/ACR-Website/assets/acr-hero-facility.jpg')\\\" aria-labelledby=\\\"home-main-title\\\">\",\"nodeLabel\":\"Insurance Clothing & Textile Restoration.\\n\\nFor insurance adjusters, carriers an…\"}]"
       },
       "lcp-discovery-insight": {
         "score": 1,
@@ -62,53 +62,53 @@
       },
       "mainthread-work-breakdown": {
         "score": 1,
-        "displayValue": "1.8 s",
-        "detail": "[{\"group\":\"other\",\"groupLabel\":\"Other\",\"duration\":1127.4239999999995},{\"group\":\"styleLayout\",\"groupLabel\":\"Style & Layout\",\"duration\":410.388},{\"group\":\"paintCompositeRender\",\"groupLabel\":\"Rendering\",\"duration\":124.1},{\"group\":\"scriptEvaluation\",\"groupLabel\":\"Script Evaluation\",\"duration\":98.44800000000004}]"
+        "displayValue": "0.6 s",
+        "detail": "[{\"group\":\"styleLayout\",\"groupLabel\":\"Style & Layout\",\"duration\":234.504},{\"group\":\"other\",\"groupLabel\":\"Other\",\"duration\":190.08800000000005},{\"group\":\"scriptEvaluation\",\"groupLabel\":\"Script Evaluation\",\"duration\":141.59600000000006},{\"group\":\"paintCompositeRender\",\"groupLabel\":\"Rendering\",\"duration\":50.14}]"
       },
       "total-byte-weight": {
         "score": 1,
-        "displayValue": "Total size was 1,659 KiB",
-        "detail": "[{\"url\":\"https://sysopx786.github.io/ACR-Website/assets/restore-drapery-folded-textiles.png\",\"totalBytes\":364855},{\"url\":\"https://sysopx786.github.io/ACR-Website/assets/restore-specialty-gown-lace.png\",\"totalBytes\":355306},{\"url\":\"https://sysopx786.github.io/ACR-Website/assets/restore-household-quilt.png\",\"totalBytes\":354375},{\"url\":\"https://sysopx786.github.io/ACR-Website/assets/acr-hero-facility.jpg\",\"totalBytes\":277745}]"
+        "displayValue": "Total size was 1,661 KiB",
+        "detail": "[{\"url\":\"https://sysopx786.github.io/ACR-Website/assets/restore-drapery-folded-textiles.png\",\"totalBytes\":364864},{\"url\":\"https://sysopx786.github.io/ACR-Website/assets/restore-specialty-gown-lace.png\",\"totalBytes\":355321},{\"url\":\"https://sysopx786.github.io/ACR-Website/assets/restore-household-quilt.png\",\"totalBytes\":354149},{\"url\":\"https://sysopx786.github.io/ACR-Website/assets/acr-hero-facility.jpg\",\"totalBytes\":277966}]"
       },
       "network-requests": {
         "score": 1,
-        "detail": "[{\"url\":\"https://sysopx786.github.io/ACR-Website/\",\"sessionTargetType\":\"page\",\"protocol\":\"h2\",\"cache\":\"none\",\"rendererStartTime\":0,\"networkRequestTime\":7.368000000002212,\"networkEndTime\":136.15400000000955,\"finished\":true,\"transferSize\":9534,\"resourceSize\":31804,\"statusCode\":200,\"mimeType\":\"text/html\",\"resourceType\":\"Document\",\"priority\":\"VeryHigh\",\"experimentalFromMainFrame\":true,\"entity\":\"GitHub\"},{\"url\":\"https://sysopx786.github.io/ACR-Website/assets/acr-hero-facility.jpg\",\"sessionTargetType\":\"page\",\"protocol\":\"h2\",\"cache\":\"none\",\"rendererStartTime\":167.7320000000036,\"networkRequestTime\":171.5340000000142,\"networkEndTime\":307.4320000000007,\"finished\":true,\"transferSize\":277745,\"resourceSize\":277450,\"statusCode\":200,\"mimeType\":\"image/jpeg\",\"resourceType\":\"Image\",\"priority\":\"High\",\"isLinkPreload\":true,\"experimentalFromMainFrame\":true,\"entity\":\"GitHub\"},{\"url\":\"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap\",\"sessionTargetType\":\"page\",\"protocol\":\"h2\",\"cache\":\"none\",\"rendererStartTime\":170.95500000000175,\"networkRequestTime\":171.79700000000594,\"networkEndTime\":247.3110000000015,\"finished\":true,\"transferSize\":1271,\"resourceSize\":12650,\"statusCode\":200,\"mimeType\":\"text/css\",\"resourceType\":\"Stylesheet\",\"priority\":\"VeryHigh\",\"experimentalFromMainFrame\":true,\"entity\":\"Google Fonts\"},{\"url\":\"https://sysopx786.github.io/ACR-Website/styles.css?v=20261002-review-drafts\",\"sessionTargetType\":\"page\",\"protocol\":\"h2\",\"cache\":\"none\",\"rendererStartTime\":171.0340000000142,\"networkRequestTime\":172.12300000000687,\"networkEndTime\":264.2020000000048,\"finished\":true,\"transferSize\":13122,\"resourceSize\":57554,\"statusCode\":200,\"mimeType\":\"text/css\",\"resourceType\":\"Stylesheet\",\"priority\":\"VeryHigh\",\"experimentalFromMainFrame\":true,\"entity\":\"GitHub\"}]"
+        "detail": "[{\"url\":\"https://sysopx786.github.io/ACR-Website/\",\"sessionTargetType\":\"page\",\"protocol\":\"h2\",\"cache\":\"none\",\"rendererStartTime\":0,\"networkRequestTime\":1.2490000000034343,\"networkEndTime\":42.75600000000122,\"finished\":true,\"transferSize\":9510,\"resourceSize\":31806,\"statusCode\":200,\"mimeType\":\"text/html\",\"resourceType\":\"Document\",\"priority\":\"VeryHigh\",\"experimentalFromMainFrame\":true,\"entity\":\"GitHub\"},{\"url\":\"https://sysopx786.github.io/ACR-Website/assets/acr-hero-facility.jpg\",\"sessionTargetType\":\"page\",\"protocol\":\"h2\",\"cache\":\"none\",\"rendererStartTime\":55.391999999999825,\"networkRequestTime\":56.666000000004715,\"networkEndTime\":110.7670000000071,\"finished\":true,\"transferSize\":277966,\"resourceSize\":277450,\"statusCode\":200,\"mimeType\":\"image/jpeg\",\"resourceType\":\"Image\",\"priority\":\"High\",\"isLinkPreload\":true,\"experimentalFromMainFrame\":true,\"entity\":\"GitHub\"},{\"url\":\"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap\",\"sessionTargetType\":\"page\",\"protocol\":\"h2\",\"cache\":\"none\",\"rendererStartTime\":55.88900000000285,\"networkRequestTime\":56.93000000000029,\"networkEndTime\":90.01699999999983,\"finished\":true,\"transferSize\":1271,\"resourceSize\":12650,\"statusCode\":200,\"mimeType\":\"text/css\",\"resourceType\":\"Stylesheet\",\"priority\":\"VeryHigh\",\"experimentalFromMainFrame\":true,\"entity\":\"Google Fonts\"},{\"url\":\"https://sysopx786.github.io/ACR-Website/styles.css?v=20261002-review-drafts\",\"sessionTargetType\":\"page\",\"protocol\":\"h2\",\"cache\":\"none\",\"rendererStartTime\":55.955000000001746,\"networkRequestTime\":57.29899999999907,\"networkEndTime\":82.17400000000634,\"finished\":true,\"transferSize\":13125,\"resourceSize\":57554,\"statusCode\":200,\"mimeType\":\"text/css\",\"resourceType\":\"Stylesheet\",\"priority\":\"VeryHigh\",\"experimentalFromMainFrame\":true,\"entity\":\"GitHub\"}]"
       }
     }
   },
   "desktop": {
     "testURL": "https://sysopx786.github.io/ACR-Website/",
-    "fetchTime": "2026-10-02T23:50:22.685Z",
+    "fetchTime": "2026-10-04T20:44:53.653Z",
     "scores": {
-      "performance": 96,
+      "performance": 97,
       "accessibility": 100,
       "best-practices": 100,
       "seo": 100
     },
     "metrics": {
       "first-contentful-paint": {
-        "value": 828.7185,
-        "display": "0.8 s"
+        "value": 687.9524999999999,
+        "display": "0.7 s"
       },
       "largest-contentful-paint": {
-        "value": 1024.108,
-        "display": "1.0 s"
+        "value": 912.4539999999998,
+        "display": "0.9 s"
       },
       "speed-index": {
-        "value": 828.7185,
-        "display": "0.8 s"
+        "value": 687.9524999999999,
+        "display": "0.7 s"
       },
       "total-blocking-time": {
         "value": 0,
         "display": "0 ms"
       },
       "cumulative-layout-shift": {
-        "value": 0.08165345595266556,
+        "value": 0.08165685060443213,
         "display": "0.082"
       },
       "interactive": {
-        "value": 1031.2912000000001,
-        "display": "1.0 s"
+        "value": 921.8959999999998,
+        "display": "0.9 s"
       }
     },
     "warnings": [],
@@ -116,17 +116,17 @@
       "largest-contentful-paint-element": null,
       "lcp-breakdown-insight": {
         "score": 1,
-        "detail": "[{\"type\":\"table\",\"headings\":[{\"key\":\"label\",\"valueType\":\"text\",\"label\":\"Subpart\"},{\"key\":\"duration\",\"valueType\":\"ms\",\"label\":\"Duration\"}],\"items\":[{\"subpart\":\"timeToFirstByte\",\"label\":\"Time to first byte\",\"duration\":138.132},{\"subpart\":\"resourceLoadDelay\",\"label\":\"Resource load delay\",\"duration\":4.828},{\"subpart\":\"resourceLoadDuration\",\"label\":\"Resource load duration\",\"duration\":121.829},{\"subpart\":\"elementRenderDelay\",\"label\":\"Element render delay\",\"duration\":78.468}]},{\"type\":\"node\",\"lhId\":\"page-9-SECTION\",\"path\":\"1,HTML,1,BODY,2,MAIN,0,SECTION\",\"selector\":\"body > main#main > section.hero\",\"boundingRect\":{\"top\":0,\"bottom\":769,\"left\":0,\"right\":1335,\"width\":1335,\"height\":769},\"snippet\":\"<section class=\\\"hero audience-hero pro-first-hero\\\" style=\\\"--hero:url('/ACR-Website/assets/acr-hero-facility.jpg')\\\" aria-labelledby=\\\"home-main-title\\\">\",\"nodeLabel\":\"Insurance Clothing & Textile Restoration.\\n\\nFor insurance adjusters, carriers an…\"}]"
+        "detail": "[{\"type\":\"table\",\"headings\":[{\"key\":\"label\",\"valueType\":\"text\",\"label\":\"Subpart\"},{\"key\":\"duration\",\"valueType\":\"ms\",\"label\":\"Duration\"}],\"items\":[{\"subpart\":\"timeToFirstByte\",\"label\":\"Time to first byte\",\"duration\":31.561},{\"subpart\":\"resourceLoadDelay\",\"label\":\"Resource load delay\",\"duration\":5.131},{\"subpart\":\"resourceLoadDuration\",\"label\":\"Resource load duration\",\"duration\":15.325},{\"subpart\":\"elementRenderDelay\",\"label\":\"Element render delay\",\"duration\":139.044}]},{\"type\":\"node\",\"lhId\":\"page-0-SECTION\",\"path\":\"1,HTML,1,BODY,2,MAIN,0,SECTION\",\"selector\":\"body > main#main > section.hero\",\"boundingRect\":{\"top\":0,\"bottom\":769,\"left\":0,\"right\":1335,\"width\":1335,\"height\":769},\"snippet\":\"<section class=\\\"hero audience-hero pro-first-hero\\\" style=\\\"--hero:url('/ACR-Website/assets/acr-hero-facility.jpg')\\\" aria-labelledby=\\\"home-main-title\\\">\",\"nodeLabel\":\"Insurance Clothing & Textile Restoration.\\n\\nFor insurance adjusters, carriers an…\"}]"
       },
       "lcp-discovery-insight": {
         "score": 1,
-        "detail": "[{\"type\":\"checklist\",\"items\":{\"priorityHinted\":{\"label\":\"fetchpriority=high applied\",\"value\":true},\"requestDiscoverable\":{\"label\":\"Request is discoverable in initial document\",\"value\":true},\"eagerlyLoaded\":{\"label\":\"LCP resources should not use loading=lazy\",\"value\":true}}},{\"type\":\"node\",\"lhId\":\"page-9-SECTION\",\"path\":\"1,HTML,1,BODY,2,MAIN,0,SECTION\",\"selector\":\"body > main#main > section.hero\",\"boundingRect\":{\"top\":0,\"bottom\":769,\"left\":0,\"right\":1335,\"width\":1335,\"height\":769},\"snippet\":\"<section class=\\\"hero audience-hero pro-first-hero\\\" style=\\\"--hero:url('/ACR-Website/assets/acr-hero-facility.jpg')\\\" aria-labelledby=\\\"home-main-title\\\">\",\"nodeLabel\":\"Insurance Clothing & Textile Restoration.\\n\\nFor insurance adjusters, carriers an…\"}]"
+        "detail": "[{\"type\":\"checklist\",\"items\":{\"priorityHinted\":{\"label\":\"fetchpriority=high applied\",\"value\":true},\"requestDiscoverable\":{\"label\":\"Request is discoverable in initial document\",\"value\":true},\"eagerlyLoaded\":{\"label\":\"LCP resources should not use loading=lazy\",\"value\":true}}},{\"type\":\"node\",\"lhId\":\"page-0-SECTION\",\"path\":\"1,HTML,1,BODY,2,MAIN,0,SECTION\",\"selector\":\"body > main#main > section.hero\",\"boundingRect\":{\"top\":0,\"bottom\":769,\"left\":0,\"right\":1335,\"width\":1335,\"height\":769},\"snippet\":\"<section class=\\\"hero audience-hero pro-first-hero\\\" style=\\\"--hero:url('/ACR-Website/assets/acr-hero-facility.jpg')\\\" aria-labelledby=\\\"home-main-title\\\">\",\"nodeLabel\":\"Insurance Clothing & Textile Restoration.\\n\\nFor insurance adjusters, carriers an…\"}]"
       },
       "render-blocking-resources": null,
       "image-delivery-insight": {
-        "score": 0,
+        "score": 0.5,
         "displayValue": "Est savings of 1,371 KiB",
-        "detail": "[{\"node\":{\"type\":\"node\",\"lhId\":\"page-0-IMG\",\"path\":\"1,HTML,1,BODY,2,MAIN,3,SECTION,2,DIV,3,ARTICLE,0,IMG\",\"selector\":\"section#what-we-restore > div.photo-grid > article.photo-card > img\",\"boundingRect\":{\"top\":2271,\"bottom\":2631,\"left\":791,\"right\":1009,\"width\":218,\"height\":360},\"snippet\":\"<img src=\\\"/ACR-Website/assets/restore-drapery-folded-textiles.png\\\" alt=\\\"Folded fabric textiles in a clean garment care workspace\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\">\",\"nodeLabel\":\"Folded fabric textiles in a clean garment care workspace\"},\"url\":\"https://sysopx786.github.io/ACR-Website/assets/restore-drapery-folded-textiles.png\",\"totalBytes\":364513,\"wastedBytes\":335838,\"subItems\":{\"type\":\"subitems\",\"items\":[{\"reason\":\"Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size.\",\"wastedBytes\":229146},{\"reason\":\"This image file is larger than it needs to be (702x1157) for its displayed dimensions (478x360). Use responsive images to reduce the image download size.\",\"wastedBytes\":287297}]}},{\"node\":{\"type\":\"node\",\"lhId\":\"page-1-IMG\",\"path\":\"1,HTML,1,BODY,2,MAIN,3,SECTION,2,DIV,4,ARTICLE,0,IMG\",\"selector\":\"section#what-we-restore > div.photo-grid > article.photo-card > img\",\"boundingRect\":{\"top\":2243,\"bottom\":2631,\"left\":1023,\"right\":1241,\"width\":218,\"height\":388},\"snippet\":\"<img src=\\\"/ACR-Website/assets/restore-specialty-gown-lace.png\\\" alt=\\\"Wedding gown lace detail after textile restoration\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\">\",\"nodeLabel\":\"Wedding gown lace detail after textile restoration\"},\"url\":\"https://sysopx786.github.io/ACR-Website/assets/restore-specialty-gown-lace.png\",\"totalBytes\":354973,\"wastedBytes\":325909,\"subItems\":{\"type\":\"subitems\",\"items\":[{\"reason\":\"Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size.\",\"wastedBytes\":190159},{\"reason\":\"This image file is larger than it needs to be (746x1326) for its displayed dimensions (449x388). Use responsive images to reduce the image download size.\",\"wastedBytes\":292376}]}},{\"node\":{\"type\":\"node\",\"lhId\":\"page-2-IMG\",\"path\":\"1,HTML,1,BODY,2,MAIN,3,SECTION,2,DIV,1,ARTICLE,0,IMG\",\"selector\":\"section#what-we-restore > div.photo-grid > article.photo-card > img\",\"boundingRect\":{\"top\":2271,\"bottom\":2631,\"left\":327,\"right\":545,\"width\":218,\"height\":360},\"snippet\":\"<img src=\\\"/ACR-Website/assets/restore-household-quilt.png\\\" alt=\\\"Clean restored household quilt on a restoration worktable\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\">\",\"nodeLabel\":\"Clean restored household quilt on a restoration worktable\"},\"url\":\"https://sysopx786.github.io/ACR-Website/assets/restore-household-quilt.png\",\"totalBytes\":353814,\"wastedBytes\":325139,\"subItems\":{\"type\":\"subitems\",\"items\":[{\"reason\":\"Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size.\",\"wastedBytes\":218447},{\"reason\":\"This image file is larger than it needs to be (702x1157) for its displayed dimensions (478x360). Use responsive images to reduce the image download size.\",\"wastedBytes\":278864}]}},{\"node\":{\"type\":\"node\",\"lhId\":\"page-3-IMG\",\"path\":\"1,HTML,1,BODY,2,MAIN,3,SECTION,2,DIV,2,ARTICLE,0,IMG\",\"selector\":\"section#what-we-restore > div.photo-grid > article.photo-card > img\",\"boundingRect\":{\"top\":2243,\"bottom\":2631,\"left\":559,\"right\":777,\"width\":218,\"height\":388},\"snippet\":\"<img src=\\\"https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&amp;f…\\\" alt=\\\"Bedding and linens\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\">\",\"nodeLabel\":\"Bedding and linens\"},\"url\":\"https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=900&q=80\",\"totalBytes\":160601,\"wastedBytes\":144841,\"subItems\":{\"type\":\"subitems\",\"items\":[{\"reason\":\"This image file is larger than it needs to be (758x1350) for its displayed dimensions (259x388). Use responsive images to reduce the image download size.\",\"wastedBytes\":144841}]}}]"
+        "detail": "[{\"node\":{\"type\":\"node\",\"lhId\":\"page-9-IMG\",\"path\":\"1,HTML,1,BODY,2,MAIN,3,SECTION,2,DIV,3,ARTICLE,0,IMG\",\"selector\":\"section#what-we-restore > div.photo-grid > article.photo-card > img\",\"boundingRect\":{\"top\":2271,\"bottom\":2631,\"left\":791,\"right\":1009,\"width\":218,\"height\":360},\"snippet\":\"<img src=\\\"/ACR-Website/assets/restore-drapery-folded-textiles.png\\\" alt=\\\"Folded fabric textiles in a clean garment care workspace\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\">\",\"nodeLabel\":\"Folded fabric textiles in a clean garment care workspace\"},\"url\":\"https://sysopx786.github.io/ACR-Website/assets/restore-drapery-folded-textiles.png\",\"totalBytes\":364513,\"wastedBytes\":335838,\"subItems\":{\"type\":\"subitems\",\"items\":[{\"reason\":\"Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size.\",\"wastedBytes\":229146},{\"reason\":\"This image file is larger than it needs to be (702x1157) for its displayed dimensions (478x360). Use responsive images to reduce the image download size.\",\"wastedBytes\":287297}]}},{\"node\":{\"type\":\"node\",\"lhId\":\"page-10-IMG\",\"path\":\"1,HTML,1,BODY,2,MAIN,3,SECTION,2,DIV,4,ARTICLE,0,IMG\",\"selector\":\"section#what-we-restore > div.photo-grid > article.photo-card > img\",\"boundingRect\":{\"top\":2243,\"bottom\":2631,\"left\":1023,\"right\":1241,\"width\":218,\"height\":388},\"snippet\":\"<img src=\\\"/ACR-Website/assets/restore-specialty-gown-lace.png\\\" alt=\\\"Wedding gown lace detail after textile restoration\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\">\",\"nodeLabel\":\"Wedding gown lace detail after textile restoration\"},\"url\":\"https://sysopx786.github.io/ACR-Website/assets/restore-specialty-gown-lace.png\",\"totalBytes\":354973,\"wastedBytes\":325909,\"subItems\":{\"type\":\"subitems\",\"items\":[{\"reason\":\"Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size.\",\"wastedBytes\":190159},{\"reason\":\"This image file is larger than it needs to be (746x1326) for its displayed dimensions (449x388). Use responsive images to reduce the image download size.\",\"wastedBytes\":292376}]}},{\"node\":{\"type\":\"node\",\"lhId\":\"page-11-IMG\",\"path\":\"1,HTML,1,BODY,2,MAIN,3,SECTION,2,DIV,1,ARTICLE,0,IMG\",\"selector\":\"section#what-we-restore > div.photo-grid > article.photo-card > img\",\"boundingRect\":{\"top\":2271,\"bottom\":2631,\"left\":327,\"right\":545,\"width\":218,\"height\":360},\"snippet\":\"<img src=\\\"/ACR-Website/assets/restore-household-quilt.png\\\" alt=\\\"Clean restored household quilt on a restoration worktable\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\">\",\"nodeLabel\":\"Clean restored household quilt on a restoration worktable\"},\"url\":\"https://sysopx786.github.io/ACR-Website/assets/restore-household-quilt.png\",\"totalBytes\":353814,\"wastedBytes\":325139,\"subItems\":{\"type\":\"subitems\",\"items\":[{\"reason\":\"Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size.\",\"wastedBytes\":218447},{\"reason\":\"This image file is larger than it needs to be (702x1157) for its displayed dimensions (478x360). Use responsive images to reduce the image download size.\",\"wastedBytes\":278864}]}},{\"node\":{\"type\":\"node\",\"lhId\":\"page-12-IMG\",\"path\":\"1,HTML,1,BODY,2,MAIN,3,SECTION,2,DIV,2,ARTICLE,0,IMG\",\"selector\":\"section#what-we-restore > div.photo-grid > article.photo-card > img\",\"boundingRect\":{\"top\":2243,\"bottom\":2631,\"left\":559,\"right\":777,\"width\":218,\"height\":388},\"snippet\":\"<img src=\\\"https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&amp;f…\\\" alt=\\\"Bedding and linens\\\" loading=\\\"lazy\\\" decoding=\\\"async\\\">\",\"nodeLabel\":\"Bedding and linens\"},\"url\":\"https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=900&q=80\",\"totalBytes\":160601,\"wastedBytes\":144841,\"subItems\":{\"type\":\"subitems\",\"items\":[{\"reason\":\"This image file is larger than it needs to be (758x1350) for its displayed dimensions (259x388). Use responsive images to reduce the image download size.\",\"wastedBytes\":144841}]}}]"
       },
       "font-display-insight": {
         "score": 1,
@@ -135,16 +135,16 @@
       "mainthread-work-breakdown": {
         "score": 1,
         "displayValue": "0.1 s",
-        "detail": "[{\"group\":\"styleLayout\",\"groupLabel\":\"Style & Layout\",\"duration\":54.794000000000004},{\"group\":\"other\",\"groupLabel\":\"Other\",\"duration\":37.907000000000124},{\"group\":\"paintCompositeRender\",\"groupLabel\":\"Rendering\",\"duration\":8.41499999999999},{\"group\":\"scriptEvaluation\",\"groupLabel\":\"Script Evaluation\",\"duration\":4.5479999999999965}]"
+        "detail": "[{\"group\":\"styleLayout\",\"groupLabel\":\"Style & Layout\",\"duration\":55.901},{\"group\":\"other\",\"groupLabel\":\"Other\",\"duration\":37.224000000000046},{\"group\":\"paintCompositeRender\",\"groupLabel\":\"Rendering\",\"duration\":6.853999999999996},{\"group\":\"scriptEvaluation\",\"groupLabel\":\"Script Evaluation\",\"duration\":5.513999999999997}]"
       },
       "total-byte-weight": {
         "score": 1,
-        "displayValue": "Total size was 1,943 KiB",
-        "detail": "[{\"url\":\"https://sysopx786.github.io/ACR-Website/assets/restore-drapery-folded-textiles.png\",\"totalBytes\":364927},{\"url\":\"https://sysopx786.github.io/ACR-Website/assets/restore-specialty-gown-lace.png\",\"totalBytes\":355314},{\"url\":\"https://sysopx786.github.io/ACR-Website/assets/restore-household-quilt.png\",\"totalBytes\":354156},{\"url\":\"https://sysopx786.github.io/ACR-Website/assets/acr-hero-facility.jpg\",\"totalBytes\":277850}]"
+        "displayValue": "Total size was 1,945 KiB",
+        "detail": "[{\"url\":\"https://sysopx786.github.io/ACR-Website/assets/restore-drapery-folded-textiles.png\",\"totalBytes\":364878},{\"url\":\"https://sysopx786.github.io/ACR-Website/assets/restore-specialty-gown-lace.png\",\"totalBytes\":355333},{\"url\":\"https://sysopx786.github.io/ACR-Website/assets/restore-household-quilt.png\",\"totalBytes\":354286},{\"url\":\"https://sysopx786.github.io/ACR-Website/assets/acr-hero-facility.jpg\",\"totalBytes\":277747}]"
       },
       "network-requests": {
         "score": 1,
-        "detail": "[{\"url\":\"https://sysopx786.github.io/ACR-Website/\",\"sessionTargetType\":\"page\",\"protocol\":\"h2\",\"cache\":\"none\",\"rendererStartTime\":0,\"networkRequestTime\":0.8039999999891734,\"networkEndTime\":138.20299999999406,\"finished\":true,\"transferSize\":9551,\"resourceSize\":31804,\"statusCode\":200,\"mimeType\":\"text/html\",\"resourceType\":\"Document\",\"priority\":\"VeryHigh\",\"experimentalFromMainFrame\":true,\"entity\":\"GitHub\"},{\"url\":\"https://sysopx786.github.io/ACR-Website/assets/acr-hero-facility.jpg\",\"sessionTargetType\":\"page\",\"protocol\":\"h2\",\"cache\":\"none\",\"rendererStartTime\":142.30499999999302,\"networkRequestTime\":142.8139999999985,\"networkEndTime\":264.1339999999909,\"finished\":true,\"transferSize\":277850,\"resourceSize\":277450,\"statusCode\":200,\"mimeType\":\"image/jpeg\",\"resourceType\":\"Image\",\"priority\":\"High\",\"isLinkPreload\":true,\"experimentalFromMainFrame\":true,\"entity\":\"GitHub\"},{\"url\":\"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap\",\"sessionTargetType\":\"page\",\"protocol\":\"h2\",\"cache\":\"none\",\"rendererStartTime\":142.53599999999278,\"networkRequestTime\":143.70099999998638,\"networkEndTime\":213.83099999999104,\"finished\":true,\"transferSize\":1271,\"resourceSize\":12650,\"statusCode\":200,\"mimeType\":\"text/css\",\"resourceType\":\"Stylesheet\",\"priority\":\"VeryHigh\",\"experimentalFromMainFrame\":true,\"entity\":\"Google Fonts\"},{\"url\":\"https://sysopx786.github.io/ACR-Website/styles.css?v=20261002-review-drafts\",\"sessionTargetType\":\"page\",\"protocol\":\"h2\",\"cache\":\"none\",\"rendererStartTime\":142.6429999999964,\"networkRequestTime\":144.05800000000454,\"networkEndTime\":226.57699999999022,\"finished\":true,\"transferSize\":13124,\"resourceSize\":57554,\"statusCode\":200,\"mimeType\":\"text/css\",\"resourceType\":\"Stylesheet\",\"priority\":\"VeryHigh\",\"experimentalFromMainFrame\":true,\"entity\":\"GitHub\"}]"
+        "detail": "[{\"url\":\"https://sysopx786.github.io/ACR-Website/\",\"sessionTargetType\":\"page\",\"protocol\":\"h2\",\"cache\":\"none\",\"rendererStartTime\":0,\"networkRequestTime\":0.7149999999965075,\"networkEndTime\":31.55999999999767,\"finished\":true,\"transferSize\":9509,\"resourceSize\":31806,\"statusCode\":200,\"mimeType\":\"text/html\",\"resourceType\":\"Document\",\"priority\":\"VeryHigh\",\"experimentalFromMainFrame\":true,\"entity\":\"GitHub\"},{\"url\":\"https://sysopx786.github.io/ACR-Website/assets/acr-hero-facility.jpg\",\"sessionTargetType\":\"page\",\"protocol\":\"h2\",\"cache\":\"none\",\"rendererStartTime\":36.09100000000035,\"networkRequestTime\":36.591999999996915,\"networkEndTime\":51.41599999999744,\"finished\":true,\"transferSize\":277747,\"resourceSize\":277450,\"statusCode\":200,\"mimeType\":\"image/jpeg\",\"resourceType\":\"Image\",\"priority\":\"High\",\"isLinkPreload\":true,\"experimentalFromMainFrame\":true,\"entity\":\"GitHub\"},{\"url\":\"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap\",\"sessionTargetType\":\"page\",\"protocol\":\"h2\",\"cache\":\"none\",\"rendererStartTime\":36.3269999999975,\"networkRequestTime\":36.838999999992666,\"networkEndTime\":69.20899999999529,\"finished\":true,\"transferSize\":1271,\"resourceSize\":12650,\"statusCode\":200,\"mimeType\":\"text/css\",\"resourceType\":\"Stylesheet\",\"priority\":\"VeryHigh\",\"experimentalFromMainFrame\":true,\"entity\":\"Google Fonts\"},{\"url\":\"https://sysopx786.github.io/ACR-Website/styles.css?v=20261002-review-drafts\",\"sessionTargetType\":\"page\",\"protocol\":\"h2\",\"cache\":\"none\",\"rendererStartTime\":36.413999999989755,\"networkRequestTime\":37.236999999993714,\"networkEndTime\":57.12099999999191,\"finished\":true,\"transferSize\":13354,\"resourceSize\":57554,\"statusCode\":200,\"mimeType\":\"text/css\",\"resourceType\":\"Stylesheet\",\"priority\":\"VeryHigh\",\"experimentalFromMainFrame\":true,\"entity\":\"GitHub\"}]"
       }
     }
   },
